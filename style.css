@@ -123,18 +123,7 @@
 
   /*product*/
 
-/*  .table-cell {*/
-/*  display: flex;*/
-/*  align-items: center;*/
-/*}*/
 
-/*.table-cell img {*/
-/*  width: 100px; !* 替换为你的图片宽度 *!*/
-/*}*/
-
-/*.product-details {*/
-/*  width: 100px; !* 设置为图片的宽度 *!*/
-/*}*/
 
 .product-section {
   display: flex;
@@ -162,13 +151,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+
 }
 
-img.product-image {
-  max-width: 100%;
-  height: auto;
-}
+  img.product-image {
+    max-width: 100%;
+    height: auto;
+  }
 
+
+  .like-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background-image: url(images/radiobtn_on.jpg);
+    background-size: cover;
+  }
 .product-details {
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -178,18 +179,12 @@ img.product-image {
 .add-button-container {
   margin-top: 10px; /* 可根据需要调整按钮与产品之间的间距 */
 }
-/*.product-details {*/
-/*  position: absolute;*/
-/*  top: 100%; !* 调整位置，此处为图片下方 *!*/
-/*  width: 100%; !* 设置为与父容器等宽 *!*/
-/*}*/
+
 
 .product-description {
   word-break: break-word; /* 让文本根据容器宽度自动换行 */
 }
-/*  .table-cell {*/
-/*  position: relative;*/
-/*}*/
+
   .original-price {
     text-decoration: line-through;
     font-size: 0.9em;

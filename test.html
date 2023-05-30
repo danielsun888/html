@@ -1,39 +1,80 @@
-<div class="review-container">
-  <div>
-    <div class="featured-label">Reviews Average Item Review<span class="rating">4.5 stars</span>(12767)</div>
-    <div class="featured-content">
-      <select>
-        <option disabled selected>Sort: Suggestion</option>
-        <option value="option1">Most recent</option>
-      </select>
-    </div>
-  </div>
+<style>
+  .product-item {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    margin: 10px;
+  }
 
-  <div class="review">
-    <img src="images/icon_service.jpg" alt="User Icon" class="user-icon">
-    <span class="username">John Doe</span>
-    <span class="date">May 1, 2023</span>
-  </div>
+  .product-image {
+    width: 100%;
+    height: auto;
+  }
 
-  <div class="content">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula tempus massa id laoreet. Cras vestibulum ipsum in diam porta posuere.
-  </div>
+  .like-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background-image: url(images/radiobtn_on.jpg);
+    background-size: cover;
+  }
 
-  <div class="review">
-    <img src="images/icon_service.jpg" alt="User Icon" class="user-icon">
-    <span class="username">Jane Smith</span>
-    <span class="date">April 28, 2023</span>
-  </div>
+  .product-details {
+    text-align: left;
+    padding: 10px;
+  }
 
-  <div class="content">
-    Sed id justo at magna porttitor faucibus. Quisque a lectus dignissim, consequat enim at, vehicula sapien.
-  </div>
+  .product-description {
+    font-weight: bold;
+  }
 
-  <div class="image-container">
-    <img src="images/vendor_thumbnail.jpg" alt="Image 4" class="image">
-    <img src="images/vendor_thumbnail.jpg" alt="Image 5" class="image">
-    <img src="images/vendor_thumbnail.jpg" alt="Image 6" class="image">
-  </div>
+  .rating {
+    color: #888;
+  }
 
-  <!-- 添加更多评论 -->
+  .price {
+    font-weight: bold;
+  }
+
+  .original-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 5px;
+  }
+
+  .discount {
+    color: #f00;
+  }
+
+  .add-button-container {
+    margin-top: 10px;
+  }
+
+  .add-button {
+    padding: 5px 10px;
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+
+<div class="product-item">
+  <img src="images/img-product_1.jpg" alt="Product 5" class="product-image">
+  <span class="like-icon"></span>
+  <div class="product-details">
+    <span class="product-description">Absolute Collagen Marine Liquid Collagen supplement for women...</span>
+    <br>
+    <span class="rating">4.5 stars</span>
+    <span class="review-count">28,901</span>
+    <br>
+    <span class="price">$29.99</span>
+    <span class="original-price">$39.99</span>
+    <span class="discount">(-25% off)</span>
+    <br>
+  </div>
+  <div class="add-button-container"><button class="add-button">Add</button></div>
 </div>
