@@ -1,5 +1,11 @@
 .container
-{width: auto;
+{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+  /*width: 50%;*/
 }
 
 /*banner*/
