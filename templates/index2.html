@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* 添加一些基本的样式 */
+ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+ul.navbar li {
+  float: left;
+}
+
+ul.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.navbar li a:hover {
+  background-color: #111;
+}
+
+/* 添加下拉菜单的样式 */
+ul.navbar li.dropdown {
+  display: inline-block;
+}
+
+ul.navbar .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+ul.navbar .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+ul.navbar .dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<ul class="navbar">
+  <li><a href="#home">home</a></li>
+  <li><a href="#home">NEW ARRIVALS</a></li>
+    <li><a href="#about">HOUSEHOLD & CLEANING</a></li>
+
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">HEALTH CARE</a>
+    <div class="dropdown-content">
+      <a href="#product1">category1</a>
+
+    </div>
+  </li>
+    <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">HEALTH CARE</a>
+    <div class="dropdown-content">
+      <a href="#product1">category1</a>
+
+    </div>
+  </li>
+    <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">BEAUTY & PERSONAL CARE</a>
+    <div class="dropdown-content">
+      <a href="#product1">category1</a>
+
+    </div>
+  </li>
+      <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">MORE</a>
+    <div class="dropdown-content">
+      <a href="#product1">category1</a>
+
+    </div>
+  </li>
+
+
+</ul>
+
+</body>
+</html>
