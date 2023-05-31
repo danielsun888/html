@@ -1,80 +1,45 @@
-<style>
-  .product-item {
-    position: relative;
-    display: inline-block;
-    width: 200px;
-    text-align: center;
-    margin: 10px;
-  }
 
-  .product-image {
-    width: 100%;
-    height: auto;
-  }
+<head>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<div class="shop-div">
+              <div class="item">
+                <img src="images/vendor_thumbnail.jpg" alt="Logo" class="logo">
+                <div class="details">
+                  <p class="name">London Street</p>
+                  <p class="desc">London Street is a vibrant and bustling.</p>
+                    <p class="desc">123 London Street, London</p>
 
-  .like-icon {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 20px;
-    height: 20px;
-    background-image: url(images/radiobtn_on.jpg);
-    background-size: cover;
-  }
+                    <p class="sales">18,846 Sales Follow Shop  <button  class="follow-button">Follow Shop</button></p>
+                </div>
+              </div>
+              <div class="item">
 
-  .product-details {
-    text-align: left;
-    padding: 10px;
-  }
+                    <div class="item1">
+                      <img src="images/icon_shipping.jpg" alt="Shipping Icon" class="shipping-icon">
+                          <div class="text-container">
+                              <span class="text-above">Smooth Shipping</span><br>
+                              <span class="text-below">Has a history of shipping on time with tracking.</span>
+                          </div>
+                    </div>
+                    <div class="item1">
+                      <img src="images/icon_reply.jpg" alt="reply Icon" class="shipping-icon">
+                                          <div class="text-container">
+                      <span class="text-above">Speedy Reply</span><br>
+                      <span class="text-below">Has a history of replying to messages quickly.</span>
+                                          </div>
+                    </div>
+                    <div class="item1">
+                      <img src="images/icon_reply.jpg" alt="reply Icon" class="shipping-icon">
+                                          <div class="text-container">
+                      <span class="text-above">Rave Reviews</span><br>
+                      <span class="text-below">Average review rating is 4.8 or higher.</span>
+                                          </div>
+                    </div>
+              </div>
+            <div class="item">
+              <img src="images/icon_reply.jpg" alt="reply Icon" class="shipping-icon">
+              <span class="text-above">Contact</span>
 
-  .product-description {
-    font-weight: bold;
-  }
-
-  .rating {
-    color: #888;
-  }
-
-  .price {
-    font-weight: bold;
-  }
-
-  .original-price {
-    text-decoration: line-through;
-    color: #888;
-    margin-right: 5px;
-  }
-
-  .discount {
-    color: #f00;
-  }
-
-  .add-button-container {
-    margin-top: 10px;
-  }
-
-  .add-button {
-    padding: 5px 10px;
-    background-color: #f00;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-</style>
-
-<div class="product-item">
-  <img src="images/img-product_1.jpg" alt="Product 5" class="product-image">
-  <span class="like-icon"></span>
-  <div class="product-details">
-    <span class="product-description">Absolute Collagen Marine Liquid Collagen supplement for women...</span>
-    <br>
-    <span class="rating">4.5 stars</span>
-    <span class="review-count">28,901</span>
-    <br>
-    <span class="price">$29.99</span>
-    <span class="original-price">$39.99</span>
-    <span class="discount">(-25% off)</span>
-    <br>
-  </div>
-  <div class="add-button-container"><button class="add-button">Add</button></div>
-</div>
+            </div>
+        </div>
