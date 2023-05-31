@@ -68,10 +68,14 @@
     overflow: hidden;
   }
 
-  .follow-button::before {
+  /*.follow-button::before {*/
+  /*  content: "\2665";*/
+  /*  position: absolute;*/
+  /*  left: 5px;*/
+  /*}*/
+    .follow-button::before {
     content: "\2665";
-    position: absolute;
-    left: 5px;
+    color: red;
   }
 
   .shipping-icon {
