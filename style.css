@@ -54,7 +54,7 @@
   }
   .follow-button {
     display: inline-block;
-    padding: 10px;
+    padding: 3px;
     color: #1c1b1b;
     font-size: smaller;
     text-decoration: none;
@@ -63,7 +63,7 @@
 
     background-color: #f1eeee;
 
-    border-radius: 20px;
+    border-radius: 30px;
     border-width : 0.5px;
     overflow: hidden;
   }
@@ -201,7 +201,7 @@
       padding: 5px;
       padding-right: 25px; /* 调整输入框右侧的内边距，以给图标留出空间 */
       border: 1px solid #ccc;
-      border-radius: 4px;
+      border-radius: 15px;
       background-image: url('images/icon_search.jpg');
       background-position: left center;
       background-repeat: no-repeat;
@@ -234,9 +234,14 @@
 
   .featured-content {
     float: right;
+    background-color: white;
   }
-
-
+  .featured-content select {
+    border-radius: 3px;  /* 设置边框圆角为5像素 */
+  }
+  .featured-content select option:checked {
+    background-color: gray;  /* 设置选中的选项背景颜色为灰色 */
+  }
   /* 横线样式 */
   .horizontal-line {
     border-top: 1px solid #ddd;
@@ -301,7 +306,11 @@
 .add-button-container {
   margin-top: 10px; /* 可根据需要调整按钮与产品之间的间距 */
 }
+.add-button {
+  border-radius: 10px;
 
+
+}
 
 .product-description {
   word-break: break-word; /* 让文本根据容器宽度自动换行 */
@@ -340,16 +349,24 @@
   .pagination-container {
     display: flex;
     justify-content: center;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px;
   }
 
   .pagination-container .page-list {
     list-style: none;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+
   }
 
   .pagination-container .page-list li {
     display: inline;
+    margin-right: 10px; /* 调整页码之间的右边距 */
+
   }
 
   .pagination-container .page-list li a {
@@ -366,6 +383,8 @@
     color: black;
     padding: 8px 12px;
   }
-
+  .page-list li:last-child {
+    margin-right: 0; /* 最后一个页码无右边距 */
+  }
 
 
