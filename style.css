@@ -1,9 +1,8 @@
 .container
 {
-    width: 80%;
+    width: 1548px;
     margin: 0 auto;
     padding: 20px;
-    /*border: 1px solid #ccc;*/
       border: none;
 
   /*width: 50%;*/
@@ -16,7 +15,7 @@
   .banner {
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 376px;
     /* 自定义高度 */
     overflow: hidden;
     margin-bottom: 20px;
@@ -38,31 +37,66 @@
   /*shop div*/
   .shop-div {
     display: flex;
-    margin-up: auto; /* 添加空白间距 */
-    margin-bottom: 10px;
-    background-color: #efeeee;
+    padding: 20px;
+    background-color: #f9f9f9;
 
   }
 
-
-  .item {
+  .shop-info{
+    width: 675px;
+  }
+.shop-logo {
+  width: 167px; /* Adjust the height value as needed */
+  float: left;
+  margin-right: 20px;
+}
+  .shop-details{
+    vertical-align: bottom;
+  }
+    .shop-name{
+      font-size: 35px;
+      padding-bottom: 10px;
+    }
+    .shop-desc{
+      font-size: 15px;
+      padding-bottom: 5px;
+    }
+  .shop-address{
+    font-size: 15px;
+  }
+  .shop-sales {
+    margin-top: 10px;
     margin-right: 10px;
+    float: left;
+    vertical-align: middle;
+    font-size: 15px;
+  }
+  .shop-rating {
+    margin-top: 10px;
+  }
+  .shop-rating img{float: left
+
+   }
+  .shop-rating-star {
+    margin: 0;
+  }
+.item {
+    margin-right: 20px;
     /* 可调整项之间的间距 */
     display: flex;
     align-items: center;
 
   }
+
   .follow-button {
+    margin-left: 10px;
     display: inline-block;
-    padding: 3px;
     color: #1c1b1b;
+    padding: 10px 20px 10px 20px;
     font-size: smaller;
-    text-decoration: none;
     position: relative;
-    border: 1px solid #000;
-
+    border: 1px solid #5d5d5d;
     /*background-color: #f1eeee;*/
-
     border-radius: 30px;
     border-width : 0.5px;
     overflow: hidden;
@@ -74,7 +108,7 @@
   /*  left: 5px;*/
   /*}*/
     .follow-button::before {
-      background-image: url(images/icon-Favorite.jpg);
+      background-image: url(images/icon-heart.jpg);
     }
 
   .shipping-icon {
@@ -88,7 +122,8 @@
 
   }
   .contact-img{
-    max-width: 100%;
+    max-width: 122px;
+    border-radius: 61px;
 
   }
   .name {
@@ -100,7 +135,8 @@
     }
 
   .item1 {
-               display: flex;
+    width: 210px;
+    display: flex;
       margin-top: 10px; /* 添加空白间距 */
       margin-bottom: 10px; /* 添加空白间距 */
     align-items: center;
@@ -145,14 +181,11 @@
       margin-top: 5px;
       font-size: smaller;
     }
-    .sales {
-      margin-top: 5px;
-    }
  /*left and right column*/
   .container1 {
       display: flex;
       flex-direction: row;
-      /*margin-up:40px;*/
+    margin-top: 50px;
     }
 /*left column  */
 .left-column {
