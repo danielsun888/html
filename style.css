@@ -36,14 +36,16 @@
 
   /*shop div*/
   .shop-div {
-    display: flex;
+    /* display: flex; */
+    overflow: auto;
     padding: 20px;
     background-color: #f9f9f9;
 
   }
 
   .shop-info{
-    width: 675px;
+    width: 580px;
+    float: left;
   }
 .shop-logo {
   width: 167px; /* Adjust the height value as needed */
@@ -56,6 +58,7 @@
     .shop-name{
       font-size: 35px;
       padding-bottom: 10px;
+      font-weight: bold;
     }
     .shop-desc{
       font-size: 15px;
@@ -80,12 +83,13 @@
   .shop-rating-star {
     margin: 0;
   }
-.item {
+.shop-features {
+  padding-top: 20px;
+  float: left;
     margin-right: 20px;
     /* 可调整项之间的间距 */
-    display: flex;
+    /* display: flex; */
     align-items: center;
-
   }
 
   .follow-button {
@@ -95,12 +99,36 @@
     padding: 10px 20px 10px 20px;
     font-size: smaller;
     position: relative;
-    border: 1px solid #5d5d5d;
+    border:1px solid #5d5d5d;
     /*background-color: #f1eeee;*/
     border-radius: 30px;
-    border-width : 0.5px;
     overflow: hidden;
   }
+
+.shop-features {
+  width: 660px;
+  margin-top: 10px; /* 添加空白间距 */
+  margin-bottom: 10px; /* 添加空白间距 */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.delivery {
+    float: left;
+    width:220px;
+    }
+  .cs {
+    float: left;
+    width:220px;
+  }
+  .rave-review {
+    float: left;
+    width:220px;
+  }
+.shop-contact {
+  float: right;
+}
 
   /*.follow-button::before {*/
   /*  content: "\2665";*/
@@ -134,27 +162,17 @@
 
     }
 
-  .item1 {
-    width: 210px;
-    display: flex;
-      margin-top: 10px; /* 添加空白间距 */
-      margin-bottom: 10px; /* 添加空白间距 */
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-
   .text-container {
-    text-align: left;
+    text-align: center;
   }
+  .delivery img{ text-align: center}
+  .text-above{
+      font-size: 18px;
+      margin-top: 5px;
+    }
   .text-below{
     font-size: smaller;
-
-
+    margin-top: 10px;
   }
   .shipping-icon {
     max-width: 100%;
@@ -183,6 +201,7 @@
     }
  /*left and right column*/
   .container1 {
+    clear: both;
       display: flex;
       flex-direction: row;
     margin-top: 50px;
