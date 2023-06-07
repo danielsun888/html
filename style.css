@@ -416,46 +416,87 @@ background-color: white;
 /*  transform: translateX(-50%);*/
 /*}*/
   /*paginatio*/
-  .pagination-container {
-    display: flex;
-    justify-content: center;
-    display: flex;
-    border: 1px solid #ccc;
+  /*.pagination-container {*/
+  /*  display: flex;*/
+  /*  justify-content: center;*/
+  /*  display: flex;*/
+  /*  border: 1px solid #ccc;*/
+  /*  border-radius: 20px;*/
+  /*  padding: 5px;*/
+  /*  border-left: 0;*/
+  /*}*/
+
+  /*.pagination-container .page-list {*/
+  /*  list-style: none;*/
+  /*  margin: 0;*/
+  /*  padding: 0;*/
+  /*  overflow: hidden;*/
+
+  /*}*/
+
+  /*.pagination-container .page-list li {*/
+  /*  display: inline;*/
+  /*  margin-right: 10px; !* 调整页码之间的右边距 *!*/
+
+  /*}*/
+
+  /*.pagination-container .page-list li a {*/
+  /*  display: inline-block;*/
+  /*  padding: 8px 12px;*/
+  /*  margin: 0 5px;*/
+  /*  text-decoration: none;*/
+  /*  color: black;*/
+  /*}*/
+
+  /*.pagination-container .previous,*/
+  /*.pagination-container .next {*/
+  /*  text-decoration: none;*/
+  /*  color: black;*/
+  /*  padding: 8px 12px;*/
+  /*}*/
+  /*.page-list li:last-child {*/
+  /*  margin-right: 0; !* 最后一个页码无右边距 *!*/
+  /*}*/
+
+
+.pagination-center {
+  text-align: center;
+    border-radius: 10px;
+
+}
+
+.pagination {
+  display: inline-block;
     border-radius: 20px;
-    padding: 5px;
-    border-left: 0;
-  }
+  border: 1px solid #ddd; /* 添加边框样式 */
 
-  .pagination-container .page-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+}
+.pagination .arrow {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 0 4px;
+}
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  /*transition: background-color .3s;*/
+  margin: 0 4px;
+}
+/*.pagination a:hover:not(.active) {*/
+/*  background-color: #ddd;*/
+/*}*/
 
-  }
+.pagination a:hover { /* 添加鼠标悬停效果 */
+  border-color: black;
+    border: 1px solid black;
 
-  .pagination-container .page-list li {
-    display: inline;
-    margin-right: 10px; /* 调整页码之间的右边距 */
+}
+.pagination a.active {
+  border: 1px solid #4CAF50;
+  color: black;
+}
 
-  }
-
-  .pagination-container .page-list li a {
-    display: inline-block;
-    padding: 8px 12px;
-    margin: 0 5px;
-    text-decoration: none;
-    color: black;
-  }
-
-  .pagination-container .previous,
-  .pagination-container .next {
-    text-decoration: none;
-    color: black;
-    padding: 8px 12px;
-  }
-  .page-list li:last-child {
-    margin-right: 0; /* 最后一个页码无右边距 */
-  }
-
+/*.pagination a:hover:not(.active) {background-color: #ddd;}*/
 

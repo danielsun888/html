@@ -1,45 +1,57 @@
-<div class="product-item">
-    <div class="product-image-wrapper">
-        <img src="images/img-product_1.jpg" alt="Product 5" class="product-image">
-        <span class="like-icon"></span>
-        <span class="best-seller">Best Seller</span>
-    </div>
-    <div class="product-details">
-        <span class="product-description">Absolute Collagen Marine Liquid Collagen supplement for women...</span>
-        <br>
-        <span class="price">$29.99</span>
-        <span class="original-price">$39.99</span>
-        <span class="discount">(-25% off)</span>
-        <br>
-    </div>
-    <div class="add-button-container"><button class="add-button">Add</button></div>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.pagination-center {
+  text-align: center;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  border: 1px solid #4CAF50;
+  color: black;
+
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+</style>
+</head>
+<body>
+<div class="pagination-center">
+  <div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#" class="page-number">Previous</a>
+  <a href="#" class="page-number">1</a>
+  <a href="#" class="page-number">2</a>
+  <a href="#" class="page-number">3</a>
+  <a href="#" class="page-number">4</a>
+  <a href="#" class="page-number">5</a>
+  <a href="#" class="page-number">6</a>
+  <a href="#" class="page-number">7</a>
+  <a href="#" class="page-number">...</a>
+                                <!-- 添加更多页码 -->
+  <a href="#" class="page-number">20</a>
+  <a href="#" class="page-number">Next</a>
+  <a href="#">&raquo;</a>
+  </div>
 </div>
 
-<style>
-    .product-item {
-        position: relative;
-    }
 
-    .product-image-wrapper {
-        position: relative;
-        display: inline-block;
-    }
+</body>
+</html>
 
-    .like-icon {
-        position: absolute;
-        top: 0;
-        right: 0;
-        background-image: url(images/icon-Favorite.jpg);
 
-        /* Add styles for the like icon, such as background-image or font-awesome class */
-    }
-
-    .best-seller {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-image: url(images/icon-Favorite.jpg);
-
-        /* Add styles for the "Best Seller" label */
-    }
-</style>
