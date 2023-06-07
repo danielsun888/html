@@ -135,9 +135,23 @@
   /*  position: absolute;*/
   /*  left: 5px;*/
   /*}*/
-    .follow-button::before {
-      background-image: url(images/icon-heart.jpg);
-    }
+.follow-button {
+
+  background-color: white;
+  padding: 10px 10px;
+  border: 2px solid gray;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+.follow-button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+    /*.follow-button::before {*/
+    /*  background-image: url(images/icon-heart.jpg);*/
+    /*}*/
 
   .shipping-icon {
     margin-right: 5px;
