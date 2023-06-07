@@ -357,6 +357,15 @@
     background-image: url(images/icon-heart.png);
     background-size: cover;
   }
+  .best-seller {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 165px;
+    height: 48px;
+    background-image: url(images/icon-BestSeller.jpg);
+    background-size: cover;
+}
 .product-details {
   padding-top: 30px;
     word-wrap: break-word;
