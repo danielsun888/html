@@ -338,24 +338,28 @@
   position: relative;
 
 }
-
-  img.product-image {
+  .product-wrapper{
+    position : relative;
+  }
+  .product-image img {
     max-width: 100%;
     height: auto;
+    position : absolute;
   }
 
 
   .like-icon {
     position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 20px;
-    height: 20px;
-    background-image: url(images/icon-Favorite.jpg);
+    top: 15px;
+    right: 15px;
+    width: 28px;
+    height: 26px;
+    background-image: url(images/icon-heart.png);
     background-size: cover;
   }
 .product-details {
-  word-wrap: break-word;
+  padding-top: 30px;
+    word-wrap: break-word;
   overflow-wrap: break-word;
     display: inline-block;
   width: 100%;
