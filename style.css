@@ -317,6 +317,7 @@
   .horizontal-line {
     border-top: 1px solid #ddd;
     margin-top: 20px;
+    padding-bottom: 50px;
   }
 
   /*product*/
@@ -330,6 +331,7 @@
 }
 
 .product-category {
+
   flex: 0 0 50%; /* 每个类别占据一半宽度，可以根据需要调整宽度 */
 }
 
@@ -373,10 +375,10 @@
   }
   .best-seller {
     position: absolute;
-    top: 15px;
-    left: 15px;
-    width: 165px;
-    height: 48px;
+    top: 0px;
+    left: 0px;
+    width: 104px;
+    height: 30px;
     background-image: url(images/icon-BestSeller.jpg);
     background-size: cover;
 }
@@ -397,7 +399,7 @@
 /*}*/
 
 .add-button-container {
-  margin-top: 10px; /* 可根据需要调整按钮与产品之间的间距 */
+  margin-top: 35px; /* 可根据需要调整按钮与产品之间的间距 */
   display: flex;
   align-items: center;
 }
@@ -408,19 +410,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 10px 15px 10px 15px;
   border: solid;
-  color: black;
-  font-size: 16px;
+  color: #2d2d2d;
+  font-size: 15px;
+  font-weight: bold;
   cursor: pointer;
+  border: 1px solid #2d2d2d;
 }
 
 .add-button::before {
   content: "";
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-image: url("images/icon-heart.png"); /* 加号图标的路径 */
+  width: 16px;
+  height: 16px;
+  background-image: url("images/icon-plus.jpg"); /* 加号图标的路径 */
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -428,6 +432,8 @@
 }
 .product-description {
   word-break: break-word; /* 让文本根据容器宽度自动换行 */
+  font-size: 18px;
+  padding-bottom: 10px;
 }
 
   .original-price {
@@ -447,7 +453,7 @@
   }
 
   .price {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 
 
@@ -506,13 +512,15 @@
 .pagination-center {
   text-align: center;
     border-radius: 10px;
+  padding-top: 80px;
 
 }
 
 .pagination {
   display: inline-block;
-    border-radius: 20px;
-  border: 1px solid #ddd; /* 添加边框样式 */
+  border-radius: 30px;
+  border: 1px solid #d6d6d6; /* 添加边框样式 */
+  padding:10px 20px 10px 20px;
 
 }
 .pagination .arrow {
