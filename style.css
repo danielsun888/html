@@ -235,11 +235,41 @@
       margin-bottom: 10px;
     }
 
-    .navbar {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
+
+/* scrollbar  */
+  .container-nav {
+    height: 200px;
+    /*width: 300px;*/
+    overflow: auto;
+  }
+
+  .container-nav::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  .container-nav::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+
+  .container-nav::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /*height: 1px; !* 设置滚动条滑块的高度 *!*/
+    width: 3px; /* 设置滚动条滑块的宽度 */
+
+  }
+
+  .container-nav::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
     }
+
+.navbar {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background: white;
+  mix-blend-mode: difference;
+}
+
 
     .navbar li {
       display: block;
@@ -260,6 +290,7 @@
     .navbar li span {
       float: right;
     }
+
 
 
   /*search bar*/

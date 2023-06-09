@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.add-button-container {
-  display: flex;
-  align-items: center;
-}
+  <title>Scrollable Container</title>
+  <style>
+    .container-nav {
+      height: 100px;
+      width: 300px;
+      overflow: auto;
+    }
 
-.add-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  border: none;
-  background-color: transparent;
-  color: black;
-  font-size: 16px;
-  cursor: pointer;
-}
+    .container-nav::-webkit-scrollbar {
+      width: 1px;
+    }
 
-.add-button::before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-image: url("images/icon-heart.png"); /* 加号图标的路径 */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  margin-right: 5px;
-}
+    .container-nav::-webkit-scrollbar-track {
+      background-color: #f1f1f1;
+    }
 
-</style>
+    .container-nav::-webkit-scrollbar-thumb {
+      background-color: #888;
+      width: 3px; /* 设置滚动条滑块的宽度 */
+    }
+
+    .container-nav::-webkit-scrollbar-thumb:hover {
+      background-color: #555;
+    }
+  </style>
 </head>
 <body>
-  <div class="add-button-container">
-    <button class="add-button">Add</button>
+  <div class="container-nav">
+    <ul class="navbar" id="navbar">
+      <li><a href="#home">All</a><span>200</span></li>
+      <li><a href="#home">New Arrivals</a><span>23</span></li>
+      <li><a href="#about">Household & Cleaning</a><span>50</span></li>
+      <li><a href="">Health Care</a><span>14</span></li>
+      <li><a href="">Beauty & Personal</a><span>35</span></li>
+      <li><a href="#home">New Arrivals</a><span>23</span></li>
+      <li><a href="#about">Household & Cleaning</a><span>50</span></li>
+      <li><a href="">Health Care</a><span>14</span></li>
+      <li><a href="">Beauty & Personal</a><span>35</span></li>
+      <li><a href="#home">New Arrivals</a><span>23</span></li>
+      <li><a href="#about">Household & Cleaning</a><span>50</span></li>
+      <li><a href="">Health Care</a><span>14</span></li>
+      <li><a href="">Beauty & Personal</a><span>35</span></li>
+      <!-- 更多的列表项... -->
+    </ul>
   </div>
 </body>
 </html>
