@@ -1,3 +1,19 @@
+/*
+      www.OnlineWebFonts.Com 
+      You must credit the author Copy this link on your web 
+      <div>Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>is licensed by CC BY 3.0</div>
+      OR
+      <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
+*/
+@font-face {font-family: "Avenir LT Pro 65 Medium";
+  src: url("http://db.onlinewebfonts.com/t/6be63a5a7921083ecd97ca92b17a7c63.eot"); /* IE9*/
+  src: url("http://db.onlinewebfonts.com/t/6be63a5a7921083ecd97ca92b17a7c63.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("http://db.onlinewebfonts.com/t/6be63a5a7921083ecd97ca92b17a7c63.woff2") format("woff2"), /* chrome firefox */
+  url("http://db.onlinewebfonts.com/t/6be63a5a7921083ecd97ca92b17a7c63.woff") format("woff"), /* chrome firefox */
+  url("http://db.onlinewebfonts.com/t/6be63a5a7921083ecd97ca92b17a7c63.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+  url("http://db.onlinewebfonts.com/t/6be63a5a7921083ecd97ca92b17a7c63.svg#Avenir LT Pro 65 Medium") format("svg"); /* iOS 4.1- */
+}
+
 .container
 {
     width: 1548px;
@@ -86,7 +102,7 @@
 
 
   .follow-button {
-    margin-left: 10px;
+    margin-left: 15px;
     display: inline-block;
     color: #1c1b1b;
     padding: 10px 20px 10px 20px;
@@ -96,6 +112,7 @@
     /*background-color: #f1eeee;*/
     border-radius: 30px;
     overflow: hidden;
+    /* height: 35px; */
   }
 
 .shop-features {
@@ -244,7 +261,7 @@
   }
 
   .container-nav::-webkit-scrollbar {
-    width: 2px;
+    width: 3px;
   }
 
   .container-nav::-webkit-scrollbar-track {
@@ -264,7 +281,7 @@
 
 .navbar {
   list-style-type: none;
-  padding: 0;
+  padding:0;
   margin: 0;
   background: white;
   mix-blend-mode: difference;
@@ -277,6 +294,8 @@
       white-space: nowrap;
       text-overflow: ellipsis;
       margin-bottom: 10px;
+      padding-right: 20px;;
+      line-height: 30px;;
 
     }
 
@@ -297,14 +316,15 @@
   .search-bar {
     display: flex;
     align-items: center;
+    padding-bottom: 25px;
   }
   .search-input {
       padding: 12px;
       padding-right: 25px; /* 调整输入框右侧的内边距，以给图标留出空间 */
-      border: 1px solid #b2b2b2;
-      border-radius: 20px;
-      background-image: url('images/icon_search.jpg');
-      background-position: left center;
+      border: 2px solid #b2b2b2;
+      border-radius: 25px;
+      background-image: url('images/icon_search1.jpg');
+      background-position: 10%;
       background-repeat: no-repeat;
       background-size: 18px;
     }
@@ -436,12 +456,12 @@
 }
 
 .add-button {
-  border-radius: 20px;
+  border-radius: 25px;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 15px 10px 15px;
+  padding: 12px 20px 12px 20px;
   border: solid;
   color: #2d2d2d;
   font-size: 15px;
@@ -549,9 +569,10 @@
 
 .pagination {
   display: inline-block;
-  border-radius: 30px;
-  border: 1px solid #d6d6d6; /* 添加边框样式 */
-  padding:10px 20px 10px 20px;
+  border-radius: 35px;
+  border: 2px solid #d6d6d6; /* 添加边框样式 */
+  padding:12px 20px 12px 20px;
+  font-size: 18px;
 
 }
 .pagination .arrow {
@@ -563,6 +584,7 @@
   color: black;
   float: left;
   padding: 8px 16px;
+  width: ;
   text-decoration: none;
   /*transition: background-color .3s;*/
   margin: 0 4px;
@@ -572,8 +594,7 @@
 /*}*/
 
 .pagination a:hover { /* 添加鼠标悬停效果 */
-  border-color: black;
-    border: 1px solid black;
+  border: 1px solid black;
 
 }
 .pagination a.active {
