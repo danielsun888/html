@@ -78,10 +78,11 @@
     }
     .shop-desc{
       font-size: 15px;
-      padding-bottom: 5px;
+      padding-bottom: 10px;
     }
   .shop-address{
     font-size: 15px;
+    padding-bottom: 8px;
   }
   .shop-sales {
     margin-top: 10px;
@@ -92,6 +93,7 @@
   }
   .shop-rating {
     margin-top: 10px;
+    margin-right:10px ; 
   }
   .shop-rating img{float: left
 
@@ -115,6 +117,45 @@
     /* height: 35px; */
   }
 
+
+  .add-fav {
+    display: inline-block;
+    padding: 6px 20px 6px 20px;
+    cursor: pointer;
+    border: 2px solid #5d5d5d;
+    background: #ffffff;
+    position: relative;
+    transition: all .5s ease;
+    border-radius: 25px;
+    margin-left:10px;
+    
+    }
+  
+    .icon-heart {
+      font-size: 24px;
+      color: #5d5d5d;
+      position: relative;
+      transition: all .5s ease-in-out;
+    }
+    
+    .add-fav span {
+      font-size:14px;
+      padding-left:3px;
+      font-weight: bold;
+      vertical-align:20%;
+    }
+  
+  
+    input[type="checkbox"] { 
+      position: absolute;
+      opacity: 0;
+      &:checked + .icon-heart {
+        color: red;
+        .icon-plus-sign {
+          display:none;
+        }
+      }
+    }
 .shop-features {
   float: left;
   width: 690px;
@@ -153,7 +194,6 @@
   /*  left: 5px;*/
   /*}*/
 .follow-button {
-
   background-color: white;
   padding: 10px 10px;
   border: 2px solid gray;
