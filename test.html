@@ -1,69 +1,54 @@
-<style>
-  .pagination-center {
-  text-align: center;
-    border-radius: 10px;
-  padding-top: 80px;
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    ul.pagination {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+    }
 
-}
-  .pagination {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    border-radius: 35px;
-  border: 2px solid #d6d6d6; /* 添加边框样式 */
-  padding:12px 20px 12px 20px;
-  font-size: 18px;
-  }
-  
-  .pagination li {
-    flex: 1;
-  }
-  .pagination .arrow {
-  display: inline-block;
-  padding: 8px 16px;
-  margin: 0 4px;
-}
-  .pagination li a {
-    display: block;
-    text-align: center;
-    padding: 8px 16px;
-    border: 2px solid #d6d6d6;
+    ul.pagination li {display: inline;}
 
-    color: black;
-  float: left;
-  padding: 8px 16px;
-  /* width: ; */
-  text-decoration: none;
-  /*transition: background-color .3s;*/
-  margin: 0 4px;
-  }
-  
-  .pagination li a:hover {
-    border: 1px solid black;
-  }
-  
-  .pagination li.active a {
-    /* border: 2px solid #4CAF50; */
-    border: 1px solid #4CAF50;
-  color: black;
-  }
+    ul.pagination li a {
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color .3s;
+      border:none;
+    }
+
+    ul.pagination li a.active {
+      background-color: #4CAF50;
+      color: white;
+      border: 1px solid #4CAF50;
+    }
+
+    ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+
+    div.center {text-align: center;}
   </style>
-  
 
-  
-  <div class="pagination-center">
-    <ul class="pagination">
-      <li><a href="#" class="page-number"><img src="images/img-page-prev.jpg"></a></li>
-      <li><a href="#" class="page-number">1</a></li>
-      <li><a href="#" class="page-number">2</a></li>
-      <li><a href="#" class="page-number">3</a></li>
-      <li><a href="#" class="page-number">4</a></li>
-      <li><a href="#" class="page-number">5</a></li>
-      <li><a href="#" class="page-number">6</a></li>
-      <li><a href="#" class="page-number">7</a></li>
-      <li><a href="#" class="page-number"><img src="images/img-page-more.jpg"></a></li>
-      <li><a href="#" class="page-number">20</a></li>
-      <li><a href="#" class="page-number"><img src="images/img-page-next.jpg"></a></li>
-    </ul>
-  </div>
+
+</head>
+<body>
+
+<h2>Centered Pagination</h2>
+
+<div class="center">
+  <ul class="pagination">
+    <li><a href="#">«</a></li>
+    <li><a href="#">1</a></li>
+    <li><a class="active" href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li><a href="#">7</a></li>
+    <li><a href="#">»</a></li>
+  </ul>
+</div>
+
+</body>
+</html>

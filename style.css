@@ -552,27 +552,34 @@
   .pagination-center {
     text-align: center;
       border-radius: 10px;
+    /*padding-top: 80px;*/
     padding-top: 80px;
+
     justify-content: center;
 
 
   }
     .pagination {
-      display: flex;
+      /*display: flex;*/
       list-style-type: none;
       justify-content: center;
       align-items: center;
-
+      display: inline-block;
       margin: 0;
 
       border-radius: 35px;
-    border: 2px solid #d6d6d6; /* 添加边框样式 */
-    padding:12px 20px 12px 20px;
+    border: 1px solid #d6d6d6; /* 添加边框样式 */
+    padding:0 8px 0 8px;
     font-size: 18px;
     }
+
+
 .pagination li {
-  flex: 1;
-  margin: 0 10px; /* 设置页码左右的间距 */
+  display: inline;
+  padding: 0;
+  /*margin: 0;*/
+  margin: 0 0 0 0; /* 设置页码左右的间距 */
+
 }
 .pagination li:not(:first-child):not(:last-child) a:hover {
   border: 1px solid black;
@@ -598,19 +605,16 @@
     .pagination li a {
       display: block;
       text-align: center;
-      border: 2px solid #d6d6d6;
-  
+      /*border: 2px solid #d6d6d6;*/
+
       color: black;
     float: left;
     padding: 8px 16px;
     /* width: ; */
     text-decoration: none;
     /*transition: background-color .3s;*/
-    /*margin: 0 4px;*/
-      margin-top: 0;
-      margin-bottom: 0;
-      margin-left: 1px;
-      margin-right: 1px;
+    margin: 0 0;
+      border:none;
     }
     
     /*.pagination li a:hover {*/
