@@ -5,14 +5,14 @@
       OR
       <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
 */
-@font-face {font-family: "Avenir LT Pro 65 Medium";
-  src: url("http://db.onlinewebfonts.com/t/6be63a5a7921083ecd97ca92b17a7c63.eot"); /* IE9*/
-  src: url("http://db.onlinewebfonts.com/t/6be63a5a7921083ecd97ca92b17a7c63.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-  url("http://db.onlinewebfonts.com/t/6be63a5a7921083ecd97ca92b17a7c63.woff2") format("woff2"), /* chrome firefox */
-  url("http://db.onlinewebfonts.com/t/6be63a5a7921083ecd97ca92b17a7c63.woff") format("woff"), /* chrome firefox */
-  url("http://db.onlinewebfonts.com/t/6be63a5a7921083ecd97ca92b17a7c63.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
-  url("http://db.onlinewebfonts.com/t/6be63a5a7921083ecd97ca92b17a7c63.svg#Avenir LT Pro 65 Medium") format("svg"); /* iOS 4.1- */
-}
+
+@font-face {font-family: "Avenir LT Pro"; 
+  src: url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.eot"); 
+  src: url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.eot?#iefix") format("embedded-opentype"), 
+  url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.woff2") format("woff2"), 
+  url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.woff") format("woff"), 
+  url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.ttf") format("truetype"), 
+  url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.svg#Avenir LT Pro") format("svg"); }
 
 .container
 {
@@ -72,16 +72,16 @@
     vertical-align: bottom;
   }
     .shop-name{
-      font-size: 35px;
+      font-size: 32px;
       padding-bottom: 10px;
-      font-weight: bold;
+      font-weight:500;
     }
     .shop-desc{
-      font-size: 15px;
+      font-size: 14px;
       padding-bottom: 10px;
     }
   .shop-address{
-    font-size: 15px;
+    font-size: 14px;
     padding-bottom: 8px;
   }
   .shop-sales {
@@ -89,7 +89,7 @@
     margin-right: 10px;
     float: left;
     vertical-align: middle;
-    font-size: 15px;
+    font-size: 14px;
   }
   .shop-rating {
     margin-top: 10px;
@@ -139,7 +139,7 @@
     }
     
     .add-fav span {
-      font-size:14px;
+      font-size:13px;
       padding-left:3px;
       font-weight: bold;
       vertical-align:20%;
@@ -198,7 +198,7 @@
   padding: 10px 10px;
   border: 2px solid gray;
   color: black;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
 }
 .follow-button img {
@@ -238,7 +238,7 @@
   }
   .delivery img{ text-align: center}
   .text-above{
-      font-size: 18px;
+      font-size: 16px;
       margin-top: 5px;
     }
   .text-below{
@@ -277,8 +277,8 @@
  /*left and right column*/
   .container1 {
     clear: both;
-      display: flex;
-      flex-direction: row;
+    display: flex;
+    flex-direction: row;
     margin-top: 50px;
     }
 /*left column  */
@@ -342,7 +342,7 @@
 
     .navbar li a {
       display: inline-block;
-        color: black;
+      color: black;
       text-decoration: none;
     }
 
@@ -390,7 +390,7 @@
   .featured-label {
     float: left;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 22px;
 
   }
 
@@ -424,6 +424,12 @@
 .product-category {
 
   flex: 0 0 50%; /* 每个类别占据一半宽度，可以根据需要调整宽度 */
+}
+
+.product-all{
+
+  flex: 0 0 50%; /* 每个类别占据一半宽度，可以根据需要调整宽度 */
+  margin-top:50px;
 }
 
 .product-list {
@@ -504,7 +510,7 @@
   padding: 12px 20px 12px 20px;
   border: solid;
   color: #2d2d2d;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
   border: 1px solid #2d2d2d;
@@ -513,8 +519,8 @@
 .add-button::before {
   content: "";
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   background-image: url("images/icon-plus.jpg"); /* 加号图标的路径 */
   background-repeat: no-repeat;
   background-position: center;
@@ -523,7 +529,7 @@
 }
 .product-description {
   word-break: break-word; /* 让文本根据容器宽度自动换行 */
-  font-size: 18px;
+  font-size: 16px;
   padding-bottom: 10px;
 }
 
@@ -551,10 +557,9 @@
   /* pagination */
   .pagination-center {
     text-align: center;
-      border-radius: 10px;
+    border-radius: 10px;
     /*padding-top: 80px;*/
     padding-top: 80px;
-
     justify-content: center;
 
 
@@ -566,11 +571,10 @@
       align-items: center;
       display: inline-block;
       margin: 0;
-
       border-radius: 35px;
-    border: 1px solid #d6d6d6; /* 添加边框样式 */
-    padding:0 8px 0 8px;
-    font-size: 18px;
+      border: 1px solid #d6d6d6; /* 添加边框样式 */
+      padding:10px;
+      font-size: 18px;
     }
 
 
