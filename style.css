@@ -548,99 +548,77 @@
   }
 
 
+  /* pagination */
+  .pagination-center {
+    text-align: center;
+      border-radius: 10px;
+    padding-top: 80px;
+    justify-content: center;
 
 
-/*.add-button-container {*/
-/*  position: absolute;*/
-/*  bottom: 0;*/
-/*  left: 50%;*/
-/*  transform: translateX(-50%);*/
-/*}*/
-  /*paginatio*/
-  /*.pagination-container {*/
-  /*  display: flex;*/
-  /*  justify-content: center;*/
-  /*  display: flex;*/
-  /*  border: 1px solid #ccc;*/
-  /*  border-radius: 20px;*/
-  /*  padding: 5px;*/
-  /*  border-left: 0;*/
-  /*}*/
+  }
+    .pagination {
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+      align-items: center;
 
-  /*.pagination-container .page-list {*/
-  /*  list-style: none;*/
-  /*  margin: 0;*/
-  /*  padding: 0;*/
-  /*  overflow: hidden;*/
+      margin: 0;
 
-  /*}*/
-
-  /*.pagination-container .page-list li {*/
-  /*  display: inline;*/
-  /*  margin-right: 10px; !* 调整页码之间的右边距 *!*/
-
-  /*}*/
-
-  /*.pagination-container .page-list li a {*/
-  /*  display: inline-block;*/
-  /*  padding: 8px 12px;*/
-  /*  margin: 0 5px;*/
-  /*  text-decoration: none;*/
-  /*  color: black;*/
-  /*}*/
-
-  /*.pagination-container .previous,*/
-  /*.pagination-container .next {*/
-  /*  text-decoration: none;*/
-  /*  color: black;*/
-  /*  padding: 8px 12px;*/
-  /*}*/
-  /*.page-list li:last-child {*/
-  /*  margin-right: 0; !* 最后一个页码无右边距 *!*/
-  /*}*/
-
-
-.pagination-center {
-  text-align: center;
-    border-radius: 10px;
-  padding-top: 80px;
-
+      border-radius: 35px;
+    border: 2px solid #d6d6d6; /* 添加边框样式 */
+    padding:12px 20px 12px 20px;
+    font-size: 18px;
+    }
+.pagination li {
+  flex: 1;
+  margin: 0 10px; /* 设置页码左右的间距 */
 }
-
-.pagination {
-  display: inline-block;
-  border-radius: 35px;
-  border: 2px solid #d6d6d6; /* 添加边框样式 */
-  padding:12px 20px 12px 20px;
-  font-size: 18px;
-
-}
-.pagination .arrow {
-  display: inline-block;
-  padding: 8px 16px;
-  margin: 0 4px;
-}
-.pagination a {
-  color: black;
-  float: left;
-  padding: 8px 16px;
-  width: ;
-  text-decoration: none;
-  /*transition: background-color .3s;*/
-  margin: 0 4px;
-}
-/*.pagination a:hover:not(.active) {*/
-/*  background-color: #ddd;*/
-/*}*/
-
-.pagination a:hover { /* 添加鼠标悬停效果 */
+.pagination li:not(:first-child):not(:last-child) a:hover {
   border: 1px solid black;
-
-}
-.pagination a.active {
-  border: 1px solid #4CAF50;
-  color: black;
 }
 
-/*.pagination a:hover:not(.active) {background-color: #ddd;}*/
+.pagination li:first-child {
+  margin-left: 0; /* 第一个页码不设置左侧间距 */
+}
 
+.pagination li:last-child {
+  margin-right: 0; /* 最后一个页码不设置右侧间距 */
+}
+    /*.pagination li {*/
+    /*  flex: 1;*/
+    /*}*/
+    .pagination .arrow {
+    display: inline-block;
+    padding: 8px 16px;
+    /*margin: 0 4px;*/
+      margin: 0;
+
+    }
+    .pagination li a {
+      display: block;
+      text-align: center;
+      border: 2px solid #d6d6d6;
+  
+      color: black;
+    float: left;
+    padding: 8px 16px;
+    /* width: ; */
+    text-decoration: none;
+    /*transition: background-color .3s;*/
+    /*margin: 0 4px;*/
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 1px;
+      margin-right: 1px;
+    }
+    
+    /*.pagination li a:hover {*/
+    /*  border: 1px solid black;*/
+    /*}*/
+    
+    .pagination li.active a {
+      /* border: 2px solid #4CAF50; */
+      border: 1px solid #4CAF50;
+    color: black;
+    }

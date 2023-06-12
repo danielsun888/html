@@ -1,50 +1,69 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Scrollable Container</title>
-  <style>
-    .container-nav {
-      height: 100px;
-      width: 300px;
-      overflow: auto;
-    }
+<style>
+  .pagination-center {
+  text-align: center;
+    border-radius: 10px;
+  padding-top: 80px;
 
-    .container-nav::-webkit-scrollbar {
-      width: 1px;
-    }
+}
+  .pagination {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 35px;
+  border: 2px solid #d6d6d6; /* 添加边框样式 */
+  padding:12px 20px 12px 20px;
+  font-size: 18px;
+  }
+  
+  .pagination li {
+    flex: 1;
+  }
+  .pagination .arrow {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 0 4px;
+}
+  .pagination li a {
+    display: block;
+    text-align: center;
+    padding: 8px 16px;
+    border: 2px solid #d6d6d6;
 
-    .container-nav::-webkit-scrollbar-track {
-      background-color: #f1f1f1;
-    }
-
-    .container-nav::-webkit-scrollbar-thumb {
-      background-color: #888;
-      width: 3px; /* 设置滚动条滑块的宽度 */
-    }
-
-    .container-nav::-webkit-scrollbar-thumb:hover {
-      background-color: #555;
-    }
+    color: black;
+  float: left;
+  padding: 8px 16px;
+  /* width: ; */
+  text-decoration: none;
+  /*transition: background-color .3s;*/
+  margin: 0 4px;
+  }
+  
+  .pagination li a:hover {
+    border: 1px solid black;
+  }
+  
+  .pagination li.active a {
+    /* border: 2px solid #4CAF50; */
+    border: 1px solid #4CAF50;
+  color: black;
+  }
   </style>
-</head>
-<body>
-  <div class="container-nav">
-    <ul class="navbar" id="navbar">
-      <li><a href="#home">All</a><span>200</span></li>
-      <li><a href="#home">New Arrivals</a><span>23</span></li>
-      <li><a href="#about">Household & Cleaning</a><span>50</span></li>
-      <li><a href="">Health Care</a><span>14</span></li>
-      <li><a href="">Beauty & Personal</a><span>35</span></li>
-      <li><a href="#home">New Arrivals</a><span>23</span></li>
-      <li><a href="#about">Household & Cleaning</a><span>50</span></li>
-      <li><a href="">Health Care</a><span>14</span></li>
-      <li><a href="">Beauty & Personal</a><span>35</span></li>
-      <li><a href="#home">New Arrivals</a><span>23</span></li>
-      <li><a href="#about">Household & Cleaning</a><span>50</span></li>
-      <li><a href="">Health Care</a><span>14</span></li>
-      <li><a href="">Beauty & Personal</a><span>35</span></li>
-      <!-- 更多的列表项... -->
+  
+
+  
+  <div class="pagination-center">
+    <ul class="pagination">
+      <li><a href="#" class="page-number"><img src="images/img-page-prev.jpg"></a></li>
+      <li><a href="#" class="page-number">1</a></li>
+      <li><a href="#" class="page-number">2</a></li>
+      <li><a href="#" class="page-number">3</a></li>
+      <li><a href="#" class="page-number">4</a></li>
+      <li><a href="#" class="page-number">5</a></li>
+      <li><a href="#" class="page-number">6</a></li>
+      <li><a href="#" class="page-number">7</a></li>
+      <li><a href="#" class="page-number"><img src="images/img-page-more.jpg"></a></li>
+      <li><a href="#" class="page-number">20</a></li>
+      <li><a href="#" class="page-number"><img src="images/img-page-next.jpg"></a></li>
     </ul>
   </div>
-</body>
-</html>
