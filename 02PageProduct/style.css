@@ -87,3 +87,47 @@
       border: 1px solid gray; /* 添加黑边框样式 */
       padding: 5px;
 }
+
+.product-details {
+  padding-top: 30px;
+    word-wrap: break-word;
+  overflow-wrap: break-word;
+    display: inline-block;
+  width: 100%;
+}
+
+.product-description {
+  word-break: break-word; /* 让文本根据容器宽度自动换行 */
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+  .original-price {
+    text-decoration: line-through;
+    font-size: 0.9em;
+
+  }
+
+  .discount {
+    color: red;
+    font-size: 0.9em;
+
+  }
+
+  .rating {
+    color: gold;
+  }
+
+  .price {
+    font-size: 1.5em;
+  }
+
+.product-info-row2{
+
+      border: 1px solid gray; /* 添加黑边框样式 */
+}
+  /*trading form*/
+.product-info-row3{
+
+      border: 1px solid black; /* 添加黑边框样式 */
+}
