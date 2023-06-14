@@ -1,0 +1,89 @@
+/*category*/
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.breadcrumb .container {
+  padding: 10px;
+  background-color: white;
+}
+
+.breadcrumb ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  margin:0;
+}
+
+.breadcrumb span {
+  margin: 0 5px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #000;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/*product*/
+.product .container {
+  display: flex;
+}
+
+.product .product-info-row {
+  flex: 1;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+
+ .product-info-row .details-gallery{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+
+}
+ .product-info-row .details-gallery .mySwiper {
+  /* 第一个 div 样式 */
+  margin-bottom: 20px; /* 设置与下一个 div 的间距 */
+       border: 2px solid gray; /* 添加黑边框样式 */
+
+}
+ .product-info-row .details-gallery .mySwiper2 {
+  /* 第一个 div 样式 */
+  margin-top: 20px; /* 设置与下一个 div 的间距 */
+}
+.product-info-row .details-gallery .big-image {
+
+  background-image: url(https://images.ibspot.com/a3992hwojb2jzpdymaad1vr244mf?width=800&amp;height=800&amp;format=jpg);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+  border: black 1px;
+}
+
+ .product-info-row .details-gallery  .small-images {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.product-info-row .details-gallery  .small-images img {
+      width: 100px;
+      height: 80px;
+      margin-right: 10px;
+      border: 1px solid gray; /* 添加黑边框样式 */
+      padding: 5px;
+}
