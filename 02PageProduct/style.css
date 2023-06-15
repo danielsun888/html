@@ -37,7 +37,7 @@
   text-decoration: underline;
 }
 
-/*product*/
+/*next*/
 .product .container {
   display: flex;
 }
@@ -87,7 +87,7 @@
       border: 1px solid gray; /* 添加黑边框样式 */
       padding: 5px;
 }
-/*product-info-row2*/
+/*next-info-row2*/
 .product-info-row2{
 
       border: none; /* 添加黑边框样式 */
@@ -223,7 +223,7 @@
     background-color: white;
     cursor: pointer;
   }
-  /*.product-info-row3 .short-input{*/
+  /*.next-info-row3 .short-input{*/
 
   /*      width: 10px; !* 设置适当的宽度 *!*/
 

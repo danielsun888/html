@@ -1,0 +1,260 @@
+/*category*/
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.breadcrumb .container {
+  padding: 10px;
+  background-color: white;
+}
+
+.breadcrumb ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  margin:0;
+}
+
+.breadcrumb span {
+  margin: 0 5px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #000;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/*next*/
+.product .container {
+  display: flex;
+}
+
+.product-info-row {
+  flex: 1;
+  border: none;
+  padding: 20px;
+}
+
+
+.product-info-row .details-gallery{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.product-info-row .details-gallery .mySwiper {
+  /* 第一个 div 样式 */
+  margin-bottom: 20px; /* 设置与下一个 div 的间距 */
+  border: 2px solid gray; /* 添加黑边框样式 */
+
+}
+.product-info-row .details-gallery .mySwiper2 {
+  /* 第一个 div 样式 */
+  margin-top: 20px; /* 设置与下一个 div 的间距 */
+}
+.product-info-row .details-gallery .big-image {
+
+  background-image: url(https://images.ibspot.com/a3992hwojb2jzpdymaad1vr244mf?width=800&amp;height=800&amp;format=jpg);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+  border: black 1px;
+}
+
+.product-info-row .details-gallery  .small-images {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.product-info-row .details-gallery  .small-images img {
+  width: 100px;
+  height: 80px;
+  margin-right: 10px;
+  border: 1px solid gray; /* 添加黑边框样式 */
+  padding: 5px;
+}
+/*next-info-row2*/
+.product-info-row2{
+
+  border: none; /* 添加黑边框样式 */
+}
+
+.product-info-row2. product-details {
+  padding-top: 30px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: inline-block;
+  width: 100%;
+}
+
+.product-info-row2 .product-description {
+  word-break: break-word; /* 让文本根据容器宽度自动换行 */
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+.product-info-row2 .product-detail-title{
+  color: #000;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.product-info-row2 .stars-wrapper{
+  display: flex;
+
+}
+.product-info-row2 a, a:link, a:visited {
+  text-decoration: none;
+  color: #007185;
+}
+
+.product-info-row2 .original-price {
+  text-decoration: line-through;
+  font-size: 0.9em;
+
+}
+
+.product-info-row2 .discount {
+  color: red;
+  font-size: 0.9em;
+
+}
+
+.product-info-row2.rating {
+  color: gold;
+}
+
+.product-info-row2 .price {
+  font-size: 1.5em;
+}
+.product-info-row2 .date {
+  font-size: 1.2em;
+}
+.product-info-row2 .horizontal-line {
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+  padding-bottom: 50px;
+}
+.product-info-row2 .tooltip{
+
+  display: flex;
+}
+.product-info-row2 .a-button-text{
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  background-color: white;
+  margin: 10px;
+
+}
+.product-info-row2 .specification {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.product-info-row2 .cell {
+  width: 33.33%;
+  padding: 10px;
+}
+
+.product-info-row2 .bold {
+  font-weight: bold;
+}
+/*row3*/
+.product-info-row3{
+
+  border: 1px solid gray; /* 添加黑边框样式 */
+}
+.product-info-row3 .shipping{
+  display: flex;
+  flex-direction: column;
+
+}
+.product-info-row3 .delivery{
+
+  margin: 5px;
+}
+.product-info-row3 .bold{
+  font-size: 1.2em;
+
+
+
+}
+.product-info-row3 .stock-color{
+  color: #ee3f24;
+
+}
+.product-info-row3 .a-link-normal {
+  text-decoration: none;
+  color: #007185;
+}
+
+.product-info-row3 .quantity-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 300px;
+}
+
+.product-info-row3 .quantity-input button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*width: available;*/
+  height: 30px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+/*.next-info-row3 .short-input{*/
+
+/*      width: 10px; !* 设置适当的宽度 *!*/
+
+/*}*/
+
+.product-info-row3 .quantity-input button:hover {
+  background-color: #ebebeb;
+}
+
+.product-info-row3 .quantity-input button:focus {
+  outline: none;
+}
+
+.product-info-row3.quantity-input input {
+  flex-grow: 1;
+  height: 100%;
+  width: 30px;
+  padding: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+}
+
+.product-info-row3 .quantity-label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+.product-info-row3 .quantity-action{
+  display: flex;
+  flex-direction: column;
+
+}
