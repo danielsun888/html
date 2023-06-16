@@ -1,6 +1,6 @@
 // import React from 'react';
 
-function Category({ posts }) {
+function Category() {
     return (
         <div className="breadcrumb">
             <div className="container">
