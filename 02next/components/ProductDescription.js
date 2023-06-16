@@ -4,13 +4,15 @@ import ProductData from '@/data/productData';
 import Category from "@/components/Category";
 import AddToCart from "@/components/addToCart";
 export  default  function ProductDescription( {product }){
-
+    const divStyle = {
+        div:{display:"flex"}
+    };
     if (!product) {
         return <div>Product not found</div>;
     }
 
     return (
-          <div style={{display:"flex"}}>
+          <div style={divStyle.div}>
             <div className="product-info-row">
                 <div className="details-gallery">
                     <div className="mySwiper">
@@ -92,7 +94,7 @@ export  default  function ProductDescription( {product }){
 
                                  <div><span className="color">Color</span></div>
                                  <div className="tooltip">
-                                    <div style={{display:"flex"}}>
+                                    <div style={divStyle.div}>
                                         {product.specs.map((spec, index) => (
                                             <div className="a-button-inner">
                                               <button className="a-button-text" type="button" id="a-autoid-21-announce">

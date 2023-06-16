@@ -1,178 +1,87 @@
-import AddToCart from "@/components/addToCart";
-export default function  Test(){
+const people = [
+    {
+        name: 'Leslie Alexander',
+        email: 'leslie.alexander@example.com',
+        role: 'Co-Founder / CEO',
+        imageUrl:
+            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        lastSeen: '3h ago',
+        lastSeenDateTime: '2023-01-23T13:23Z',
+    },
+    {
+        name: 'Michael Foster',
+        email: 'michael.foster@example.com',
+        role: 'Co-Founder / CTO',
+        imageUrl:
+            'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        lastSeen: '3h ago',
+        lastSeenDateTime: '2023-01-23T13:23Z',
+    },
+    {
+        name: 'Dries Vincent',
+        email: 'dries.vincent@example.com',
+        role: 'Business Relations',
+        imageUrl:
+            'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        lastSeen: null,
+    },
+    {
+        name: 'Lindsay Walton',
+        email: 'lindsay.walton@example.com',
+        role: 'Front-end Developer',
+        imageUrl:
+            'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        lastSeen: '3h ago',
+        lastSeenDateTime: '2023-01-23T13:23Z',
+    },
+    {
+        name: 'Courtney Henry',
+        email: 'courtney.henry@example.com',
+        role: 'Designer',
+        imageUrl:
+            'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        lastSeen: '3h ago',
+        lastSeenDateTime: '2023-01-23T13:23Z',
+    },
+    {
+        name: 'Tom Cook',
+        email: 'tom.cook@example.com',
+        role: 'Director of Product',
+        imageUrl:
+            'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        lastSeen: null,
+    },
+]
+
+export default function Example() {
     return (
-        <div style={{display:"flex"}}>
-            <div className="product-info-row">
-                <div className="details-gallery">
-                    <div className="mySwiper">
-                        <div className="big-image" id="galleryBox">
-                            <a
-                                href="https://images.ibspot.com/a3992hwojb2jzpdymaad1vr244mf?width=800&amp;height=800&amp;format=jpg"
-                            >
-                                <picture>
-                                    <img alt=""
-                                         src="https://images.ibspot.com/a3992hwojb2jzpdymaad1vr244mf?width=600&amp;height=600&amp;format=jpg"/>
-                                </picture>
-
-                            </a>
-
+        <ul role="list" className="divide-y divide-gray-100">
+            {people.map((person) => (
+                <li key={person.email} className="flex justify-between gap-x-6 py-5">
+                    <div className="flex gap-x-4">
+                        <img className="h-12 w-12 flex-none rounded-full bg-gray-50" src={person.imageUrl} alt="" />
+                        <div className="min-w-0 flex-auto">
+                            <p className="text-sm font-semibold leading-6 text-gray-900">{person.name}</p>
+                            <p className="mt-1 truncate text-xs leading-5 text-gray-500">{person.email}</p>
                         </div>
                     </div>
-                    <div className="mySwiper2">
-                        <div className="small-images">
-                            <div className="swiper-slide">
-                                <img
-                                    src="https://images.ibspot.com/a3992hwojb2jzpdymaad1vr244mf?width=100&amp;height=100&amp;format=jpg"
-                                    alt="Small Image 1"/>
+                    <div className="hidden sm:flex sm:flex-col sm:items-end">
+                        <p className="text-sm leading-6 text-gray-900">{person.role}</p>
+                        {person.lastSeen ? (
+                            <p className="mt-1 text-xs leading-5 text-gray-500">
+                                Last seen <time dateTime={person.lastSeenDateTime}>{person.lastSeen}</time>
+                            </p>
+                        ) : (
+                            <div className="mt-1 flex items-center gap-x-1.5">
+                                <div className="flex-none rounded-full bg-emerald-500/20 p-1">
+                                    <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                                </div>
+                                <p className="text-xs leading-5 text-gray-500">Online</p>
                             </div>
-                            <div className="swiper-slide">
-                                <img
-                                    src="https://images.ibspot.com/a3992hwojb2jzpdymaad1vr244mf?width=100&amp;height=100&amp;format=jpg"
-                                    alt="Small Image 1"/>
-                            </div>
-                            <div className="swiper-slide">
-                                <img
-                                    src="https://images.ibspot.com/a3992hwojb2jzpdymaad1vr244mf?width=100&amp;height=100&amp;format=jpg"
-                                    alt="Small Image 1"/>
-                            </div>
-                            <div className="swiper-slide">
-                                <img
-                                    src="https://images.ibspot.com/a3992hwojb2jzpdymaad1vr244mf?width=100&amp;height=100&amp;format=jpg"
-                                    alt="Small Image 1"/>
-                            </div>
-                            <div className="swiper-slide">
-                                <img
-                                    src="https://images.ibspot.com/a3992hwojb2jzpdymaad1vr244mf?width=100&amp;height=100&amp;format=jpg"
-                                    alt="Small Image 1"/>
-                            </div>
-                        </div>
+                        )}
                     </div>
-                </div>
-
-            </div>
-            <div className="product-info-row2">
-                <div className="details-info">
-                    <div className="product-details">
-                        <div className="product-description"><h1 className="product-detail-title">Rugshop Vintage
-                            Distressed Bohemian Runner Rug 2' x 7' Gray</h1></div>
-                        <div className="product-rating1">
-                            <a id="bylineInfo" className="a-link-normal"
-                               href="/stores/Rugshop/page/BBB9F7D5-9545-4CDE-8F39-CA76C7ABF6A8?ref_=ast_bln">Visit the
-                                Rugshop Store</a></div>
-                        <div className="stars-wrapper">
-                            <div className="shop-rating">
-                                <img src="/images/icon_star(on).jpg" />
-                                <img src="/images/icon_star(off).jpg"/>
-                                <img src="/images/icon_star(off).jpg"/>
-                                <img src="/images/icon_star(off).jpg"/>
-                                <img src="/images/icon_star(off).jpg"/>
-                            </div>
-                            <div>(4.8)</div>
-                            <div><a href="#" data-turbolinks="false">182 reviews</a></div>
-                        </div>
-                        <span className="discount">-30%</span>
-                        <span className="price">$29.99</span>
-                        <br />
-                        <span className="original-price">$39.99</span>
-                        <br />
-                        <span className="delivery">Arrives: <span className="date">Wed,June 07-Fri,June 09</span></span>
-                    </div>
-                    <div className="horizontal-line"></div>
-                    <div>
-                        <div><span className="color">Color</span></div>
-                        <div className="tooltip">
-                            <div className="a-button-inner">
-                                <button className="a-button-text" type="button" id="a-autoid-21-announce">
-                                    <div className="">
-                                        <img src="https://m.media-amazon.com/images/I/61kAEWa-CoL._SS36_.jpg" alt="Blue"
-                                             className="imgSwatch"/>
-                                    </div>
-                                    <div className="color-desc">Yellow</div>
-                                </button>
-                            </div>
-                            <div className="a-button-inner">
-                                <button className="a-button-text" type="button" id="a-autoid-21-announce">
-                                    <div className="">
-                                        <img src="https://m.media-amazon.com/images/I/61kAEWa-CoL._SS36_.jpg" alt="Blue"
-                                             className="imgSwatch"/>
-                                    </div>
-                                    <div className="color-desc">Yellow</div>
-                                </button>
-                            </div>
-                            <div className="a-button-inner">
-                                <button className="a-button-text" type="button" id="a-autoid-21-announce">
-                                    <div className="">
-                                        <img src="https://m.media-amazon.com/images/I/61kAEWa-CoL._SS36_.jpg" alt="Blue"
-                                             className="imgSwatch"/>
-                                    </div>
-                                    <div className="color-desc">Yellow</div>
-                                </button>
-                            </div>
-                            <div className="a-button-inner">
-                                <button className="a-button-text" type="button" id="a-autoid-21-announce">
-                                    <div className="">
-                                        <img src="https://m.media-amazon.com/images/I/61kAEWa-CoL._SS36_.jpg" alt="Blue"
-                                             className="imgSwatch"/>
-                                    </div>
-                                    <div className="color-desc">Yellow</div>
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div>
-                        <div><span className="color">About this item</span></div>
-                        <ul className="details-more mb-3">
-                            <li>100% polypropylene machine made area rug with jute backing.
-                            </li>
-                            <li>100% polypropylene machine made area rug with jute backing.
-                            </li>
-                            <li>100% polypropylene machine made area rug with jute backing.
-                            </li>
-                            <li>100% polypropylene machine made area rug with jute backing.
-                            </li>
-                            <li>Easy-to-clean, does not shed - Perfect for high traffic areas of your home, this design
-                                beautifully enhances any room of the home.
-                            </li>
-                            <li>Easy-to-clean, does not shed - Perfect for high traffic areas of your home, this design
-                                beautifully enhances any room of the home.
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="specification">
-                        <div className="row">
-
-                            <div><span className="cell bold">Brand:</span></div>
-                            <div><span className="cell bold">Mpn:</span></div>
-                            <div><span className="cell bold">Size:</span></div>
-                            <div><span className="cell bold">Color:</span></div>
-                            <div><span className="cell bold">Material Type:</span></div>
-                            <div><span className="cell bold">Manufacturer:</span></div>
-                            <div><span className="cell bold">Model:</span></div>
-                            <div><span className="cell bold">Product Dimensions:</span></div>
-                            <div><span className="cell bold">Isin:</span></div>
-                        </div>
-                        <div className="row">
-
-                            <div><span className="cell">Rugshop Store</span></div>
-                            <div><span className="cell ">MON836Gray2*7</span></div>
-                            <div><span className="cell">2*7 Feet</span></div>
-                            <div><span className="cell ">Grey</span></div>
-                            <div><span className="cell">Other</span></div>
-                            <div><span className="cell ">World Rug Gallery</span></div>
-                            <div><span className="cell">Rugshop Vintage</span></div>
-                            <div><span className="cell ">0.31 inches</span></div>
-                            <div><span className="cell">IBSKEV</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <AddToCart />
-        </div>
-
-
+                </li>
+            ))}
+        </ul>
     )
-
-
-
 }
