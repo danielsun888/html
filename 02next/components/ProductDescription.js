@@ -86,28 +86,26 @@ export  default  function ProductDescription( {product }){
                         <span className="delivery">Arrives: <span className="date">Wed,June 07-Fri,June 09</span></span>
                     </div>
                     <div className="horizontal-line"></div>
-                    <div>
-                        <div><span className="color">Color</span></div>
-                        <div className="tooltip">
+
                             {product.specs && (
-                                <div style={{display:"flex"}}>
+                                <div>
 
+                                 <div><span className="color">Color</span></div>
+                                 <div className="tooltip">
+                                    <div style={{display:"flex"}}>
                                         {product.specs.map((spec, index) => (
-
                                             <div className="a-button-inner">
-                                            <button className="a-button-text" type="button" id="a-autoid-21-announce">
-
-                                            <div className="color-desc">    {spec}</div>
-                                            </button>
+                                              <button className="a-button-text" type="button" id="a-autoid-21-announce">
+                                                 <div className="color-desc">    {spec}</div>
+                                               </button>
                                             </div>
                                         ))}
-
+                                     </div>
+                                  </div>
                                 </div>
-                            )}
 
+                                )}
 
-                        </div>
-                    </div>
                     <div>
                         <div><span className="color">About this item</span></div>
                         <ul className="details-more mb-3">
