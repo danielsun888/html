@@ -70,7 +70,7 @@ export  default  function ProductDescription( {product }){
                                href="/stores/Rugshop/page/BBB9F7D5-9545-4CDE-8F39-CA76C7ABF6A8?ref_=ast_bln">Visit the
                                 Rugshop Store</a></div>
                         <div className="stars-wrapper">
-                            <div className="shop-rating">
+                            <div style={divStyle.div}>
                                 <img src="/images/icon_star(on).jpg" />
                                 <img src="/images/icon_star(off).jpg"/>
                                 <img src="/images/icon_star(off).jpg"/>

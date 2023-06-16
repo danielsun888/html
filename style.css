@@ -1,13 +1,39 @@
+/*
+      www.OnlineWebFonts.Com 
+      You must credit the author Copy this link on your web 
+      <div>Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>is licensed by CC BY 3.0</div>
+      OR
+      <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
+*/
+
+@font-face {font-family: "Avenir LT Pro"; 
+  src: url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.eot"); 
+  src: url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.eot?#iefix") format("embedded-opentype"), 
+  url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.woff2") format("woff2"), 
+  url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.woff") format("woff"), 
+  url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.ttf") format("truetype"), 
+  url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.svg#Avenir LT Pro") format("svg"); }
+
+
+.container
+{
+    width: 1548px;
+    margin: 0 auto;
+    padding: 20px;
+    border: none;
+
+  /*width: 50%;*/
+}
+
 /*category*/
 .breadcrumb {
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: 12px;
 }
 
-.breadcrumb .container {
-  padding: 10px;
-  background-color: white;
+.breadcrumb{
+  padding: 6px;
 }
 
 .breadcrumb ul {
@@ -25,12 +51,12 @@
 }
 
 .breadcrumb span {
-  margin: 0 5px;
+  margin: 0 2px;
 }
 
 .breadcrumb a {
   text-decoration: none;
-  color: #000;
+  color: #313131;
 }
 
 .breadcrumb a:hover {
@@ -38,14 +64,15 @@
 }
 
 /*next*/
-.product .container {
+.product .product-container {
   display: flex;
 }
 
  .product-info-row {
   flex: 1;
   border: none;
-  padding: 20px;
+  padding-top: 25px;
+
 }
 
 
@@ -57,8 +84,7 @@
 }
  .product-info-row .details-gallery .mySwiper {
   /* 第一个 div 样式 */
-  margin-bottom: 20px; /* 设置与下一个 div 的间距 */
-       border: 2px solid gray; /* 添加黑边框样式 */
+  border: 1px solid #e6e6e6; /* 添加黑边框样式 */
 
 }
  .product-info-row .details-gallery .mySwiper2 {
@@ -70,8 +96,7 @@
   background-image: url(https://images.ibspot.com/a3992hwojb2jzpdymaad1vr244mf?width=800&amp;height=800&amp;format=jpg);
   background-size: cover;
   background-position: center;
-  margin-bottom: 20px;
-  border: black 1px;
+  border: #e6e6e6 1px;
 }
 
  .product-info-row .details-gallery  .small-images {
@@ -84,7 +109,7 @@
       width: 100px;
       height: 80px;
       margin-right: 10px;
-      border: 1px solid gray; /* 添加黑边框样式 */
+      border: 1px solid #e6e6e6; /* 添加黑边框样式 */
       padding: 5px;
 }
 /*next-info-row2*/
