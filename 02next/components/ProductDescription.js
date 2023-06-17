@@ -1,8 +1,5 @@
 import React from "react";
-import { useRouter } from 'next/router';
-import ProductData from '@/data/productData';
-import Category from "@/components/Category";
-import AddToCart from "@/components/addToCart";
+
 export  default  function ProductDescription( {product }){
     const divStyle = {
         div:{display:"flex"}
@@ -20,10 +17,10 @@ export  default  function ProductDescription( {product }){
                         <div className="product-description"><h1 className="product-detail-title">{product.name}</h1></div>
                         <div className="product-rating1">
                             <a id="bylineInfo" className="a-link-normal"
-                               href="/stores/Rugshop/page/BBB9F7D5-9545-4CDE-8F39-CA76C7ABF6A8?ref_=ast_bln">Visit the
+                               href="">Visit the
                                 Rugshop Store</a></div>
                         <div className="stars-wrapper">
-                            <div style={divStyle.div}>
+                            <div className="flex">
                                 <img src="/images/icon_star(on).jpg" />
                                 <img src="/images/icon_star(off).jpg"/>
                                 <img src="/images/icon_star(off).jpg"/>
@@ -41,7 +38,7 @@ export  default  function ProductDescription( {product }){
                         <span className="delivery">Arrives: <span className="date">Wed,June 07-Fri,June 09</span></span>
                     </div>
                     <div className="horizontal-line"></div>
-
+                    <div>
                             {product.specs && (
                                 <div>
 
@@ -60,6 +57,7 @@ export  default  function ProductDescription( {product }){
                                 </div>
 
                                 )}
+                    </div>
 
                     <div>
                         <div><span className="color">About this item</span></div>

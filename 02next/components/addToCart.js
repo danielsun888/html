@@ -46,8 +46,8 @@ export  default  function AddToCart ()
                         <div className="quantity-input">
                             <span className="quantity-label">quantity:</span>
                             <button id="decrease" onClick={handleMinus}>-</button>
-                            <input type="number" id="quantity" min="0" value={count}         onChange={handleInputChange}
-                                   className="short-input" readOnly/>
+                            <input   type="number" id="quantity" min="0" value={count}         onChange={handleInputChange}
+                                   className="content-center items-center text-center short-input" readOnly/>
                             <button id="increase" onClick={handleAdd}>+</button>
                         </div>
                     </div>

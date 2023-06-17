@@ -25,7 +25,7 @@ export default function ProductPage() {
     return (<div >
             <Category />
 
-               <div style={{display:"flex"}}>
+               <div className="flex">
                    <div>
                    {/*<ProductGallery product={productInfo} style={{ flex: "1" }} />*/}
                    <ProductGallery images={imageData} />;
