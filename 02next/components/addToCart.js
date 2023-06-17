@@ -52,11 +52,11 @@ export  default  function AddToCart ()
                         </div>
                     </div>
                     <div className="quantity-action">
-                        <button name="button" type="submit" className="btn cart-btn add-to-cart-button"
+                        <button name="button" type="submit" className="a-button-text bg-orange-500 rounded-md border-orange-500 text-white"
                                 data-id="616307">
                             Add to Cart
                         </button>
-                        <button name="button" type="submit" className="btn cart-btn add-to-cart-button"
+                        <button name="button" type="submit" className="a-button-text bg-red-950 border rounded-md text-white"
                                 data-id="616307">
                             Buy Now
                         </button>
