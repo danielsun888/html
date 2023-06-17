@@ -53,7 +53,12 @@
 .breadcrumb span {
   margin: 0 2px;
 }
+.breadcrumb .translation_missing
+{
+    color: #000;
 
+
+}
 .breadcrumb a {
   text-decoration: none;
   color: #313131;
