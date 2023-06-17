@@ -11,16 +11,15 @@ export default  function ProductGallery({ images }) {
     };
 
     if (!images) {
-        return <div>Product not found</div>;
+        return <div>Product not found</div>
     }
     return (
         <div className="product-info-row">
             <div className="details-gallery">
                 <div className="mySwiper">
-                    <div className="w-full" id="galleryBox">
+                    <div  id="galleryBox">
                         <a
-                            href="https://images.ibspot.com/a3992hwojb2jzpdymaad1vr244mf?width=800&amp;height=800&amp;format=jpg"
-                        >
+                            href="https://images.ibspot.com/a3992hwojb2jzpdymaad1vr244mf?width=800&amp;height=800&amp;format=jpg" >
                             <picture>
                                 <img src={bigImage} alt=""/>
                             </picture>
