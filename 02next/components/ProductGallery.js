@@ -30,7 +30,7 @@ export default  function ProductGallery({ images }) {
                     </div>
                 </div>
                 <div className="mySwiper2">
-                    <div className="">
+                    <div className="small-images">
                         {images.map((image, index) => (
 
                             <div className="swiper-slide">
