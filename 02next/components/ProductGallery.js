@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import productData from "@/data/productData";
 export default  function ProductGallery({ images }) {
 
-    const [bigImage, setBigImage] = useState(images[0]);
+    const initialImage  =             "/images/img-desc-product-thumbnail.jpg";
+
+    const [bigImage, setBigImage] = useState(initialImage );
 
     const handleImageHover = (image) => {
         setBigImage(image);

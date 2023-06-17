@@ -6,7 +6,10 @@ const ProductData = [
         hasSpecs: true,
         specs: ["Yellow", "Brown", "Green","Red"],
         images: [
-           "/images/img-desc-gallery1.jpg",
+
+            "/images/img-desc-gallery1.jpg",
+
+            "/images/img-desc-gallery1.jpg",
             "/images/img-desc-gallery2.jpg",
         ],
     },
@@ -16,6 +19,11 @@ const ProductData = [
         // 其他产品属性...
         hasSpecs: false,
         images: [
+
+            "/images/img-desc-gallery1.jpg",
+
+            "/images/img-desc-gallery1.jpg",
+
             "/images/img-desc-gallery1.jpg",
             "/images/img-desc-gallery2.jpg",
         ],
