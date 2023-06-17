@@ -7,9 +7,9 @@ const ProductData = [
         specs: ["Yellow", "Brown", "Green","Red"],
         images: [
 
-            "/images/img-desc-gallery1.jpg",
+            "/images/OIG.jpeg",
 
-            "/images/img-desc-gallery1.jpg",
+            "/images/OIG.tqP39JM42.5ZhxR.jpeg",
             "/images/img-desc-gallery2.jpg",
         ],
     },
@@ -20,7 +20,7 @@ const ProductData = [
         hasSpecs: false,
         images: [
 
-            "/images/img-desc-gallery1.jpg",
+            "/images/OIG.tqP39JM42.5ZhxR.jpeg",
 
             "/images/img-desc-gallery1.jpg",
 

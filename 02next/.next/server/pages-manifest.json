@@ -3,5 +3,5 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/product/[id]": "pages/product/[id].js",
-  "/test": "pages/test.js"
+  "/": "pages/index.js"
 }
