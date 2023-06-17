@@ -7,7 +7,7 @@ function Category() {
                 <ul>
                     <li>
                         <a href="/" itemScope="url">
-                            <span itemProp="name">Home</span>
+                            <span className="translation_missing" itemProp="name">Home</span>
                         </a>
                     </li>
                     <li>&gt;</li>

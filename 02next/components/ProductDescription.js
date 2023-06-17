@@ -13,55 +13,45 @@ export  default  function ProductDescription( {product }){
 
     return (
           <div style={divStyle.div}>
-            <div className="product-info-row">
-                <div className="details-gallery">
-                    <div className="mySwiper">
-                        <div className="big-image" id="galleryBox">
-                            <a
-                                href="https://images.ibspot.com/a3992hwojb2jzpdymaad1vr244mf?width=800&amp;height=800&amp;format=jpg"
-                            >
-                                <picture>
-                                    <img alt=""
-                                         src="https://images.ibspot.com/a3992hwojb2jzpdymaad1vr244mf?width=600&amp;height=600&amp;format=jpg"/>
-                                </picture>
+              <div className="product-info-row">
+                  <div className="details-gallery">
+                      <div className="mySwiper">
+                          <div className="big-image" id="galleryBox">
+                              <a
+                                  href="https://images.ibspot.com/a3992hwojb2jzpdymaad1vr244mf?width=800&amp;height=800&amp;format=jpg"
+                              >
+                                  <picture>
+                                      <img alt="" src="/images/img-desc-product-thumbnail.jpg"/>
+                                  </picture>
 
-                            </a>
+                              </a>
 
-                        </div>
-                    </div>
-                    <div className="mySwiper2">
-                        <div className="small-images">
-                            <div className="swiper-slide">
-                                <img
-                                    src="https://images.ibspot.com/a3992hwojb2jzpdymaad1vr244mf?width=100&amp;height=100&amp;format=jpg"
-                                    alt="Small Image 1"/>
-                            </div>
-                            <div className="swiper-slide">
-                                <img
-                                    src="https://images.ibspot.com/a3992hwojb2jzpdymaad1vr244mf?width=100&amp;height=100&amp;format=jpg"
-                                    alt="Small Image 1"/>
-                            </div>
-                            <div className="swiper-slide">
-                                <img
-                                    src="https://images.ibspot.com/a3992hwojb2jzpdymaad1vr244mf?width=100&amp;height=100&amp;format=jpg"
-                                    alt="Small Image 1"/>
-                            </div>
-                            <div className="swiper-slide">
-                                <img
-                                    src="https://images.ibspot.com/a3992hwojb2jzpdymaad1vr244mf?width=100&amp;height=100&amp;format=jpg"
-                                    alt="Small Image 1"/>
-                            </div>
-                            <div className="swiper-slide">
-                                <img
-                                    src="https://images.ibspot.com/a3992hwojb2jzpdymaad1vr244mf?width=100&amp;height=100&amp;format=jpg"
-                                    alt="Small Image 1"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                          </div>
+                      </div>
+                      <div className="mySwiper2">
+                          <div className="small-images">
+                              <div className="swiper-slide">
+                                  <img src="/images/img-desc-gallery1.jpg" alt="Small Image 1" />
+                              </div>
+                              <div className="swiper-slide">
+                                  <img src="/images/img-desc-gallery2.jpg" alt="Small Image 1" />
+                              </div>
+                              <div className="swiper-slide">
+                                  <img src="/images/img-desc-gallery3.jpg" alt="Small Image 1" />
+                              </div>
+                              <div className="swiper-slide">
+                                  <img src="/images/img-desc-gallery3.jpg" alt="Small Image 1" />
+                              </div>
+                              <div className="swiper-slide">
+                                  <img src="/images/img-desc-gallery3.jpg" alt="Small Image 1" />
+                              </div>
+                          </div>
+                      </div>
+                  </div>
 
-            </div>
-            <div className="product-info-row2">
+              </div>
+
+              <div className="product-info-row2">
                 <div className="details-info">
                     <div className="product-details">
                         <div className="product-description"><h1 className="product-detail-title">{product.name}</h1></div>
