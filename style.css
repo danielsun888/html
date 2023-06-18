@@ -71,6 +71,7 @@
 /*next*/
 .product .product-container {
   display: flex;
+  margin-top: 25px;;
 }
 
  .product-info-row {
@@ -92,9 +93,13 @@
   border: 1px solid #e6e6e6; /* 添加黑边框样式 */
 
 }
- .product-info-row .details-gallery .mySwiper2 {
+.product-info-row .mySwiper2 {
   /* 第一个 div 样式 */
   margin-top: 20px; /* 设置与下一个 div 的间距 */
+    display: flex;
+    flex-direction: row;
+
+
 }
 .product-info-row .details-gallery .big-image {
 
@@ -102,6 +107,7 @@
   background-size: cover;
   background-position: center;
   border: #e6e6e6 1px;
+
 }
 
  .product-info-row .details-gallery  .small-images {
@@ -119,7 +125,7 @@
 }
 /*next-info-row2*/
 .product-info-row2{
-  margin-left: 35px;;
+  margin-left: 35px;
 }
 
 .product-info-row2. product-details {
@@ -133,33 +139,33 @@
 .product-info-row2 .product-description {
   word-break: break-word; /* 让文本根据容器宽度自动换行 */
   font-size: 16px;
-  padding-bottom: 10px;
 }
 .product-info-row2 .product-detail-title{
     color: #000;
     font-size: 24px;
     font-weight: 500;
     line-height: 1.2;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 .product-info-row2 .stars-wrapper{
     display: flex;
+    padding-top: 15px;
 
 }
 .product-info-row2 a, a:link, a:visited {
     text-decoration: none;
-    color: #007185;
+    color: #10824b;
+    font-weight: bold;
 }
 
 .product-info-row2 .original-price {
     text-decoration: line-through;
     font-size: 0.9em;
-
   }
 
 .product-info-row2 .discount {
     color: red;
-    font-size: 0.9em;
+    font-size: 2em;
 
   }
 
@@ -168,15 +174,16 @@
   }
 
   .product-info-row2 .price {
-    font-size: 1.5em;
+    font-size: 2em;
   }
   .product-info-row2 .date {
-    font-size: 1.2em;
+    font-size: 0.9em;
+    font-weight: bold;
   }
   .product-info-row2 .horizontal-line {
     border-top: 1px solid #ddd;
     margin-top: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 25px;
   }
   .product-info-row2 .tooltip{
 
@@ -204,6 +211,10 @@
 .product-info-row2 .bold {
     font-weight: bold;
     }
+  
+.option-title {
+  font-weight: bold;
+}
 /*row3*/
 .product-info-row3{
   margin-left: 30px;

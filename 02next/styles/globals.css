@@ -106,6 +106,8 @@
   background-size: cover;
   background-position: center;
   border: #e6e6e6 1px;
+
+
 }
 
 .product-info-row .details-gallery  .small-images {
@@ -120,6 +122,7 @@
   margin-right: 10px;
   border: 1px solid #e6e6e6; /* 添加黑边框样式 */
   padding: 5px;
+
 }
 /*next-info-row2*/
 .product-info-row2{
