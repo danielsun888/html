@@ -18,14 +18,14 @@ export default function ProductPage() {
 
 // Pass the images array to the ProductGallery component
     const divStyle = {
-       div:{display:"flex"}
+       div:{display:"flex",flexDirection:"row"}
      };
     console.log(id,productInfo)
     // 根据产品数据渲染页面
-    return (<div >
+    return (<div   >
             <Category />
 
-               <div className="flex">
+               <div style={divStyle.div}>
                    <div>
                    {/*<ProductGallery product={productInfo} style={{ flex: "1" }} />*/}
                    <ProductGallery images={imageData} />;

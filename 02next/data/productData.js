@@ -7,10 +7,10 @@ const ProductData = [
         specs: ["Yellow", "Brown", "Green","Red"],
         images: [
 
-            "/images/OIG.jpeg",
+            "/images/OIG.jpg",
 
-            "/images/OIG.tqP39JM42.5ZhxR.jpeg",
-            "/images/img-desc-gallery2.jpg",
+            "/images/img-desc-product-thumbnail.jpg",
+
         ],
     },
     {
@@ -20,12 +20,10 @@ const ProductData = [
         hasSpecs: false,
         images: [
 
-            "/images/OIG.tqP39JM42.5ZhxR.jpeg",
+            "/images/img-desc-product-thumbnail.jpg",
 
-            "/images/img-desc-gallery1.jpg",
+            "/images/OIG.jpg",
 
-            "/images/img-desc-gallery1.jpg",
-            "/images/img-desc-gallery2.jpg",
         ],
     }
 ];
