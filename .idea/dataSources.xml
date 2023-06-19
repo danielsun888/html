@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Zeppelin connection" read-only="true" uuid="8fbe9de8-6fec-4b39-879e-37cf44100d32">
+      <synchronize>true</synchronize>
+      <remarks>Wrapper For Zeppelin Spark from Big Data Tools plugin</remarks>
+      <jdbc-driver>com.dbschema.ZeppelinSparkJdbcDriver</jdbc-driver>
+      <jdbc-url>Zeppelin connection@ZeppelinConnections@7629948283060962483</jdbc-url>
+      <jdbc-additional-properties>
+        <property name="connectionId" value="Zeppelin connection@ZeppelinConnections@7629948283060962483" />
+      </jdbc-additional-properties>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>

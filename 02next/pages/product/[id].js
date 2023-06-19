@@ -22,15 +22,14 @@ export default function ProductPage() {
      };
     console.log(id,productInfo)
     // 根据产品数据渲染页面
-    return (<div   >
+    return (<div  className="container">
             <Category />
 
                <div style={divStyle.div}>
                    <div>
                    {/*<ProductGallery product={productInfo} style={{ flex: "1" }} />*/}
-                   <ProductGallery images={imageData} />;
-
-               </div>
+                   <ProductGallery images={imageData} />
+                   </div>
                    <ProductDescription product ={productInfo}/>
                   <AddToCart />
                </div>

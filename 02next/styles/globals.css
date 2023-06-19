@@ -5,6 +5,18 @@
       OR
       <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
 */
+/*@tailwind base;*/
+/*@tailwind components;*/
+/*@tailwind utilities;*/
+
+
+/*
+      www.OnlineWebFonts.Com
+      You must credit the author Copy this link on your web
+      <div>Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>is licensed by CC BY 3.0</div>
+      OR
+      <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
+*/
 
 @font-face {font-family: "Avenir LT Pro";
   src: url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.eot");
@@ -17,10 +29,10 @@
 
 .container
 {
-  width: 1548px;
-  margin: 0 auto;
-  padding: 20px;
-  border: none;
+    width: 1548px;
+    margin: 0 auto;
+    padding: 20px;
+    border: none;
 
   /*width: 50%;*/
 }
@@ -55,7 +67,7 @@
 }
 .breadcrumb .translation_missing
 {
-  color: #000;
+    color: #000;
 
 
 }
@@ -74,7 +86,7 @@
   margin-top: 25px;;
 }
 
-.product-info-row {
+ .product-info-row {
   flex: 1;
   border: none;
   padding-top: 25px;
@@ -82,13 +94,13 @@
 }
 
 
-.product-info-row .details-gallery{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+ .product-info-row .details-gallery{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
 
 }
-.product-info-row .details-gallery .mySwiper {
+ .product-info-row .details-gallery .mySwiper {
   /* 第一个 div 样式 */
   border: 1px solid #e6e6e6; /* 添加黑边框样式 */
 
@@ -96,8 +108,8 @@
 .product-info-row .mySwiper2 {
   /* 第一个 div 样式 */
   margin-top: 20px; /* 设置与下一个 div 的间距 */
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 
 
 }
@@ -110,18 +122,18 @@
 
 }
 
-.product-info-row .details-gallery  .small-images {
+ .product-info-row .details-gallery  .small-images {
   padding-top: 20px;
   display: flex;
   flex-direction: row;
 }
 
 .product-info-row .details-gallery  .small-images img {
-  width: 100px;
-  height: 80px;
-  margin-right: 10px;
-  border: 1px solid #e6e6e6; /* 添加黑边框样式 */
-  padding: 5px;
+      width: 100px;
+      height: 80px;
+      margin-right: 10px;
+      border: 1px solid #e6e6e6; /* 添加黑边框样式 */
+      padding: 5px;
 }
 /*next-info-row2*/
 .product-info-row2{
@@ -130,9 +142,9 @@
 
 .product-info-row2. product-details {
   padding-top: 30px;
-  word-wrap: break-word;
+    word-wrap: break-word;
   overflow-wrap: break-word;
-  display: inline-block;
+    display: inline-block;
   width: 100%;
 }
 
@@ -141,76 +153,76 @@
   font-size: 16px;
 }
 .product-info-row2 .product-detail-title{
-  color: #000;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 1.2;
-  margin-bottom: 10px;
+    color: #000;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 10px;
 }
 .product-info-row2 .stars-wrapper{
-  display: flex;
-  padding-top: 15px;
+    display: flex;
+    padding-top: 15px;
 
 }
 .product-info-row2 a, a:link, a:visited {
-  text-decoration: none;
-  color: #10824b;
-  font-weight: bold;
+    text-decoration: none;
+    color: #10824b;
+    font-weight: bold;
 }
 
 .product-info-row2 .original-price {
-  text-decoration: line-through;
-  font-size: 0.9em;
-}
+    text-decoration: line-through;
+    font-size: 0.9em;
+  }
 
 .product-info-row2 .discount {
-  color: red;
-  font-size: 2em;
+    color: red;
+    font-size: 2em;
 
-}
+  }
 
-.product-info-row2.rating {
-  color: gold;
-}
+  .product-info-row2.rating {
+    color: gold;
+  }
 
-.product-info-row2 .price {
-  font-size: 2em;
-}
-.product-info-row2 .date {
-  font-size: 0.9em;
-  font-weight: bold;
-}
-.product-info-row2 .horizontal-line {
-  border-top: 1px solid #ddd;
-  margin-top: 20px;
-  padding-bottom: 25px;
-}
-.product-info-row2 .tooltip{
+  .product-info-row2 .price {
+    font-size: 2em;
+  }
+  .product-info-row2 .date {
+    font-size: 0.9em;
+    font-weight: bold;
+  }
+  .product-info-row2 .horizontal-line {
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    padding-bottom: 25px;
+  }
+  .product-info-row2 .tooltip{
 
-  display: flex;
-}
-.product-info-row2 .a-button-text{
-  display: flex;
-  align-items: center; /* 垂直居中 */
-  justify-content: center; /* 水平居中 */
-  background-color: white;
-  margin: 10px;
+      display: flex;
+  }
+  .product-info-row2 .a-button-text{
+      display: flex;
+      align-items: center; /* 垂直居中 */
+      justify-content: center; /* 水平居中 */
+      background-color: white;
+            margin: 10px;
 
-}
-.product-info-row2 .specification {
-  display: flex;
-  flex-wrap: wrap;
-}
+  }
+  .product-info-row2 .specification {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
 
 .product-info-row2 .cell {
-  width: 33.33%;
-  padding: 10px;
-}
+    width: 33.33%;
+    padding: 10px;
+  }
 
 .product-info-row2 .bold {
-  font-weight: bold;
-}
+    font-weight: bold;
+    }
 
 .option-title {
   font-weight: bold;
@@ -218,84 +230,84 @@
 /*row3*/
 .product-info-row3{
   margin-left: 30px;
-  border: 1px solid #e4e4e4; /* 添加黑边框样式 */
-  padding:26px;
+      border: 1px solid #e4e4e4; /* 添加黑边框样式 */
+      padding:26px;
 }
 .product-info-row3 .shipping{
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
 }
 .product-info-row3 .delivery{
 
-  margin: 5px;
+    margin: 5px;
 }
 .product-info-row3 .bold{
-  font-size: 1.2em;
+        font-size: 1.2em;
 
 
 
 }
 .product-info-row3 .stock-color{
-  color: #ee3f24;
+    color: #ee3f24;
 
 }
 .product-info-row3 .a-link-normal {
-  text-decoration: none;
-  color: #007185;
+    text-decoration: none;
+    color: #007185;
 }
 
-.product-info-row3 .quantity-input {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  overflow: hidden;
-  width: 300px;
-}
+  .product-info-row3 .quantity-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+      width: 300px;
+  }
 
-.product-info-row3 .quantity-input button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: available;
-  height: 30px;
-  border: none;
-  background-color: white;
-  cursor: pointer;
-}
-/*.next-info-row3 .short-input{*/
+  .product-info-row3 .quantity-input button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: available;
+    height: 30px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+  }
+  /*.next-info-row3 .short-input{*/
 
-/*      width: 10px; !* 设置适当的宽度 *!*/
+  /*      width: 10px; !* 设置适当的宽度 *!*/
 
-/*}*/
+  /*}*/
 
-.product-info-row3 .quantity-input button:hover {
-  background-color: #ebebeb;
-}
+  .product-info-row3 .quantity-input button:hover {
+    background-color: #ebebeb;
+  }
 
-.product-info-row3 .quantity-input button:focus {
-  outline: none;
-}
+  .product-info-row3 .quantity-input button:focus {
+    outline: none;
+  }
 
-.product-info-row3.quantity-input input {
-  flex-grow: 1;
-  height: 100%;
-  width: 30px;
-  padding: 0 10px;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  background-color: transparent;
-  text-align: center;
-}
+  .product-info-row3.quantity-input input {
+    flex-grow: 1;
+    height: 100%;
+      width: 30px;
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+  }
 
-.product-info-row3 .quantity-label {
-  margin-right: 10px;
-  font-weight: bold;
-}
+  .product-info-row3 .quantity-label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
 .product-info-row3 .quantity-action{
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
 }

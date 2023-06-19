@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import productData from "@/data/productData";
 export default  function ProductGallery({ images }) {
 
-    const initialImage  =             "/images/img-desc-product-thumbnail.jpg";
+    const initialImage  =  "/images/img-desc-product-thumbnail.jpg";
 
     const [bigImage, setBigImage] = useState(initialImage );
 
@@ -46,6 +46,6 @@ export default  function ProductGallery({ images }) {
 
         </div>
 
-    );
+    )
 
 }

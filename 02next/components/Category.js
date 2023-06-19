@@ -3,7 +3,7 @@
 function Category() {
     return (
         <div className="breadcrumb">
-            <div className="container">
+            <div >
                 <ul>
                     <li>
                         <a href="/" itemScope="url">

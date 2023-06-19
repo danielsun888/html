@@ -12,4 +12,6 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  purge: ['./components/**/*.js', './pages/**/*.js'], // 根据你的项目结构进行相应的配置
+
 }

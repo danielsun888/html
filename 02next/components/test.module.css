@@ -1,0 +1,9 @@
+/*@import '../../node_modules/tailwindcss/dist/base.min.css';*/
+/*@import '../../node_modules/tailwindcss/dist/components.min.css';*/
+/*@import '../tailwindcss/dist/utilities.min.css';*/
+.container {
+  color: red;
+  font-size: 16px;
+  /* 其他样式属性... */
+
+}
