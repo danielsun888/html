@@ -13,12 +13,9 @@ const Layout = ({ children }) => {
                     gap: "50px" // 设置子元素之间的间距
                 }}>
                     <li>
-                        <Link href="/">index</Link>
+                        <Link href="/">Header</Link>
                     </li>
-                    <li>
-                        <Link href="/chart/">Chart
-                        </Link>
-                    </li>
+
 
                 </ul>
             </header>
@@ -27,7 +24,7 @@ const Layout = ({ children }) => {
                 {children} {/* 这里插入特定页面的内容 */}
             </main>
             <footer>
-                {/* 在这里放置页脚内容 */} contact us
+                {/* 在这里放置页脚内容 */} Footer
             </footer>
         </div>
     );
