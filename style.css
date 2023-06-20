@@ -231,12 +231,15 @@
   .product-info-row2 .specification {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 40px;
   }
 
 
 .product-info-row2 .cell {
     width: 33.33%;
-    padding: 10px;
+    margin-right: 22px;
+    line-height: 20px;
+
   }
 
 .product-info-row2 .bold {
@@ -252,11 +255,15 @@
   padding-bottom: 15px;
   margin-top: 40px;
 }
-.detail-more ul{
+.details-more {
   padding: 0;
   margin: 0;
 }
 
+.details-more li {
+  line-height: 20px;
+  list-style-position: inside;
+}
 
 /*row3*/
 .product-info-row3{
