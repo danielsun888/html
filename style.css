@@ -386,7 +386,8 @@ border-radius: 31px;
     margin-top: 27px;
     padding-top: 17px;
     padding-bottom: 17px;
-        color: white;
+    color: white;
+  font-size: 20px; /* 设置字体大小为 20 像素 */
 
 }
 .product-info-row3 .buy-now-button{
@@ -399,6 +400,8 @@ border-radius: 31px;
     padding-top: 17px;
     padding-bottom: 17px;
     color: white;
+      font-size: 20px; /* 设置字体大小为 20 像素 */
+
 }
 .product-info-row3 #increase {
   margin-right: 30px; /* 设置左边距为10像素 */
