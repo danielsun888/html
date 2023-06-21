@@ -14,6 +14,9 @@
   url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.ttf") format("truetype"),
   url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.svg#Avenir LT Pro") format("svg"); }
 
+body {
+  font-family: sans-serif; /* 将所有字体设置为 sans-serif */
+}
 
 .container
 {
@@ -231,15 +234,17 @@
   .product-info-row2 .specification {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 40px;
+    margin-top: 90px;
   }
-
+.product-info-row2 .specification .row {
+  margin-bottom: 20px; /* 在每个.row的下方添加20像素的下边距 */
+}
 
 .product-info-row2 .cell {
     width: 33.33%;
     margin-right: 22px;
     line-height: 20px;
-
+    margin-bottom: 20px;
   }
 
 .product-info-row2 .bold {
@@ -296,12 +301,14 @@
 }
 
   .product-info-row3 .quantity-input {
+      margin-top: 0px;
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
-    border-radius: 20px;
+    border-radius: 30px;
     overflow: hidden;
       width: 300px;
+      pdding-bottom: 21px;
   }
 
   .product-info-row3 .quantity-input button {
@@ -314,6 +321,7 @@
     border: none;
     background-color: white;
     cursor: pointer;
+      /*margin-right: 33px;*/
   }
   /*.next-info-row3 .short-input{*/
 
@@ -353,7 +361,7 @@ padding-left: 20px;
 
 }
 
-.number-short-input{
+.product-info-row3 .number-short-input{
     /*align-content: center;*/
     /*justify-content: center;*/
       text-align: center; /* 将输入文本居中对齐 */
@@ -368,7 +376,9 @@ border-radius: 31px;
     background-color: orange;
     border: none;
     margin-top: 27px;
-    font-family: sans-serif;
+    padding-top: 17px;
+    padding-bottom: 17px;
+        color: white;
 
 }
 .product-info-row3 .buy-now-button{
@@ -377,6 +387,25 @@ border-radius: 31px;
     height: 64px;
     background-color: darkred;
     border: none;
-    font-family: sans-serif;
  margin-top: 18px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    color: white;
+}
+.product-info-row3 #increase {
+  margin-right: 30px; /* 设置左边距为10像素 */
+}
+.product-info-row3 #decrease {
+  marin-left: 18px; /* 设置左边距为10像素 */
+}
+.product-info-row3 .sold-by{
+
+    margin-top: 90px;
+    margin-bottom: 70px;
+
+}
+.product-info-row3 .h2{
+
+    margin-bottom: 18px;
+
 }
