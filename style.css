@@ -244,30 +244,35 @@ body {
     width: 33.33%;
     margin-right: 22px;
     line-height: 20px;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
+    padding-bottom: 24px;
   }
 
 .product-info-row2 .bold {
     font-weight: bold;
     }
-
-.option-title {
+div.row .row2  {
+  margin-top: 22px; /* 设置上方间距为 22px */
+}
+.product-info-row2 .option-title {
   font-weight: bold;
   padding-bottom: 15px;
 }
-.short-desc-title{
+.product-info-row2 .short-desc-title{
   font-weight: bold;
   padding-bottom: 15px;
   margin-top: 40px;
 }
-.details-more {
+.product-info-row2 .details-more {
   padding: 0;
   margin: 0;
 }
 
-.details-more li {
+.product-info-row2 .details-more li {
   line-height: 20px;
   list-style-position: inside;
+    padding-bottom: 13px; /* 设置下方内边距为 10px */
+
 }
 
 /*row3*/
@@ -366,6 +371,9 @@ padding-left: 20px;
     /*justify-content: center;*/
       text-align: center; /* 将输入文本居中对齐 */
     border:none;
+    /*width:40px;*/
+      width: 50%;
+
 
 
 }
