@@ -1,17 +1,17 @@
 /*
-      www.OnlineWebFonts.Com 
-      You must credit the author Copy this link on your web 
+      www.OnlineWebFonts.Com
+      You must credit the author Copy this link on your web
       <div>Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>is licensed by CC BY 3.0</div>
       OR
       <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
 */
 
-@font-face {font-family: "Avenir LT Pro"; 
-  src: url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.eot"); 
-  src: url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.eot?#iefix") format("embedded-opentype"), 
-  url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.woff2") format("woff2"), 
-  url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.woff") format("woff"), 
-  url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.ttf") format("truetype"), 
+@font-face {font-family: "Avenir LT Pro";
+  src: url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.eot");
+  src: url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.eot?#iefix") format("embedded-opentype"),
+  url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.woff2") format("woff2"),
+  url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.woff") format("woff"),
+  url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.ttf") format("truetype"),
   url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.svg#Avenir LT Pro") format("svg"); }
 
 
@@ -245,7 +245,7 @@
 .product-info-row2 .bold {
     font-weight: bold;
     }
-  
+
 .option-title {
   font-weight: bold;
   padding-bottom: 15px;
@@ -308,8 +308,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: available;
-    height: 30px;
+      border-radius: 32px;
+    width: 230px;
+    height: 64px;
     border: none;
     background-color: white;
     cursor: pointer;
@@ -343,9 +344,39 @@
   .product-info-row3 .quantity-label {
     margin-right: 10px;
     font-weight: bold;
+      font-family: sans-serif;
+padding-left: 20px;
   }
 .product-info-row3 .quantity-action{
     display: flex;
     flex-direction: column;
 
+}
+
+.number-short-input{
+    /*align-content: center;*/
+    /*justify-content: center;*/
+      text-align: center; /* 将输入文本居中对齐 */
+    border:none;
+
+
+}
+.product-info-row3 .add-to-cart-button{
+border-radius: 31px;
+    width:420px;
+    height: 64px;
+    background-color: orange;
+    border: none;
+    margin-top: 27px;
+    font-family: sans-serif;
+
+}
+.product-info-row3 .buy-now-button{
+border-radius: 31px;
+    width:420px;
+    height: 64px;
+    background-color: darkred;
+    border: none;
+    font-family: sans-serif;
+ margin-top: 18px;
 }

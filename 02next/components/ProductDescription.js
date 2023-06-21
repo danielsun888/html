@@ -48,6 +48,8 @@ export  default  function ProductDescription( {product }){
                                         {product.specs.map((spec, index) => (
                                             <div className="a-button-inner">
                                               <button className="a-button-text" type="button" id="a-autoid-21-announce">
+                                                    <div class="select-option-1">
+                                                                    </div>
                                                  <div className="color-desc">    {spec}</div>
                                                </button>
                                             </div>
