@@ -155,6 +155,7 @@ body {
     padding-top: 15px;
 
 }
+
 .product-info-row2 a, a:link, a:visited {
     text-decoration: none;
     color: #10824b;
@@ -205,28 +206,28 @@ body {
 
   }
 
-  /*.select-option-1 {*/
-  /*  width:36px;*/
-  /*  height:36px;*/
-  /*  background-color: #dcd392;*/
-  /*}*/
+  .select-option-1 {
+    width:36px;
+    height:36px;
+    background-color: #dcd392;
+  }
 
-  /*.select-option-2 {*/
-  /*  width:36px;*/
-  /*  height:36px;*/
-  /*  background-color: #d4c1b3;*/
-  /*}*/
+  .select-option-2 {
+    width:36px;
+    height:36px;
+    background-color: #d4c1b3;
+  }
 
-  /*.select-option-3 {*/
-  /*  width:36px;*/
-  /*  height:36px;*/
-  /*  background-color: #cbdb90;*/
-  /*}*/
-  /*.select-option-4 {*/
-  /*  width:36px;*/
-  /*  height:36px;*/
-  /*  background-color: #dc9090;*/
-  /*}*/
+  .select-option-3 {
+    width:36px;
+    height:36px;
+    background-color: #cbdb90;
+  }
+  .select-option-4 {
+    width:36px;
+    height:36px;
+    background-color: #dc9090;
+  }
 
   .option-name{
     padding-left: 10px;
@@ -394,7 +395,7 @@ border-radius: 31px;
 border-radius: 31px;
     width:420px;
     height: 64px;
-    background-color: darkred;
+    background-color: #d51313;
     border: none;
     margin-top: 18px;
     padding-top: 17px;

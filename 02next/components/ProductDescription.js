@@ -28,7 +28,7 @@ export  default  function ProductDescription( {product }){
                                 <img src="/images/icon_star(off).jpg"/>
                             </div>
                             <div>(4.8)</div>
-                            <div><a href="02next/pages#" data-turbolinks="false">182 reviews</a></div>
+                            <div>182 reviews</div>
                         </div>
                         <span className="discount">-30%</span>
                         <span className="price">$29.99</span>
