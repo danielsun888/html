@@ -50,7 +50,7 @@ export  default  function ProductDescription( {product }){
                                               <button className="a-button-text" type="button" id="a-autoid-21-announce">
                                                   <div style={{ width: '36px', height: '36px', backgroundColor: spec }} ></div>
 
-                                                 <div className="color-desc">    {spec}</div>
+                                                 <div  className="option-name">    {spec}</div>
                                                </button>
                                             </div>
                                         ))}
