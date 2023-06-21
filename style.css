@@ -155,6 +155,7 @@ body {
     padding-top: 15px;
 
 }
+
 .product-info-row2 a, a:link, a:visited {
     text-decoration: none;
     color: #10824b;
@@ -394,7 +395,7 @@ border-radius: 31px;
 border-radius: 31px;
     width:420px;
     height: 64px;
-    background-color: darkred;
+    background-color: #d51313;
     border: none;
     margin-top: 18px;
     padding-top: 17px;
