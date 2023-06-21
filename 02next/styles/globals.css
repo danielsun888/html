@@ -5,18 +5,6 @@
       OR
       <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
 */
-/*@tailwind base;*/
-/*@tailwind components;*/
-/*@tailwind utilities;*/
-
-
-/*
-      www.OnlineWebFonts.Com
-      You must credit the author Copy this link on your web
-      <div>Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>is licensed by CC BY 3.0</div>
-      OR
-      <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
-*/
 
 @font-face {font-family: "Avenir LT Pro";
   src: url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.eot");
@@ -26,6 +14,9 @@
   url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.ttf") format("truetype"),
   url("//db.onlinewebfonts.com/t/80ef43d3685d74fc0e7ba8490cd6adc1.svg#Avenir LT Pro") format("svg"); }
 
+body {
+  font-family: sans-serif; /* 将所有字体设置为 sans-serif */
+}
 
 .container
 {
@@ -42,6 +33,7 @@
   display: flex;
   align-items: center;
   font-size: 12px;
+  font-weight: lighter;
 }
 
 .breadcrumb{
@@ -83,7 +75,6 @@
 /*next*/
 .product .product-container {
   display: flex;
-  margin-top: 25px;;
 }
 
  .product-info-row {
@@ -155,7 +146,7 @@
 .product-info-row2 .product-detail-title{
     color: #000;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.2;
     margin-bottom: 10px;
 }
@@ -201,37 +192,94 @@
 
       display: flex;
   }
+
+
   .product-info-row2 .a-button-text{
       display: flex;
       align-items: center; /* 垂直居中 */
       justify-content: center; /* 水平居中 */
       background-color: white;
-            margin: 10px;
+      border: solid #ddd 1px;
+      padding: 12px;
+      margin-right: 15px;
 
+  }
+
+  /*.select-option-1 {*/
+  /*  width:36px;*/
+  /*  height:36px;*/
+  /*  background-color: #dcd392;*/
+  /*}*/
+
+  /*.select-option-2 {*/
+  /*  width:36px;*/
+  /*  height:36px;*/
+  /*  background-color: #d4c1b3;*/
+  /*}*/
+
+  /*.select-option-3 {*/
+  /*  width:36px;*/
+  /*  height:36px;*/
+  /*  background-color: #cbdb90;*/
+  /*}*/
+  /*.select-option-4 {*/
+  /*  width:36px;*/
+  /*  height:36px;*/
+  /*  background-color: #dc9090;*/
+  /*}*/
+
+  .option-name{
+    padding-left: 10px;
   }
   .product-info-row2 .specification {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 90px;
   }
-
+.product-info-row2 .specification .row {
+  margin-bottom: 20px; /* 在每个.row的下方添加20像素的下边距 */
+}
 
 .product-info-row2 .cell {
     width: 33.33%;
-    padding: 10px;
+    margin-right: 22px;
+    line-height: 20px;
+    /*margin-bottom: 20px;*/
+    padding-bottom: 24px;
   }
 
 .product-info-row2 .bold {
     font-weight: bold;
     }
-
-.option-title {
-  font-weight: bold;
+div.row .row2  {
+  margin-top: 22px; /* 设置上方间距为 22px */
 }
+.product-info-row2 .option-title {
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+.product-info-row2 .short-desc-title{
+  font-weight: bold;
+  padding-bottom: 15px;
+  margin-top: 40px;
+}
+.product-info-row2 .details-more {
+  padding: 0;
+  margin: 0;
+}
+
+.product-info-row2 .details-more li {
+  line-height: 20px;
+  list-style-position: inside;
+    padding-bottom: 13px; /* 设置下方内边距为 10px */
+
+}
+
 /*row3*/
 .product-info-row3{
   margin-left: 30px;
-      border: 1px solid #e4e4e4; /* 添加黑边框样式 */
-      padding:26px;
+  border: 1px solid #e4e4e4; /* 添加黑边框样式 */
+  padding:25px;
 }
 .product-info-row3 .shipping{
     display: flex;
@@ -249,7 +297,7 @@
 
 }
 .product-info-row3 .stock-color{
-    color: #ee3f24;
+    color: #871e0e;
 
 }
 .product-info-row3 .a-link-normal {
@@ -258,23 +306,27 @@
 }
 
   .product-info-row3 .quantity-input {
+      margin-top: 0px;
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
-    border-radius: 20px;
+    border-radius: 30px;
     overflow: hidden;
       width: 300px;
+      pdding-bottom: 21px;
   }
 
   .product-info-row3 .quantity-input button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: available;
-    height: 30px;
+      border-radius: 32px;
+    width: 230px;
+    height: 64px;
     border: none;
     background-color: white;
     cursor: pointer;
+      /*margin-right: 33px;*/
   }
   /*.next-info-row3 .short-input{*/
 
@@ -305,9 +357,66 @@
   .product-info-row3 .quantity-label {
     margin-right: 10px;
     font-weight: bold;
+      font-family: sans-serif;
+padding-left: 20px;
   }
 .product-info-row3 .quantity-action{
     display: flex;
     flex-direction: column;
+
+}
+
+.product-info-row3 .number-short-input{
+    /*align-content: center;*/
+    /*justify-content: center;*/
+      text-align: center; /* 将输入文本居中对齐 */
+    border:none;
+    /*width:40px;*/
+      width: 50%;
+
+
+
+}
+.product-info-row3 .add-to-cart-button{
+border-radius: 31px;
+    width:420px;
+    height: 64px;
+    background-color: orange;
+    border: none;
+    margin-top: 27px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    color: white;
+  font-size: 20px; /* 设置字体大小为 20 像素 */
+
+}
+.product-info-row3 .buy-now-button{
+border-radius: 31px;
+    width:420px;
+    height: 64px;
+    background-color: darkred;
+    border: none;
+    margin-top: 18px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    color: white;
+      font-size: 20px; /* 设置字体大小为 20 像素 */
+
+}
+.product-info-row3 #increase {
+  margin-right: 30px; /* 设置左边距为10像素 */
+}
+.product-info-row3 #decrease {
+  marin-left: 18px; /* 设置左边距为10像素 */
+}
+.product-info-row3 .sold-by{
+
+    margin-top: 90px;
+    margin-bottom: 70px;
+
+}
+.product-info-row3 .h2{
+
+    margin-bottom: 18px;
 
 }

@@ -48,8 +48,8 @@ export  default  function ProductDescription( {product }){
                                         {product.specs.map((spec, index) => (
                                             <div className="a-button-inner">
                                               <button className="a-button-text" type="button" id="a-autoid-21-announce">
-                                                    <div class="select-option-1">
-                                                                    </div>
+                                                  <div style={{ width: '36px', height: '36px', backgroundColor: spec }} ></div>
+
                                                  <div className="color-desc">    {spec}</div>
                                                </button>
                                             </div>
@@ -80,32 +80,33 @@ export  default  function ProductDescription( {product }){
                             </li>
                         </ul>
                     </div>
-                    <div className="specification">
-                        <div className="row">
+                    <div class="specification">
+                                    <div class="row">
 
-                            <div><span className="cell bold">Brand:</span></div>
-                            <div><span className="cell bold">Mpn:</span></div>
-                            <div><span className="cell bold">Size:</span></div>
-                            <div><span className="cell bold">Color:</span></div>
-                            <div><span className="cell bold">Material Type:</span></div>
-                            <div><span className="cell bold">Manufacturer:</span></div>
-                            <div><span className="cell bold">Model:</span></div>
-                            <div><span className="cell bold">Product Dimensions:</span></div>
-                            <div><span className="cell bold">Isin:</span></div>
-                        </div>
-                        <div className="row">
+                                        <div class="row2"><span class="cell bold">Brand:</span></div>
+                                        <div class="row2"><span class="cell bold">Mpn:</span></div>
+                                        <div class="row2"><span class="cell bold">Size:</span></div>
+                                        <div class="row2"><span class="cell bold">Color:</span></div>
+                                        <div class="row2"><span class="cell bold">Material Type:</span></div>
+                                        <div class="row2"><span class="cell bold">Manufacturer:</span></div>
+                                        <div class="row2"><span class="cell bold">Model:</span></div>
+                                        <div  class="row2"><span class="cell bold">Product Dimensions:</span></div>
+                                        <div class="row2"><span class="cell bold">Isin:</span></div>
+                                    </div>
+                                    <div class="row">
 
-                            <div><span className="cell">Rugshop Store</span></div>
-                            <div><span className="cell ">MON836Gray2*7</span></div>
-                            <div><span className="cell">2*7 Feet</span></div>
-                            <div><span className="cell ">Grey</span></div>
-                            <div><span className="cell">Other</span></div>
-                            <div><span className="cell ">World Rug Gallery</span></div>
-                            <div><span className="cell">Rugshop Vintage</span></div>
-                            <div><span className="cell ">0.31 inches</span></div>
-                            <div><span className="cell">IBSKEV</span></div>
-                        </div>
+                                        <div  class="row2"><span class="cell">Rugshop Store</span></div>
+                                        <div  class="row2"><span class="cell ">MON836Gray2*7</span></div>
+                                        <div  class="row2"><span class="cell">2*7 Feet</span></div>
+                                        <div  class="row2"><span class="cell ">Grey</span></div>
+                                        <div  class="row2"><span class="cell">Other</span></div>
+                                        <div  class="row2"><span class="cell ">World Rug Gallery</span></div>
+                                        <div  class="row2"><span class="cell">Rugshop Vintage</span></div>
+                                        <div  class="row2"><span class="cell ">0.31 inches</span></div>
+                                        <div  class="row2"><span class="cell">IBSKEV</span></div>
+                                    </div>
                     </div>
+
                 </div>
             </div>
 

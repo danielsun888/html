@@ -47,20 +47,18 @@ export  default  function AddToCart ()
                             <span className="quantity-label">quantity:</span>
                             <button id="decrease" onClick={handleMinus}>-</button>
                             <input   type="number" id="quantity" min="0" value={count}         onChange={handleInputChange}
-                                   className="content-center items-center text-center short-input" readOnly/>
+                                   className="number-short-input" readOnly/>
                             <button id="increase" onClick={handleAdd}>+</button>
                         </div>
                     </div>
-                    <div className="quantity-action">
-                        <button name="button" type="submit" className="a-button-text bg-orange-500 rounded-md border-orange-500 text-white"
-                                data-id="616307">
-                            Add to Cart
-                        </button>
-                        <button name="button" type="submit" className="a-button-text bg-red-950 border rounded-md text-white"
-                                data-id="616307">
-                            Buy Now
-                        </button>
-                    </div>
+                     <div class="quantity-action">
+                                                <button name="button" type="submit" class="add-to-cart-button" data-id="616307">
+                                                  Add to Cart
+                                                </button>
+                                                <button name="button" type="submit" class="buy-now-button" data-id="616307">
+                                                   Buy Now
+                                                </button>
+                     </div>
                     <p className="sold-by small mt-3">
                         Sold by IBSPOT, ships from <span className="ship-from">United States</span>
                     </p>
