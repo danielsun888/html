@@ -38,19 +38,18 @@ export  default  function AddToCart ()
                     </div>
                 </div>
 
-                <div className="details-card-quantity">
-                    <h2 className="stock-color">In Stock</h2>
-                </div>
-                <div className="details-card-quantity" id="quantity_select_and_add_to_cart">
-                    <div className="quantity quantity-select">
+
+                  <div class="details-card-quantity">
+                                         In Stock
+                  </div>
+                <div >
                         <div className="quantity-input">
                             <span className="quantity-label">quantity:</span>
-                            <button id="decrease" onClick={handleMinus}>-</button>
+                            <button className="decrease" onClick={handleMinus}>-</button>
                             <input   type="number" id="quantity" min="0" value={count}         onChange={handleInputChange}
                                    className="number-short-input" readOnly/>
-                            <button id="increase" onClick={handleAdd}>+</button>
+                            <button className="increase" onClick={handleAdd}>+</button>
                         </div>
-                    </div>
                      <div class="quantity-action">
                                                 <button name="button" type="submit" class="add-to-cart-button" data-id="616307">
                                                   Add to Cart
@@ -59,7 +58,7 @@ export  default  function AddToCart ()
                                                    Buy Now
                                                 </button>
                      </div>
-                    <p className="sold-by small mt-3">
+                    <p className="sold-by">
                         Sold by IBSPOT, ships from <span className="ship-from">United States</span>
                     </p>
                 </div>
