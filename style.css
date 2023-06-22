@@ -128,7 +128,7 @@ body {
 }
 /*next-info-row2*/
 .product-info-row2{
-  margin-left: 35px;
+  margin-left: 40px;
 }
 
 .product-info-row2 .product-details {
@@ -159,8 +159,18 @@ body {
     padding-bottom: 10px;;
 }
 
+
 .shop-rating{
-  padding-right: 8px;;
+  padding-right: 8px;
+}
+.rating-grade {
+  padding-right: 5px;
+}
+.rating-reviews a{
+  font-weight: 500;
+  font-size: 1em;
+
+
 }
 .product-info-row2 a, a:link, a:visited {
     text-decoration: none;
@@ -249,9 +259,9 @@ body {
 .product-info-row2 .cell {
     width: 33.33%;
     margin-right: 22px;
-    line-height: 20px;
+    line-height: 16px;
     /*margin-bottom: 20px;*/
-    padding-bottom: 2px;
+    font-size: 0.9em;
   }
 
 /*//ratings*/
@@ -275,9 +285,12 @@ div.row .row2  {
   font-weight: bold;
   padding-bottom: 15px;
 }
+.short-desc {
+  margin-left: 0;
+
+}
 .product-info-row2 .short-desc-title{
   font-weight: bold;
-  padding-bottom: 15px;
   margin-top: 40px;
 }
 .product-info-row2 .details-more {
@@ -286,16 +299,21 @@ div.row .row2  {
     /*text-align: justify;*/
 }
 
+.details-more ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  
+}
 .product-info-row2 .details-more li {
-  line-height: 12px;
-  list-style-position: inside;
-  padding-bottom: 13px; /* 设置下方内边距为 10px */
+  line-height: 20px;
+  list-style-position:inside;
+  list-style-type:disc;
   font-size: 0.9em;
   /*display: inline-block;*/
-  vertical-align: top;
-      text-indent: -1.5em; /* 设置负缩进值，2em 为 2 个单位的缩进距离 */
+  text-indent: -1.5em; /* 设置负缩进值，2em 为 2 个单位的缩进距离 */
   /*word-break: break-all;*/
     overflow-wrap: break-word;
+  
 }
 
 
@@ -303,7 +321,8 @@ div.row .row2  {
 
 /*row3*/
 .product-info-row3{
-  margin-left: 30px;
+  margin-left: 40px;
+  margin-top: 22px;
   border: 1px solid #e4e4e4; /* 添加黑边框样式 */
   padding:15px 25px 25px 25px;
   height: fit-content;
@@ -431,7 +450,7 @@ border-radius: 22px;
   height: 40px;
     background-color: #cc0200;
     border: none;
-    margin-top: 18px;
+    margin-top: 10px;
     padding-bottom: 17px;
     color: white;
     font-size: 1.3em; /* 设置字体大小为 20 像素 */
@@ -448,15 +467,21 @@ border-radius: 22px;
 .product-info-row3 .sold-by{
 
     margin-top: 50px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-size: 0.9em;
 }
 .buyer-protection {
+margin-top: 40px;;
+}
+.buyer-protection-title {
   font-size: 0.9em;
   font-weight: bold;
 }
+
 .buyer-protection p {
   font-weight: normal;
+  margin-top: 5px;
+  font-size: 0.9em;
 }
 .product-info-row3 .h2{
 
