@@ -313,7 +313,7 @@ div.row .row2  {
   color: #942700;
   font-weight: bold;
   font-size: 1.2em;
-  padding-bottom: 25px;  
+  padding-bottom: 25px;
 }
 
 .product-info-row3 .a-link-normal {
@@ -331,8 +331,18 @@ div.row .row2  {
     overflow: hidden;
       width: 150px;
       height: 40px;
-    
+  padding-right: 10px;
   }
+  .product-info-row3 .number-short-input{
+    /*align-content: center;*/
+    /*justify-content: center;*/
+      text-align: center; /* 将输入文本居中对齐 */
+    border:none;
+    width:30px;
+    /*  width: 50%;*/
+
+
+}
 
   .product-info-row3 .quantity-input button {
     display: flex;
@@ -383,17 +393,7 @@ div.row .row2  {
 
 }
 
-.product-info-row3 .number-short-input{
-    /*align-content: center;*/
-    /*justify-content: center;*/
-      text-align: center; /* 将输入文本居中对齐 */
-    border:none;
-    /*width:40px;*/
-      width: 50%;
 
-
-
-}
 .product-info-row3 .add-to-cart-button{
 border-radius: 22px;
     width:260px;
@@ -422,6 +422,7 @@ border-radius: 22px;
 .product-info-row3 #increase {
   margin-right: 10px; /* 设置左边距为15像素 */
   font-size: 1.3em;
+    padding-right: 20px;
 }
 .product-info-row3 #decrease {
   font-size: 1.3em;
