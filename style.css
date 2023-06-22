@@ -254,6 +254,17 @@ body {
     padding-bottom: 2px;
   }
 
+/*//ratings*/
+.product-info-row2 .rating {
+  display: inline-block;
+      white-space: pre; /* 或 white-space: pre-wrap; */
+
+}
+
+/*.product-info-row2 .rating::after {*/
+/*  content: '\t'; !* 设置伪元素的内容为制表符 *!*/
+/*}*/
+
 .product-info-row2 .bold {
     font-weight: bold;
     }
@@ -272,6 +283,7 @@ div.row .row2  {
 .product-info-row2 .details-more {
   padding: 0;
   margin: 0;
+    /*text-align: justify;*/
 }
 
 .product-info-row2 .details-more li {
@@ -279,7 +291,13 @@ div.row .row2  {
   list-style-position: inside;
   padding-bottom: 13px; /* 设置下方内边距为 10px */
   font-size: 0.9em;
+  /*display: inline-block;*/
+  vertical-align: top;
+      text-indent: -1.5em; /* 设置负缩进值，2em 为 2 个单位的缩进距离 */
+  /*word-break: break-all;*/
+    overflow-wrap: break-word;
 }
+
 
 
 
