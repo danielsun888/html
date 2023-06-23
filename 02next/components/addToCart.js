@@ -64,11 +64,8 @@ export  default  function AddToCart ()
                 </div>
             </form>
             <div className="buyer-protection">
-                <div className="buyer-text">
-                    <h2>IBspot Buyer Protection</h2>
-                    <p>Shop confidently on IBspot, receive your item as described or your money back for eligible
-                        orders. </p>
-                </div>
+             <div className="buyer-protection-title"> Buyer Protection</div>
+                <p>Shop confidently on IBspot, receive your item as described or your money back for eligible orders. </p>
             </div>
         </div>
 

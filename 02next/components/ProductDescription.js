@@ -27,8 +27,8 @@ export  default  function ProductDescription( {product }){
                                 <img src="/images/icon_star(off).jpg"/>
                                 <img src="/images/icon_star(off).jpg"/>
                             </div>
-                            <div>(4.8)</div>
-                            <div>182 reviews</div>
+                           <div className="rating-grade">(4.8)</div>
+                            <div className="rating-reviews">182 reviews</div>
                         </div>
                         <span className="discount">-30%</span>
                         <span className="price">$29.99</span>
@@ -61,24 +61,27 @@ export  default  function ProductDescription( {product }){
                                 )}
                     </div>
 
-                    <div>
-                        <div><span className="color">About this item</span></div>
-                        <ul className="details-more   mb-3">
-                            <li>100% polypropylene machine made area rug with jute backing.
-                            </li>
-                            <li>100% polypropylene machine made area rug with jute backing.
-                            </li>
-                            <li>100% polypropylene machine made area rug with jute backing.
-                            </li>
-                            <li>100% polypropylene machine made area rug with jute backing.
-                            </li>
-                            <li>Easy-to-clean, does not shed - Perfect for high traffic areas of your home, this design
-                                beautifully enhances any room of the home.
-                            </li>
-                            <li>Easy-to-clean, does not shed - Perfect for high traffic areas of your home, this design
-                                beautifully enhances any room of the home.
-                            </li>
-                        </ul>
+                       <div className="short-desc">
+                                <div className="short-desc-title">About this item</div>
+                                <div className="details-more">
+                                <ul>
+                                    <li>100% polypropylene machine made area rug with jute backing.
+                                    </li>
+                                    <li>100% polypropylene machine made area rug with jute backing.
+                                    </li>
+                                    <li>100% polypropylene machine made area rug with jute backing.
+                                    </li>
+                                    <li>100% polypropylene machine made area rug with jute backing.
+                                    </li>
+                                    <li>Easy-to-clean, does not shed - Perfect for high traffic areas of your home, this design
+                                        beautifully enhances any room of the home.
+                                    </li>
+                                    <li>Easy-to-clean, does not shed - Perfect for high traffic areas of your home, this design
+                                        beautifully enhances any room of the home.
+                                    </li>
+                                </ul>
+
+                                </div>
                     </div>
                     <div class="specification">
                                     <div class="row">
