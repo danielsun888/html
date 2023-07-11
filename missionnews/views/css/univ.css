@@ -1,0 +1,134 @@
+/* University List */ 
+.uvlist_lmenu {
+	float:left;width:100px;border-right:1px solid #F6F6F6;height:300px;margin-right: 10px;text-align: center;
+}
+.uvlist_lmenu ul {
+	margin-top: 35px;
+}
+.uvlist_lmenu li {
+	padding: 9px 0px;border-bottom: 1px solid #F6F6F6;
+}
+.uvlist_lmenu li a {
+	font-weight: bold;font-size: 10pt;display:block;
+}
+.uvlist_rcont { float: left;width: 560px; }
+.uvlist_rcont h3 { margin-top: 35px;color: #004276;margin-left: 20px;display: inline-block; }
+.uvlist_rcont ul {
+	list-style: disc;margin-top: 5px;padding-left: 35px;clear: both;display: inline-block;width:95%;
+}
+.uvlist_rcont ul li {
+	padding:5px 0px;font-weight:bold;
+}
+.uvlist_rcont ul li.uvlist_region{
+	float:left;width:33%;
+}
+.uvlist_rcont ul li.uvlist_school{
+	float:left;width:50%;
+}
+
+/* UV Detail info */
+.uvd_lmenu { width:130px; }
+.uvd_rcont { width:530px; }
+.uvinfo_detail { padding:23px 15px;box-sizing:border-box }
+.uvinfo_detail .uvgeneral_info {
+	font-size: 13px;font-weight: bold;line-height: 19px;position:relative;min-height:90px;
+}
+.uvinfo_detail .uvgeneral_info img {
+	width:235px;float: left;margin-right: 25px;
+}
+.uvinfo_detail .uvgeneral_info>div {
+	position:absolute;left:260px;top:0px;width: 300px;
+}
+.uvinfo_detail .uvinfo_cont h3 {
+	margin: 0px;color: #1B86DC;font-size: 18px;
+}
+.uvinfo_cont img { max-width:100%; }
+
+.uvinfo_tabmore { border-top:3px solid navy;background-color: #F3F3F3; }
+.uvinfo_tabmore a { padding: 10px;display: inline-block;border-left: 1px solid #E7E9EC;font-weight: bold; }
+.uvinfo_tabmore a:last-child { border-right: 1px solid #E7E9EC; }
+
+/* University Board */
+.unews_table { border-top:3px solid #064374;width: 98%; }
+.unews_table thead td {
+	color:#064374;
+	border-bottom:1px solid #1B86DC;
+	font-size: 14px;
+	padding: 7px 10px;
+	line-height: 20px;
+}
+.unews_table tbody td {
+	border-bottom:1px solid #F6F6F6;
+	color:#323232;
+	padding: 10px 10px;
+	font-size: 13px;
+}
+.unews_table tbody tr:last-child td {
+    border-bottom: 0px;
+}
+.uvpage a { color:#1B86DC; font-weight:bold; font-size:13px; margin:5px; }
+
+
+/* University Board Bottom */
+.uvtab_wrap { width:230px;box-sizing:border-box;float:left;padding: 0px 7px 7px 7px; }
+.unews_mtable {
+    border-top: 3px solid #064374;
+    width: 98%;
+}
+.unews_mtable thead td {
+    color: #064374;
+    font-size: 13px;
+    padding: 7px 1px;
+    line-height: 20px;
+}
+.unews_mtable tbody td {
+    padding: 7px 0px;
+    border-bottom: 1px solid #F6F6F6;
+}
+.unews_mtable tbody tr:first-child td a {
+    font-weight:bold;
+}
+.unews_mtable tbody tr:last-child td {
+    border-bottom: 0px;
+}
+
+.uv_photolist li { box-sizing: border-box;border-bottom: 1px solid #F6F6F6; }
+.uv_photolist li:last-child { border-bottom: 0px; }
+
+
+/* University Board Detail page */
+.uv-postinfo {
+	border-top:3px solid navy;background-color: #F3F3F3;width: 98%;padding: 10px;box-sizing: border-box;margin-bottom: 10px;
+}
+.uv-info-tlt {
+	font-weight:bold;color:navy;margin-right: 10px;
+}
+.uv-info-val {
+	color:black;margin-right: 20px;
+}
+.uv-info-list {
+	font-weight:bold;float: right;color: black;
+}
+.uv-info-list font { font-weight: bold;margin-left: 5px; }
+
+.uv-board-vwrap {
+	width: 98%;padding: 10px;box-sizing: border-box;margin-bottom: 10px;
+}
+.uv-board-vtext {
+	line-height: 28px;color: black;margin-top: 24px;margin-bottom: 23px;
+}
+
+/* University Media list */
+.uv-media-wrap { float:left;width:213px;margin-bottom:30px; }
+.uv-media-wrap img { width:100%; }
+.uv-media-wrap p { font-weight: bold;font-size: 12pt;line-height: 22px;color: #064374; }
+
+.uvmedia_player object , .uvmedia_player iframe { width:90%;display:block;margin:5px auto 10px; }
+
+
+.ulist_selected {
+    color: #1B86DC;
+    background: url(../images/univ_mselected.png) right 50% no-repeat;
+    font-weight: bold;
+    display: block;
+}

@@ -1,0 +1,705 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>선교신문</title>
+<meta name="Title" content="선교신문"><meta name="Keywords" content="meta keyword"><meta name="Description" content="Meta description"><meta name="Subject" content="missionews.co.kr">	<meta name="robots" content="index, follow">
+	<!-- meta name="Googlebot-news" content="index, follow" -->
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/views/images/2020/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/views/images/2020/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/views/images/2020/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="/views/images/2020/favicon_io/site.webmanifest">
+
+
+<link rel="stylesheet" href="/views/css/2023/slick.css?ver=1">
+<link rel="stylesheet" href="/views/css/2023/grid.css?ver=2">
+<link rel="stylesheet" href="/views/css/2023/common.css?ver=1.0">
+<link rel="stylesheet" href="/views/css/2023/homepage.css?ver=1">
+<!-- scripts begin -->
+<script type="text/javascript" src="/views/js/2020/jquery-3.4.0.min.js"></script>
+<script type="text/javascript" src="/views/js/2020/slick.min.js"></script>
+<script type="text/javascript" src="/views/js/2020/jquery.sticky-kit.js"></script>
+<script type="text/javascript" src="/views/js/2020/scripts.js?ver=1.2"></script>
+<!-- HTML5 element support for IE6-8 -->
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+<link rel="stylesheet" media="screen" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
+<link rel="stylesheet" media="screen" href="//fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+<script type="text/javascript">
+_current_device_type='computer';
+_current_is_ios='0';
+_current_ad_cats='';
+_current_ad_keywords='';
+</script>
+
+<script>
+              var roller = {
+                  rollDiv: new Object(),
+
+                  previousDiv: function(id) {
+                      if (typeof(roller.rollDiv[id]) == 'undefined') roller.newRolling(id);
+                      else if (roller.rollDiv[id].timeId) roller.stopRolling(id);
+
+                      var idx = roller.rollDiv[id].current;
+                      document.getElementById("rollDiv" + id + idx).style.display = 'none';
+                      idx = (idx - 1 < 0) ? roller.rollDiv[id].total : idx - 1;
+                      document.getElementById("rollDiv" + id + idx).style.display = 'block';
+                      roller.rollDiv[id].current = idx;
+                      if (roller.rollDiv[id].term > 0) roller.startRolling(id);
+                  },
+
+                  nextDiv: function(id) {
+                      if (typeof(roller.rollDiv[id]) == 'undefined') roller.newRolling(id);
+                      else if (roller.rollDiv[id].timeId) roller.stopRolling(id);
+
+                      var idx = roller.rollDiv[id].current;
+                      document.getElementById("rollDiv" + id + idx).style.display = 'none';
+                      if (idx + 1 > roller.rollDiv[id].total && roller.rollDiv[id].pa) {
+                          var nidx = parseInt(id.substr(id.length - 1));
+                          nidx = (nidx + 1 > roller.rollDiv[roller.rollDiv[id].pa].total) ? 0 : nidx + 1;
+                          var nid = id.substr(0, id.length - 1) + nidx;
+                          roller.nextDiv(roller.rollDiv[id].pa);
+                          roller.newRolling(nid, roller.rollDiv[id].term, roller.rollDiv[id].pa);
+                          roller.rollDiv[id].term = 0;
+                      }
+                      idx = (idx + 1 > roller.rollDiv[id].total) ? 0 : idx + 1;
+                      document.getElementById("rollDiv" + id + idx).style.display = 'block';
+                      roller.rollDiv[id].current = idx;
+                      if (roller.rollDiv[id].term > 0) roller.startRolling(id);
+                  },
+
+                  gotoDiv: function(id, idx) {
+                      if (typeof(roller.rollDiv[id]) == 'undefined') roller.newRolling(id);
+                      else if (roller.rollDiv[id].timeId) roller.stopRolling(id);
+
+                      document.getElementById("rollDiv" + id + roller.rollDiv[id].current).style.display = 'none';
+                      document.getElementById("rollDiv" + id + idx).style.display = 'block';
+                      roller.rollDiv[id].current = idx;
+                      if (roller.rollDiv[id].term > 0) roller.startRolling(id);
+                  },
+
+                  newRolling: function() {
+                      var id = arguments[0];
+                      var term = (arguments[1]) ? arguments[1] : 0;
+                      var pa = (arguments[2]) ? arguments[2] : '';
+                      for (var i = 0; document.getElementById("rollDiv" + id + i) != null; i++);
+                      roller.rollDiv[id] = new Object();
+                      roller.rollDiv[id].total = i - 1;
+                      roller.rollDiv[id].current = 0;
+                      roller.rollDiv[id].term = term;
+                      roller.rollDiv[id].timeId = 0;
+                      roller.rollDiv[id].pa = pa;
+                      if (term > 0) roller.startRolling(id);
+                      //if(pa) roller.newRolling(pa);
+                  },
+
+                  stopRolling: function(id) {
+                      clearTimeout(roller.rollDiv[id].timeId)
+                  },
+
+                  startRolling: function(id) {
+                      roller.rollDiv[id].timeId = setTimeout("roller.nextDiv('" + id + "')", roller.rollDiv[id].term);
+                  },
+
+                  autoSet: function() {
+                      var imgs = document.getElementsByTagName("img");
+                      var anchors = document.getElementsByTagName("a");
+                      roller.regRolling(imgs);
+                      roller.regRolling(anchors);
+                  },
+
+                  regRolling: function(obj) {
+                      var i = 0;
+                      for (i = 0; i < obj.length; i++) {
+                          if (obj[i].getAttribute("rolling")) {
+                              var oid = obj[i].getAttribute("rolling");
+                              var alt = obj[i].getAttribute("alt");
+                              var timeset = obj[i].getAttribute("timeset");
+                              if (alt.substr(0, 2) == "이전" || alt.substr(0, 2).toUpperCase() == "PR") {
+                                  obj[i].setAttribute("onclick", "roller.previousDiv('" + oid + "');");
+                              } else {
+                                  obj[i].setAttribute("onclick", "roller.nextDiv('" + oid + "');");
+                              }
+                              if (timeset != null) roller.newRolling(oid, timeset);
+                          }
+                      }
+                  }
+
+              }
+              </script>
+	
+<!-- gpt head -->
+<script async="" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+window.googletag = window.googletag || {cmd: []};
+googletag.cmd.push(function() {
+    googletag.pubads().collapseEmptyDivs();
+    googletag.defineSlot('/112584932/missionews.co.kr', [[728, 90]], 'gpt-ad-top').setTargeting("pos", ["top"]).setCollapseEmptyDiv(true, true).addService(googletag.pubads());
+    googletag.defineSlot('/112584932/missionews.co.kr', [[300, 250]], 'gpt-ad-right1').setTargeting("pos", ["right1"]).setCollapseEmptyDiv(true, true).addService(googletag.pubads());
+    googletag.defineSlot('/112584932/missionews.co.kr', [[300, 250]], 'gpt-ad-right2').setTargeting("pos", ["right2"]).setCollapseEmptyDiv(true, true).addService(googletag.pubads());
+    googletag.defineSlot('/112584932/missionews.co.kr', [[300, 250]], 'gpt-ad-right3').setTargeting("pos", ["right3"]).setCollapseEmptyDiv(true, true).addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+});
+</script>
+<!--// gpt head -->
+
+
+
+<meta http-equiv="origin-trial" content="A7CQXglZzTrThjGTBEn1rWTxHOEtkWivwzgea+NjyardrwlieSjVuyG44PkYgIPGs8Q9svD8sF3Yedn0BBBjXAkAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A3vKT9yxRPjmXN3DpIiz58f5JykcWHjUo/W7hvmtjgh9jPpQgem9VbADiNovG8NkO6mRmk70Kex8/KUqAYWVWAEAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A4A26Ymj79UVY7C7JGUS4BG1s7MdcDokAQf/RP0paks+RoTYbXHxceT/5L4iKcsleFCngi75YfNRGW2+SpVv1ggAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><script src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202307060101/pubads_impl.js?cb=31075866" async=""></script></head>
+
+<body><header class="ph">
+  <div class="topbar">
+    <div class="container-fluid flex-sm jc-sb">
+      <div class="f1">
+        세계시각 : <iframe src="/views/world_time.php" frameborder="0" scrolling="no" style="margin-top: -11px;padding: 0px;width:250px;height: 25px;position: relative;"></iframe>
+        <!-- <div style="padding-top:7px; padding-right:0px; padding-left:60px; color:#ebf1fc; font-size:11px;">
+        <a href="http://search.naver.com/search.naver?sm=tab_hty&where=nexearch&query=%BC%BC%B0%E8%BD%C3%B0%A2">세계시각 : </a><iframe src="/views/world_time.php" frameborder="0"></iframe></div> -->
+      </div>
+      <ul class="links flex-sm jc-c">
+        <li><a href="javascript:;" onclick="bookMark(this,'https://missionews.co.kr');">선교신문을 시작 페이지로</a></li>
+        <li><a href="mailto:missionews777@gmail.com">기사제보</a></li>
+        <li><a href="mailto:missionews777@gmail.com">후원문의</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="middle flex-sm container-fluid jc-sb">
+    <div class="fn">
+      <!--<img src="/views/images/2020/ad1.jpg">-->
+	  <ul class="meta container-fluid flex-xs row">
+        <li class="col-xs-6 tl_l">2023.07.10(월)</li>
+      </ul>
+    </div>
+    <div class="f1 ta-c">
+      <a class="logo" href="/"></a>
+    </div>
+    <div class="fn">
+		<ul class="meta container-fluid flex-xs row">
+			<li class="col-xs-12 tl_l"><a href="#">신문구독 |</a></li>
+			<li class="col-xs-12 tl_l"><a href="#">中文 |</a></li>
+			<li class="col-xs-12 tl_l"><a href="#">English |</a></li>
+			<li class="col-xs-12 tl_l"><a href="#">日本語</a></li>
+      </ul>
+      <!--<a href="https://coupa.ng/bFjTRX" target="_blank"><img src="/views/images/2020/ad2.jpg"></a>-->
+    </div>
+  </div>
+  <nav class="pn">
+    <div class="container flex-sm ai-c jc-sb">
+      <button class="btn-menu"></button>
+      <div class="f1 menu">
+        <ul class="container-fluid flex-sm">
+          <li><a href="/archives">전체기사</a></li>
+          <li><a href="/sections/news">뉴스</a></li>
+          <li><a href="/sections/special">기획</a></li>
+          <li><a href="/sections/column">사설/칼럼</a></li>
+          <li><a href="/sections/book">추천서적</a></li>
+          <li><a href="/sections/resources">자료실</a></li>
+        </ul>
+        <button class="btn-close"></button>
+      </div>
+      <button class="btn-search"></button>
+      <form action="/search" method="get" id="searchform">
+        <input type="text" name="q" class="form-text" placeholder="Search...">
+        <input type="submit" class="form-submit" value="Search">
+      </form>
+    </div>
+  </nav>
+</header>
+
+<script>
+function bookMark(Obj,urlStr){if(document.all && window.external){Obj.style.behavior='url(#default#homepage)';Obj.setHomePage(urlStr);}else{alert('CTRL+D를 누르시면 북마크가 가능합니다.');}}
+</script>   
+<main>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-9 col-l ">
+        <div class="row">
+          <!-- headline -->
+          <div class="col-sm-12">
+			<div class="feature"><div class="title"><a href="https://missionews.co.kr/news/584356" class="art_created_at" data-date="2023-07-09 07:58:14">“한국교회와 선교, 코로나 이후 부흥과 갱신 어떻게?”</a></div>
+				<div class="fn col-sm-7">
+					<figure class="m_ban"><a href="https://missionews.co.kr/news/584356"><img src="https://missionews.co.kr/data/images/full/16460/4.jpg" alt=""></a></figure>
+				</div>
+				<div class="col-sm-5">
+                  <summary>“한국교회는 ‘자기중심성’이라는 심각한 병에 걸려 있다. 자기중심성에서부터 형식주의, 권위주의, 세속주의가 파생된다. 이러한 모든 문제는 방향성을 ‘하나님 중심성’, ‘타자 지향성’으로 바꿀 때만 극복할 수 있다.” 코로나 사태를 지나며 한국교회는 코로나 사태를 지나며 한국교회는 사회적 비판과 신뢰도 감소라는 외적 도전에 의한 심각한 위기를 경험했다. 그러나 외부 비판에 의한 위기 역시 사실상 누적된 한국교회의 각종 병폐가 ‘봇물’처럼 터져 나온...</summary>
+				<ul class="related">
+                    <li><a href="https://missionews.co.kr/news/584350" class="art_created_at" data-date="2023-06-30 16:32:29">한직선·직선대·미주 장신대, 최초로 직장선교사 공동 임명 및 파송한다</a></li>
+					<li><a href="https://missionews.co.kr/news/584350" class="art_created_at" data-date="2023-06-30 16:32:29">한직선·직선대·미주 장신대, 최초로 직장선교사 공동 임명 및 파송한다</a></li>
+                </ul>
+			   </div>
+			</div>
+           	<div class="subfeature">
+			 <div class="col-sm-7">
+			  <div class="title"><a href="https://missionews.co.kr/news/584353" class="art_created_at" data-date="2023-07-05 14:17:34">중국, ‘온라인 DB’로 공인 성직자와 가정교회 지도자들에 대한 압박 강화</a></div>
+              <div class="flex-xs">
+                <div class="fn">
+                  <figure><a href="https://missionews.co.kr/news/584353"><img src="https://missionews.co.kr/images/data/md_p.jpg" alt="중국이 새로운 온라인 데이터베이스(DB)를 활용해 합법적인 종교 성직자들과 기독교 가정교회 지도자들에 대한 감시와 압박을 강화하고 있다고 한국..."></a></figure>
+                </div>
+                <div class="f1">
+                  <summary>중국이 새로운 온라인 데이터베이스(DB)를 활용해 합법적인 종교 성직자들과 기독교 가정교회 지도자들에 대한 감시와 압박을 강화하고 있다고 한국오…</summary>
+                </div>
+              </div>
+             </div>
+			 <div class="col-sm-5 bd-l">
+			   <div class="flex-xs">
+                <div class="f1">
+                  <div class="title_s"><a href="https://missionews.co.kr/news/584353" class="art_created_at" data-date="2023-07-05 14:17:34">“‘안녕’이 굿바이(Good bye)가 아닌 헬로(Hello)가...</a></div>
+                </div>
+			 	<div class="fn">
+                  <figure><a href="https://missionews.co.kr/news/584353"><img src="https://missionews.co.kr/images/data/sp1.jpg" alt=""></a></figure>
+                </div>
+               </div>
+			   <div class="flex-xs">
+                <div class="f1">
+                  <div class="title_s"><a href="https://missionews.co.kr/news/584353" class="art_created_at" data-date="2023-07-05 14:17:34">“‘안녕’이 굿바이(Good bye)가 아닌 헬로(Hello)가...</a></div>
+                </div>
+			 	<div class="fn">
+                  <figure><a href="https://missionews.co.kr/news/584353"><img src="https://missionews.co.kr/images/data/sp2.jpg" alt=""></a></figure>
+                </div>
+               </div>
+			   <div class="flex-xs">
+                <div class="f1">
+                  <div class="title_s"><a href="https://missionews.co.kr/news/584353" class="art_created_at" data-date="2023-07-05 14:17:34">“‘안녕’이 굿바이(Good bye)가 아닌 헬로(Hello)가...</a></div>
+                </div>
+			 	<div class="fn">
+                  <figure><a href="https://missionews.co.kr/news/584353"><img src="https://missionews.co.kr/images/data/sp1.jpg" alt=""></a></figure>
+                </div>
+               </div>
+			 </div>
+			</div>
+<table align="center" style="margin:20px auto 0;width:100%;background:#f6f6f6;padding:0px;">
+					<tbody><tr>
+						<td style="text-align:center;">
+							<div class="bn"><a href="https://missionews.co.kr/news/583032" target="_blank"><img src="/data/ad_banner/image_1626400504.gif"></a></div>						</td>
+					</tr>
+				</tbody></table>
+			  <div class="container-fluid">
+    <div class="row">
+            <ul class="feature-list"><li class="flex-xs"><div class="fn"><figure><a href="https://missionews.co.kr/news/584355"><img src="https://missionews.co.kr/data/images/full/16450/2023-4-korea.jpg?w=145&amp;h=85&amp;l=50&amp;t=40" alt=""></a></figure></div><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/584355" class="art_created_at" data-date="2023-07-06 23:55:27">“교회개척 불가능한 시대 아냐… 한국교회 생태계 알고 선교적 교회 세워야”</a></div><summary>한국선교신학회와 세뛰새KOREA가 최근 서울 구로 연세중앙교회에서 제4차 공동포럼을 열고, 코로나 이후 한국 생태계에 맞는 선교적 교회로의 근본적 …</summary>
+    </div></li>
+  <li class="flex-xs"><div class="fn"><figure><a href="https://missionews.co.kr/news/584354"><img src="https://missionews.co.kr/data/images/full/16449/2023-1.jpg?w=145&amp;h=85&amp;l=50&amp;t=40" alt=""></a></figure></div><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/584354" class="art_created_at" data-date="2023-07-05 16:19:59">통일소망선교회 “복음통일 위해 한국교회와 함께 뛰겠다”</a></div><summary>복음통일을 준비하는 초교파 선교단체인 통일소망선교회가 ‘2023 제1회 통일소망의 밤’을 열어 후원 교회 목회자, 성도들에게 그동안의 사역 열매와 …</summary>
+    </div></li>
+  <li class="flex-xs"><div class="fn"><figure><a href="https://missionews.co.kr/news/584351"><img src="https://missionews.co.kr/data/images/full/16417/103.jpg?w=145&amp;h=85&amp;l=49&amp;t=47" alt=""></a></figure></div><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/584351" class="art_created_at" data-date="2023-07-02 18:09:49">“이웃과 세계 위해 구원의 복음 전해야”</a></div><summary>세계선교연대(세선연, 대표 최요한 목사)가 1일 서울 명동 서울프린스호텔 컨벤션홀 2층에서 제103차 세계선교연대포럼을 성황리에 마쳤다. 한희성 장…</summary>
+    </div></li>
+  <li class="flex-xs"><div class="fn"><figure><a href="https://missionews.co.kr/news/584346"><img src="https://missionews.co.kr/data/images/full/16405/2023.jpg?w=145&amp;h=85&amp;l=48&amp;t=46" alt=""></a></figure></div><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/584346" class="art_created_at" data-date="2023-06-29 18:18:27">2023 그레이트커미션 선교대회 “청년들을 예수 생명의 복음으로 일으키자!”</a></div><summary>다음세대 및 청년 세대를 일으켜 한국교회 부흥을 이끌고 세계 복음화를 앞당기기 위한 ‘2023 그레이트커미션 선교대회’가 오는 8월 3일부터 5일까지 …</summary>
+    </div></li>
+  <li class="flex-xs"><div class="fn"><figure><a href="https://missionews.co.kr/news/584343"><img src="https://missionews.co.kr/data/images/full/16398/image.jpg?w=145&amp;h=85&amp;l=48&amp;t=43" alt=""></a></figure></div><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/584343" class="art_created_at" data-date="2023-06-28 20:57:59">인도 마니푸르주 박해로 기독교 난민 5만 명 발생… 식량 위기 심각</a></div><summary>인도 동북부 마니푸르주에서 지난 5월 초부터 발생한 박해로 기독교 소수부족 난민이 약 두 달 만에 5만 명 수준으로 급증했다. 힌두 소수부족인 메이…</summary>
+    </div></li>
+			  </ul>
+				  </div>
+			  </div>
+			  
+	<div class="container-fluid">
+    <div class="row">
+	<div class="block mid">
+		<div class="title ta-c">이슈·추천기사</div>
+  			<div class="row flex-xs flex-wrap">
+              <article class="col-xs-6 col-sm-3">
+				  <figure><a href="https://www.christiandaily.co.kr/news/126563"><img src="https://images.christiandaily.co.kr/data/images/full/106792/ccc.jpeg?w=260&amp;h=161&amp;l=50&amp;t=40" alt=""></a></figure><h5><a href="https://www.christiandaily.co.kr/news/126563" class="art_created_at" data-date="2023-07-08 09:35:42">CCC, 8천여 명 모였던 여름수련회 폐막… ‘은혜의 단비’</a></h5>
+				  <summary>한국CCC의 전국대학생여름수련회 ‘JESUS COMMUNITAS’가 최근 막을 내렸다. 전북 무주 덕유산리조트에서 열린 이번 ..<span class="author"><a href="#">이상진 기자</a></span></summary></article>
+				<article class="col-xs-6 col-sm-3">
+					<figure><a href="https://www.christiandaily.co.kr/news/126560"><img src="https://images.christiandaily.co.kr/data/images/full/101131/image.jpg?w=260&amp;h=161&amp;l=50&amp;t=40" alt=""></a></figure><h5><a href="https://www.christiandaily.co.kr/news/126560" class="art_created_at" data-date="2023-07-07 16:39:30">헤리티지 매스콰이어, ‘시편 150 프로젝트’ 첫 번째 싱글 앨범 발매</a></h5><summary>시편 1편부터 150편까지, 모든 시편을 한달에 1편씩 찬양으로 제작하는 기획인 ‘시편 150 프로젝트’의 첫번째 싱..<span class="author"><a href="#">조성호 기자</a></span></summary></article>
+				<article class="col-xs-6 col-sm-3"><figure><a href="https://www.christiandaily.co.kr/news/126489"><img src="https://images.christiandaily.co.kr/data/images/full/106633/image.jpg?w=260&amp;h=161&amp;l=51&amp;t=59" alt=""></a></figure><h5><a href="https://www.christiandaily.co.kr/news/126489" class="art_created_at" data-date="2023-07-06 06:56:38">“교사가 곧 미디어, 아이들에게 좋은 신앙의 본 보여야”</a></h5>
+					<summary>2023 청소년사역 컨퍼런스가 서울 용산구 소재 신용산교회(담임 오원석 목사)에서 3일부터 5일까지 열린 가운데, 5..<span class="author"><a href="#">노형구 기자</a></span></summary></article>
+				<article class="col-xs-6 col-sm-3"><figure><a href="https://www.christiandaily.co.kr/news/126522"><img src="https://images.christiandaily.co.kr/data/images/full/106739/image.jpg?w=260&amp;h=161&amp;l=50&amp;t=40" alt=""></a></figure><h5><a href="https://www.christiandaily.co.kr/news/126522" class="art_created_at" data-date="2023-07-06 17:42:34">“7월 임시국회서 보호출산제 통과돼야”</a></h5>
+					<summary>전국입양가족연대를 중심으로 90개 시민단체가 모여 만든 ‘보호출산법 시민연대’(이하 시민연대)가 6일 오후 ..<span class="author"><a href="#">최승연 기자</a></span></summary></article>
+				<article class="col-xs-6 col-sm-3"><figure><a href="https://www.christiandaily.co.kr/news/126519"><img src="https://images.christiandaily.co.kr/data/images/full/106704/1.jpg?w=260&amp;h=161&amp;l=50&amp;t=40" alt=""></a></figure><h5><a href="https://www.christiandaily.co.kr/news/126519" class="art_created_at" data-date="2023-07-06 14:33:05">이상원 전 총신대 교수, 차별금지법 제정 반대 1인 시위</a></h5><summary>이상원 전 총신대 교수(조직신학, 기독교 윤리)가 6일 아침 국회의사당 앞에서 차별금지법 1인 시위에 동참했다. ..<span class="author"><a href="#">이상진 기자</a></span></summary></article>
+				<article class="col-xs-6 col-sm-3"><figure><a href="https://www.christiandaily.co.kr/news/126520"><img src="https://images.christiandaily.co.kr/data/images/full/106705/48.jpg?w=260&amp;h=161&amp;l=50&amp;t=40" alt=""></a></figure><h5><a href="https://www.christiandaily.co.kr/news/126520" class="art_created_at" data-date="2023-07-06 14:27:11">“AI 세상 와도 마음·영혼 문제 다룰 수 있는 건 교회와 성경”</a></h5>
+					<summary>온신학회(회장 윤철호)가 최근 장로회신학대학교 세교협 2층 새문안홀에서 제48차 온신학회 정기학술세미나를 개..<span class="author"><a href="#">장지동 기자</a></span></summary></article>
+				<article class="col-xs-6 col-sm-3"><figure><a href="https://www.christiandaily.co.kr/news/126484"><img src="https://images.christiandaily.co.kr/data/images/full/106623/image.jpg?w=260&amp;h=161&amp;l=50&amp;t=55" alt=""></a></figure><h5><a href="https://www.christiandaily.co.kr/news/126484" class="art_created_at" data-date="2023-07-05 12:45:49">베토벤 ‘합창’이 종교 편향?… 대구 종교화합자문위 폐지</a></h5><summary>베토벤 교향곡 9번 ‘합창’을 종교 편향적이라고 판단해 논란을 낳았던 대구광역시 ‘종교화합자문위원회’가 ..<span class="author"><a href="#">김진영 기자</a></span></summary></article><article class="col-xs-6 col-sm-3"><figure><a href="https://www.christiandaily.co.kr/news/126507"><img src="https://images.christiandaily.co.kr/data/images/full/106675/image.jpg?w=260&amp;h=161&amp;l=50&amp;t=40" alt=""></a></figure><h5><a href="https://www.christiandaily.co.kr/news/126507" class="art_created_at" data-date="2023-07-05 19:32:39">“우리 모두 직장선교 위해 부름받은 ‘직장선교사’입니다!”</a></h5><summary>한국기독교직장선교연합회(한직선)와 한국직장선교대학(직선대), 미주장로회신학대학교(미주장신대)가 7월 1일 ..<span class="author"><a href="#">이지희 기자</a></span></summary></article>          
+  			</div>
+  		</div>
+		</div>
+			  </div>
+			  
+<div class="container-fluid">
+<div class="row">
+<ul class="feature-list">
+  <li class="flex-xs"><div class="fn"><figure><a href="https://missionews.co.kr/news/584344"><img src="https://missionews.co.kr/data/images/full/16402/714.jpg?w=145&amp;h=85&amp;l=50&amp;t=40" alt=""></a></figure></div><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/584344" class="art_created_at" data-date="2023-06-28 21:04:53">“로잔대회 앞두고 한국교회 영적대각성부터!” ‘714 기도대성회’ 진행</a></div><summary>2024 서울 제4차 로잔대회와 한국교회 영적대각성을 위한 ‘714 기도대성회’가 오는 7월 14일 오후 2~9시 인천 송도 컨벤시아에서 진행된다. ‘교회여, 그…</summary>
+    </div></li>
+  <li class="flex-xs"><div class="fn"><figure><a href="https://missionews.co.kr/news/584339"><img src="https://missionews.co.kr/data/images/full/16385/image.jpg?w=145&amp;h=85&amp;l=50&amp;t=40" alt=""></a></figure></div><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/584339" class="art_created_at" data-date="2023-06-27 09:15:59">매일 14명 순교·13명 납치… ‘기독교인 살인의 수도’ 나이지리아 위한 기도</a></div><summary>글로벌 크리스천 릴리프(GCR·Global Christian Relief, 전 미국오픈도어)는 지난 19일(현지 시각) 나이지리아에서 신앙 때문에 폭력과 살해, 납치를 당하고 있…</summary>
+    </div></li>
+  <li class="flex-xs"><div class="fn"><figure><a href="https://missionews.co.kr/news/584335"><img src="https://missionews.co.kr/data/images/full/16346/18-3.jpg?w=145&amp;h=85&amp;l=48&amp;t=49" alt=""></a></figure></div><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/584335" class="art_created_at" data-date="2023-06-22 23:45:38">“오대양 육대주에 예수 십자가 자랑하는 하나님의 군병 되길”</a></div><summary>㈔누가선교회 창립 제18주년 감사예배 및 제3회 목사안수식이 22일 서울 종로 한국기독교연합회관 3층 아가페홀에서 하나님의 풍성한 은혜 가운데 거행…</summary>
+    </div></li>
+  <li class="flex-xs"><div class="fn"><figure><a href="https://missionews.co.kr/news/584329"><img src="https://missionews.co.kr/data/images/full/16330/image.jpg?w=145&amp;h=85&amp;l=50&amp;t=40" alt=""></a></figure></div><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/584329" class="art_created_at" data-date="2023-06-19 08:20:23">[아트칼럼] 미라클</a></div><summary>우리는 항상 인생의 기적을 꿈꾼다. 성경 속 빵 다섯 개와 물고기 두 마리로 오천 명을 먹이고 열두 광주리가 남았다는 오병이어의 이야기는 기적을 꿈…</summary>
+    </div></li>
+  <li class="flex-xs"><div class="fn"><figure><a href="https://missionews.co.kr/news/584321"><img src="https://missionews.co.kr/data/images/full/16291/image.jpg?w=145&amp;h=85&amp;l=50&amp;t=40" alt=""></a></figure></div><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/584321" class="art_created_at" data-date="2023-06-12 23:53:34">“인도 쿠키 기독교 소수부족 난민 3만 명 넘어… 긴급구호 절실”</a></div><summary>인도 마니푸르주의 기독교 소수부족인 쿠키(Kuki)족이 힌두 극단주의자들의 조직적 공격으로 난민 수가 3만 명을 넘어선 가운데, 이들을 위한 긴급구호…</summary>
+    </div></li>
+  <li class="flex-xs"><div class="fn"><figure><a href="https://missionews.co.kr/news/584315"><img src="https://missionews.co.kr/data/images/full/16269/2019-2-24-umc.jpg?w=145&amp;h=85&amp;l=50&amp;t=40" alt=""></a></figure></div><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/584315" class="art_created_at" data-date="2023-06-10 09:30:27">美 사우스 캐롤라이나 UMC 113개 교회, 교단 탈퇴</a></div><summary>미국 사우스 캐롤라이나에 소재한 1백여개 교회가 연합감리교회(UMC)를 탈퇴할 예정이라고 미국 크리스천포스트(CP)가 보도했다. 이에 따르면, 사우스 …</summary>
+    </div></li>
+  <li class="flex-xs"><div class="fn"><figure><a href="https://missionews.co.kr/news/584318"><img src="https://missionews.co.kr/data/images/full/16280/70-dmz.jpg?w=145&amp;h=85&amp;l=50&amp;t=40" alt=""></a></figure></div><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/584318" class="art_created_at" data-date="2023-06-10 21:52:03">“정전 70년을 통일선교의 새 원년으로 삼자!”</a></div><summary>북녘땅이 보이는 DMZ 전망대 9곳에서 동시다발적으로 한반도의 평화를 믿음으로 선포하고 기도하는 ‘DMZ 평화기도회’가 현충일인 지난 6월 6일 진행됐…</summary>
+    </div></li>
+  <li class="flex-xs"><div class="fn"><figure><a href="https://missionews.co.kr/news/584308"><img src="https://missionews.co.kr/data/images/full/16257/image.jpg?w=145&amp;h=85&amp;l=50&amp;t=40" alt=""></a></figure></div><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/584308" class="art_created_at" data-date="2023-06-08 18:30:25">고(故) 조요셉 목사 천국환송예배, 25개 단체 연합 ‘통일시민장’으로 드려져</a></div><summary>30년 가까이 탈북민을 위해 헌신한 선교통일한국협의회(선통협) 상임대표 고(故) 조요셉 목사(물댄동산교회 담임목사)의 천국환송예배가 7일 오전 서울…</summary>
+    </div></li>
+  <li class="flex-xs"><div class="fn"><figure><a href="https://missionews.co.kr/news/584309"><img src="https://missionews.co.kr/data/images/full/16266/image.jpg?w=145&amp;h=85&amp;l=50&amp;t=40" alt=""></a></figure></div><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/584309" class="art_created_at" data-date="2023-06-08 18:46:54">시각장애 피아니스트 유예은, 감동과 희망의 음악 선사</a></div><summary>서울 상봉동 은혜제일교회(국제독립교회연합회 소속, 최원호 담임목사)가 지난달 27일 시각장애 피아니스트 유예은 씨를 초청하여 특별한 북콘서트를 …</summary>
+    </div></li>
+  <li class="flex-xs"><div class="fn"><figure><a href="https://missionews.co.kr/news/584292"><img src="https://missionews.co.kr/data/images/full/16169/image.jpg?w=145&amp;h=85&amp;l=50&amp;t=40" alt=""></a></figure></div><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/584292" class="art_created_at" data-date="2023-06-09 09:42:20">[아트칼럼] 물 위에 비친 예수님</a></div><summary>이 그림은 물 위에 비친 주님의 모습을 그린 그림이다. 가끔은 어디에도 느껴지지 않는 주님이 아련해진다면 잠시 눈을 감고 마음의 눈을 떠보자. 매 …</summary>
+    </div></li>
+  <li class="flex-xs"><div class="fn"><figure><a href="https://missionews.co.kr/news/584306"><img src="https://missionews.co.kr/data/images/full/16246/image.jpg?w=145&amp;h=85&amp;l=50&amp;t=40" alt=""></a></figure></div><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/584306" class="art_created_at" data-date="2023-06-07 15:13:11">부르키나파소, 지하디스트 공격으로 기독교인 최소 6명 사망</a></div><summary>부르키나파소 북부 지역의 마을 두 곳이 지난 5월 지하디스트들의 공격을 받아 현지 목사 2명을 포함해 최소 6명 이상의 기독교인이 목숨을 잃었다고 …</summary>
+    </div></li>
+  <li class="flex-xs"><div class="fn"><figure><a href="https://missionews.co.kr/news/584305"><img src="https://missionews.co.kr/data/images/full/16236/image.jpg?w=145&amp;h=85&amp;l=50&amp;t=40" alt=""></a></figure></div><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/584305" class="art_created_at" data-date="2023-06-05 08:03:47">인도 마니푸르주, 힌두 무장세력 잇단 공격에 기독교 소수민족 이재민 3만 명</a></div><summary>인도 마니푸르주에서 기독교 소수민족에 대한 힌두 극단주의자들의 무차별 공격이 연일 이어지면서 사망자와 부상자가 증가하고, 교회와 성도들의 가…</summary>
+    </div></li>
+  <li class="flex-xs"><div class="fn"><figure><a href="https://missionews.co.kr/news/584302"><img src="https://missionews.co.kr/data/images/full/16232/image.jpg?w=145&amp;h=85&amp;l=50&amp;t=49" alt=""></a></figure></div><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/584302" class="art_created_at" data-date="2023-06-02 16:40:57">[전도편지] 트래킹 틈새전도 대회를 진행했습니다</a></div><summary>한국기독교직장선교목회자협의회(직목협, 상임회장 김윤규 목사) 주최로 지난 5월 15일 오후 1시부터 오후 5시까지 청와대에서 트래킹 틈새전도 대회를…</summary>
+    </div></li>
+  <li class="flex-xs"><div class="fn"><figure><a href="https://missionews.co.kr/news/584294"><img src="https://missionews.co.kr/data/images/full/16184/image.jpg?w=145&amp;h=85&amp;l=52&amp;t=48" alt=""></a></figure></div><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/584294" class="art_created_at" data-date="2023-05-27 07:35:29">“인도 마니푸르주, 4일 만에 최소 121개 교회와 1,800채 교인 집 불타”</a></div><summary>인도 북동부 마니푸르주에서 지난달 말부터 격화된 부족 갈등이 기독교 박해로 확산하면서 현지시각으로 5월 3일부터 6일까지 단 4일 만에 최소 121개 …</summary>
+    </div></li>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-r "><!-- 미션뉴스_오른쪽 -->
+<div class="side-block opinion">
+  <div class="block-title">오피니언<img src="https://missionews.co.kr/images/data/op_arrow.png?w=4&amp;h=7" />
+	<ul class="dot_list">
+		<li><a href="#"><span class="dot"></span></a></li>
+		<li><a href="#"><span class="dot"></span></a></li>
+		<li><a href="#"><span class="dot"></span></a></li>
+	</ul>
+  </div>
+<article class="flex-xs"><div class="f1"><div class="title"><a href="https://missionews.co.kr/news/584349" class="art_created_at" data-date="2023-06-30 15:44:15">종교적 믿음, 신경전달물질이 분비된다</a></div><summary>전 세계에는 현재 4,000여 개의 종교가 존재하고 있다고…</summary></div>
+<figure class="fn"><a href="https://missionews.co.kr/news/584349" class="art_created_at"><img src="https://missionews.co.kr/data/images/full/16413/image.jpg?w=87&amp;h=51&amp;l=50&amp;t=40" alt="종교적 믿음은 도파민, 세로토닌, 옥시토신 등 신경전달물질의 분비를 촉진하여 치유와 정신건강의 지름길이 된다."></a></figure></article>
+<article class="flex-xs"><div class="f1"><div class="title"><a href="https://missionews.co.kr/news/584345" class="art_created_at" data-date="2023-06-28 21:07:09">지루한 듯해도, 오래된 일상은 힘이 있다</a></div><summary>우리는 위기에 처음 한두 번은 반응하지만, 그 위기가 반복되면…</summary></div>
+<figure class="fn"><a href="https://missionews.co.kr/news/584345" class="art_created_at"><img src="https://missionews.co.kr/data/images/full/16404/image.jpg?w=87&amp;h=51&amp;l=51&amp;t=46" alt="윤상덕 목사"></a></figure></article>
+<article class="flex-xs"><div class="f1"><div class="title"><a href="https://missionews.co.kr/news/584297" class="art_created_at" data-date="2023-05-29 23:37:30">하나님께만 영광을 돌리게 하라</a></div><summary>최근에 찰스 스펄존, 허드슨 테일러, 찰스 스터드, 윌리암 캐리, 에미…</summary></div>
+<figure class="fn"><a href="https://missionews.co.kr/news/584297" class="art_created_at"><img src="https://missionews.co.kr/data/images/full/14924/image.jpg?w=87&amp;h=51&amp;l=50&amp;t=40" alt="브라더 앤드류(왼쪽)와 김성태 명예교수"></a></figure></article>
+<article class="flex-xs"><div class="f1"><div class="title"><a href="https://missionews.co.kr/news/584285" class="art_created_at" data-date="2023-05-19 16:01:59">노년기의 뇌, 퇴행성 뇌질환이 발생하는 시기이다(3)</a></div><summary>퇴행성 뇌질환의 주요 원인론을 살펴보려 한다. 우선 알츠하이머병, 곧…</summary></div>
+<figure class="fn"><a href="https://missionews.co.kr/news/584285" class="art_created_at"><img src="https://missionews.co.kr/data/images/full/16141/image.jpg?w=87&amp;h=51&amp;l=50&amp;t=40" alt="뇌질환 예방의 가장 핵심적인 것이 산화질소로, 운동을 하면 혈관내피세포에서 일산화질소가 잘 생성된다."></a></figure></article>
+</div>
+<div class="event-news">  
+				<div class="block-title"><a href="#">행사소식</a></div>
+                  <ul class="list">
+                      <li><a href="/news/584330" title="2023 제4차 한국선교신학회&amp;세뛰새KOREA 공동포럼 진행" class="art_created_at" data-date="2023-06-19 08:57:13">2023 제4차 한국선교신학회&amp;…</a></li>
+                      <li><a href="/news/584316" title="㈔누가선교회 창립 제18주년 감사 예배 및 목사안수식 22일 진행" class="art_created_at" data-date="2023-06-10 09:44:31">㈔누가선교회 창립 제18주년…</a></li>
+                      <li><a href="/news/584303" title="회심한 이주민의 간증 담아낸 ‘바이끄 이야기’ 북 콘서트" class="art_created_at" data-date="2023-06-02 18:16:32">회심한 이주민의 간증 담아…</a></li>
+                      <li><a href="/news/584290" title="‘세계에 눈뜨는 한 사람’ 북콘서트, 내달 11일 한남교회서 진행" class="art_created_at" data-date="2023-05-24 08:40:12">‘세계에 눈뜨는 한 사람’…</a></li>
+                  </ul>
+			  </div>
+<div class="gallery">
+    <div class="block-title flex-xs">
+      <div class="f1">
+        <a href="#">포토뉴스</a>
+      </div>
+    </div>
+    <div id="rollDivPhoto0">
+<div id="rollDivPhotoContent00" class="m_headline_p" style="display: block;"><a href="https://missionews.co.kr/news/584347" target="_top" title=""><img src="https://missionews.co.kr/data/images/full/16409/image.jpg?w=277&amp;h=168&amp;l=50&amp;t=40" alt=""></a>
+<span class="m_alph"></span><div id="m_headline_t" class="txt_line2"><a href="https://missionews.co.kr/news/584347" target="_top" title="" class="art_created_at" data-date="2023-06-29 18:33:47">미래목회포럼 ‘2023년 리더십 컨퍼런스’ 26~28일 개최</a></div>
+</div><div id="rollDivPhotoContent01" class="m_headline_p" style="display: none;"><a href="https://missionews.co.kr/news/584320" target="_top" title=""><img src="https://missionews.co.kr/data/images/full/16285/2023.jpg?w=277&amp;h=168&amp;l=50&amp;t=40" alt=""></a>
+<span class="m_alph"></span><div id="m_headline_t" class="txt_line2"><a href="https://missionews.co.kr/news/584320" target="_top" title="" class="art_created_at" data-date="2023-06-12 23:37:19">2023 선교통일한국컨퍼런스, 제주서 성황리 열려</a></div>
+</div><div id="rollDivPhotoContent02" class="m_headline_p" style="display: none;"><a href="https://missionews.co.kr/news/584317" target="_top" title=""><img src="https://missionews.co.kr/data/images/full/16273/mou.jpg?w=277&amp;h=168&amp;l=50&amp;t=40" alt=""></a>
+<span class="m_alph"></span><div id="m_headline_t" class="txt_line2"><a href="https://missionews.co.kr/news/584317" target="_top" title="" class="art_created_at" data-date="2023-06-10 11:12:18">예장개혁대신-서울사이버에듀, 지도자 양성 위해 MOU</a></div>
+</div>        <ul id="m_headline_p2" class="flex-xs">
+<li class="m_hd_p" onmouseover="roller.gotoDiv('PhotoContent0',0);"><img src="https://missionews.co.kr/data/images/full/16409/image.jpg?w=246&amp;h=208" style="width:88px;"></li><li class="m_hd_p" onmouseover="roller.gotoDiv('PhotoContent0',1);"><img src="https://missionews.co.kr/data/images/full/16285/2023.jpg?w=246&amp;h=208" style="width:88px;"></li><li class="m_hd_p" onmouseover="roller.gotoDiv('PhotoContent0',2);"><img src="https://missionews.co.kr/data/images/full/16273/mou.jpg?w=246&amp;h=208" style="width:88px;"></li>
+        </ul>
+    </div>
+    <div id="rollDivPhoto1" style="display:none;">
+<div id="rollDivPhotoContent10" class="m_headline_p" style="display: block;"><a href="https://missionews.co.kr/news/584282" target="_top" title=""><img src="https://missionews.co.kr/data/images/full/16129/43.jpg?w=277&amp;h=168&amp;l=50&amp;t=40" alt=""></a>
+<span class="m_alph"></span><div id="m_headline_t" class="txt_line2"><a href="https://missionews.co.kr/news/584282" target="_top" title="" class="art_created_at" data-date="2023-05-17 15:30:32">예장개혁대신 교단, 제43회 전국목사·장로기도회 성료</a></div>
+</div><div id="rollDivPhotoContent11" class="m_headline_p" style="display: none;"><a href="https://missionews.co.kr/news/584281" target="_top" title=""><img src="https://missionews.co.kr/data/images/full/16127/72.jpg?w=277&amp;h=168&amp;l=50&amp;t=40" alt=""></a>
+<span class="m_alph"></span><div id="m_headline_t" class="txt_line2"><a href="https://missionews.co.kr/news/584281" target="_top" title="" class="art_created_at" data-date="2023-05-17 09:41:23">예하성 제72차 정기총회… ‘하나님 마음에 합한 자’ 주제로 성황리 열려</a></div>
+</div><div id="rollDivPhotoContent12" class="m_headline_p" style="display: none;"><a href="https://missionews.co.kr/news/584265" target="_top" title=""><img src="https://missionews.co.kr/data/images/full/16011/3.jpg?w=277&amp;h=168&amp;l=50&amp;t=40" alt=""></a>
+<span class="m_alph"></span><div id="m_headline_t" class="txt_line2"><a href="https://missionews.co.kr/news/584265" target="_top" title="" class="art_created_at" data-date="2023-05-04 16:30:13">누가신학대학원, 제3기 제주도 졸업여행 다녀와</a></div>
+</div>        <ul id="m_headline_p2" class="flex-xs">
+<li class="m_hd_p" onmouseover="roller.gotoDiv('PhotoContent1',0);"><img src="https://missionews.co.kr/data/images/full/16129/43.jpg?w=246&amp;h=208" style="width:88px;"></li><li class="m_hd_p" onmouseover="roller.gotoDiv('PhotoContent1',1);"><img src="https://missionews.co.kr/data/images/full/16127/72.jpg?w=246&amp;h=208" style="width:88px;"></li><li class="m_hd_p" onmouseover="roller.gotoDiv('PhotoContent1',2);"><img src="https://missionews.co.kr/data/images/full/16011/3.jpg?w=246&amp;h=208" style="width:88px;"></li>           
+        </ul>
+    </div>
+    <div id="rollDivPhoto2" style="display:none;">
+<div id="rollDivPhotoContent20" class="m_headline_p" style="display: block;"><a href="https://missionews.co.kr/news/584251" target="_top" title=""><img src="https://missionews.co.kr/data/images/full/15985/107.jpg?w=277&amp;h=168&amp;l=50&amp;t=40" alt=""></a>
+<span class="m_alph"></span><div id="m_headline_t" class="txt_line2"><a href="https://missionews.co.kr/news/584251" target="_top" title="" class="art_created_at" data-date="2023-04-26 10:21:00">예장 개혁대신, 제107회 춘계 워크샵서 은혜와 비전 나눠</a></div>
+</div><div id="rollDivPhotoContent21" class="m_headline_p" style="display: none;"><a href="https://missionews.co.kr/news/584234" target="_top" title=""><img src="https://missionews.co.kr/data/images/full/15945/2023.jpg?w=277&amp;h=168&amp;l=50&amp;t=40" alt=""></a>
+<span class="m_alph"></span><div id="m_headline_t" class="txt_line2"><a href="https://missionews.co.kr/news/584234" target="_top" title="" class="art_created_at" data-date="2023-04-16 23:46:39">중랑지구 교경협·중랑경찰선교회, 4년 만에 부활절 대면예배 드려</a></div>
+</div><div id="rollDivPhotoContent22" class="m_headline_p" style="display: none;"><a href="https://missionews.co.kr/news/584229" target="_top" title=""><img src="https://missionews.co.kr/data/images/full/15924/image.jpg?w=277&amp;h=168&amp;l=50&amp;t=40" alt=""></a>
+<span class="m_alph"></span><div id="m_headline_t" class="txt_line2"><a href="https://missionews.co.kr/news/584229" target="_top" title="" class="art_created_at" data-date="2023-04-10 16:28:11">한기총, 정상화 후 첫 부활절 예배… “한국교회 다시 일어나길”</a></div>
+</div>        <ul id="m_headline_p2" class="flex-xs">
+<li class="m_hd_p" onmouseover="roller.gotoDiv('PhotoContent2',0);"><img src="https://missionews.co.kr/data/images/full/15985/107.jpg?w=246&amp;h=208" style="width:88px;"></li><li class="m_hd_p" onmouseover="roller.gotoDiv('PhotoContent2',1);"><img src="https://missionews.co.kr/data/images/full/15945/2023.jpg?w=246&amp;h=208" style="width:88px;"></li><li class="m_hd_p" onmouseover="roller.gotoDiv('PhotoContent2',2);"><img src="https://missionews.co.kr/data/images/full/15924/image.jpg?w=246&amp;h=208" style="width:88px;"></li>        </ul>
+    </div>
+</div>
+<div class="side-block popular">
+  <div class="block-title">많이 본 기사</div>
+<article class="flex-xs"><div class="f1 title"><a href="https://missionews.co.kr/news/584343" class="art_created_at" data-date="2023-06-28 20:57:59">인도 마니푸르주 박해로 기독교 난민 5만 명 발생… 식량 위기 심각</a></div><figure class="fn"><a href="https://missionews.co.kr/news/584343"><img src="https://missionews.co.kr/data/images/full/16398/image.jpg?w=51&amp;h=51&amp;l=48&amp;t=43" alt=""></a></figure></article>
+<article class="flex-xs"><div class="f1 title"><a href="https://missionews.co.kr/news/584350" class="art_created_at" data-date="2023-06-30 16:32:29">한직선·직선대·미주 장신대, 최초로 직장선교사 공동 임명 및 파송한다</a></div><figure class="fn"><a href="https://missionews.co.kr/news/584350"><img src="https://missionews.co.kr/data/images/full/9906/image.jpg?w=51&amp;h=51&amp;l=50&amp;t=40" alt=""></a></figure></article>
+<article class="flex-xs"><div class="f1 title"><a href="https://missionews.co.kr/news/584352" class="art_created_at" data-date="2023-07-03 21:43:58">“우리 모두 직장선교를 위해 하나님의 부름받은 ‘직장선교사’입니다!”</a></div><figure class="fn"><a href="https://missionews.co.kr/news/584352"><img src="https://missionews.co.kr/data/images/full/16421/image.jpg?w=51&amp;h=51&amp;l=50&amp;t=40" alt=""></a></figure></article>
+<article class="flex-xs"><div class="f1 title"><a href="https://missionews.co.kr/news/584351" class="art_created_at" data-date="2023-07-02 18:09:49">“이웃과 세계 위해 구원의 복음 전해야”</a></div><figure class="fn"><a href="https://missionews.co.kr/news/584351"><img src="https://missionews.co.kr/data/images/full/16417/103.jpg?w=51&amp;h=51&amp;l=49&amp;t=47" alt=""></a></figure></article>
+<article class="flex-xs"><div class="f1 title"><a href="https://missionews.co.kr/news/584346" class="art_created_at" data-date="2023-06-29 18:18:27">2023 그레이트커미션 선교대회 “청년들을 예수 생명의 복음으로 일으키자!”</a></div><figure class="fn"><a href="https://missionews.co.kr/news/584346"><img src="https://missionews.co.kr/data/images/full/16405/2023.jpg?w=51&amp;h=51&amp;l=48&amp;t=46" alt=""></a></figure></article>
+<article class="flex-xs"><div class="f1 title"><a href="https://missionews.co.kr/news/584339" class="art_created_at" data-date="2023-06-27 09:15:59">매일 14명 순교·13명 납치… ‘기독교인 살인의 수도’ 나이지리아 위한 기도</a></div><figure class="fn"><a href="https://missionews.co.kr/news/584339"><img src="https://missionews.co.kr/data/images/full/16385/image.jpg?w=51&amp;h=51&amp;l=50&amp;t=40" alt=""></a></figure></article>
+<article class="flex-xs"><div class="f1 title"><a href="https://missionews.co.kr/news/584337" class="art_created_at" data-date="2023-06-25 16:04:28">“목회자가 권위 내려놓고 지역사회로 들어가 함께하길”</a></div><figure class="fn"><a href="https://missionews.co.kr/news/584337"><img src="https://missionews.co.kr/data/images/full/16377/image.jpg?w=51&amp;h=51&amp;l=51&amp;t=48" alt=""></a></figure></article>
+  
+</div>
+<div class="photos">
+  <div class="block-title flex-xs ai-c">
+    <div class="f1">이미지 묵상</div>
+    <div class="fn arrows"><button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button><button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button></div>
+  </div>
+  <ul class="slider slick-initialized slick-slider">
+<div aria-live="polite" class="slick-list draggable" style="padding: 0px 29px; height: 279.587px;"><div class="slick-track" role="listbox" style="opacity: 1; width: 1936px; transform: translate3d(-484px, 0px, 0px);"><li class="slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 242px;"><figure><a href="https://missionews.co.kr/news/583788" tabindex="-1"><img src="https://missionews.co.kr/data/images/full/14263/image.jpg?w=196&amp;h=128&amp;l=50&amp;t=40" alt="(이미지 묵상) 우리가 아직 죄인 되었을 때에 그리스도께서 우리를 위하여 죽으심으로 하나님께서 우리에 대한 자기의 사랑을 확증하셨느니라"></a></figure><div class="info">
+        <div class="title"><a href="https://missionews.co.kr/news/583788" class="art_created_at" data-date="2022-07-16 07:00:49" tabindex="-1">우리가 아직 죄인 되었을 때에…(롬 5:8)</a></div>
+        <div class="byline"></div>
+      </div></li><li class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 242px;"><figure><a href="https://missionews.co.kr/news/583008" tabindex="-1"><img src="https://missionews.co.kr/data/images/full/11962/image.jpg?w=196&amp;h=128&amp;l=46&amp;t=43" alt="기도묵상"></a></figure><div class="info">
+
+        <div class="title"><a href="https://missionews.co.kr/news/583008" class="art_created_at" data-date="2021-06-25 10:53:26" tabindex="-1">위대한 일을 위해서 기도하라</a></div>
+        <div class="byline"></div>
+      </div></li><li class="slick-slide slick-current slick-active slick-center" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide00" style="width: 242px;"><figure><a href="https://missionews.co.kr/news/583790" tabindex="0"><img src="https://missionews.co.kr/data/images/full/14265/5-17.jpg?w=196&amp;h=128&amp;l=50&amp;t=40" alt="[이미지 묵상] 그런즉 누구든지 그리스도 안에 있으면 새로운 피조물이라 이전 것은 지나갔으니 보라 새 것이 되었도다 (고후 5:17)"></a></figure><div class="info">
+        <div class="title"><a href="https://missionews.co.kr/news/583790" class="art_created_at" data-date="2022-07-16 07:07:08" tabindex="0">그런즉 누구든지 그리스도 안에 있으면 새로운 피조물이라… (고후 5:17)</a></div>
+        <div class="byline"></div>
+      </div></li><li class="slick-slide" data-slick-index="1" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide01" style="width: 242px;"><figure><a href="https://missionews.co.kr/news/583789" tabindex="-1"><img src="https://missionews.co.kr/data/images/full/14264/9-27.jpg?w=196&amp;h=128&amp;l=50&amp;t=40" alt="[이미지 묵상] 한번 죽는 것은 사람에게 정해진 것이요 그 후에는 심판이 있으리니 (히 9:27)"></a></figure><div class="info">
+        <div class="title"><a href="https://missionews.co.kr/news/583789" class="art_created_at" data-date="2022-07-16 07:04:25" tabindex="-1"> 한번 죽는 것은 사람에게 정해진 것이요(히 9:27)</a></div>
+        <div class="byline"></div>
+      </div></li><li class="slick-slide" data-slick-index="2" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide02" style="width: 242px;"><figure><a href="https://missionews.co.kr/news/583788" tabindex="-1"><img src="https://missionews.co.kr/data/images/full/14263/image.jpg?w=196&amp;h=128&amp;l=50&amp;t=40" alt="(이미지 묵상) 우리가 아직 죄인 되었을 때에 그리스도께서 우리를 위하여 죽으심으로 하나님께서 우리에 대한 자기의 사랑을 확증하셨느니라"></a></figure><div class="info">
+        <div class="title"><a href="https://missionews.co.kr/news/583788" class="art_created_at" data-date="2022-07-16 07:00:49" tabindex="-1">우리가 아직 죄인 되었을 때에…(롬 5:8)</a></div>
+        <div class="byline"></div>
+      </div></li><li class="slick-slide" data-slick-index="3" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide03" style="width: 242px;"><figure><a href="https://missionews.co.kr/news/583008" tabindex="-1"><img src="https://missionews.co.kr/data/images/full/11962/image.jpg?w=196&amp;h=128&amp;l=46&amp;t=43" alt="기도묵상"></a></figure><div class="info">
+        <div class="title"><a href="https://missionews.co.kr/news/583008" class="art_created_at" data-date="2021-06-25 10:53:26" tabindex="-1">위대한 일을 위해서 기도하라</a></div>
+        <div class="byline"></div>
+      </div></li><li class="slick-slide slick-cloned slick-center" data-slick-index="4" aria-hidden="true" tabindex="-1" style="width: 242px;"><figure><a href="https://missionews.co.kr/news/583790" tabindex="-1"><img src="https://missionews.co.kr/data/images/full/14265/5-17.jpg?w=196&amp;h=128&amp;l=50&amp;t=40" alt="[이미지 묵상] 그런즉 누구든지 그리스도 안에 있으면 새로운 피조물이라 이전 것은 지나갔으니 보라 새 것이 되었도다 (고후 5:17)"></a></figure><div class="info">
+        <div class="title"><a href="https://missionews.co.kr/news/583790" class="art_created_at" data-date="2022-07-16 07:07:08" tabindex="-1">그런즉 누구든지 그리스도 안에 있으면 새로운 피조물이라… (고후 5:17)</a></div>
+        <div class="byline"></div>
+      </div></li><li class="slick-slide slick-cloned" data-slick-index="5" aria-hidden="true" tabindex="-1" style="width: 242px;"><figure><a href="https://missionews.co.kr/news/583789" tabindex="-1"><img src="https://missionews.co.kr/data/images/full/14264/9-27.jpg?w=196&amp;h=128&amp;l=50&amp;t=40" alt="[이미지 묵상] 한번 죽는 것은 사람에게 정해진 것이요 그 후에는 심판이 있으리니 (히 9:27)"></a></figure><div class="info">
+        <div class="title"><a href="https://missionews.co.kr/news/583789" class="art_created_at" data-date="2022-07-16 07:04:25" tabindex="-1"> 한번 죽는 것은 사람에게 정해진 것이요(히 9:27)</a></div>
+        <div class="byline"></div>
+      </div></li></div></div>
+  </ul>
+</div>
+<div class="side-block">
+	<div class="block-title">박해 지역을 위한 기도</div>
+<article><div class="title"><a href="https://missionews.co.kr/news/584314" class="art_created_at" data-date="2023-06-09 15:07:47">박해받는 교회를 위한 6월 21일~30일 기도 제목</a></div><div class="flex-xs"><summary class="f1">2022년에 약 10,000명의 기독교인이 나이지리아에서 고향을 떠났습니다. 올해 …</summary><figure class="fn"><a href="https://missionews.co.kr/news/584314"><img src="https://missionews.co.kr/data/images/full/7268/image.jpg?w=51&amp;h=51&amp;l=50&amp;t=40" alt="나이지리아의 어린이들"></a></figure></div>
+  </article>
+<article><div class="title"><a href="https://missionews.co.kr/news/584313" class="art_created_at" data-date="2023-06-09 15:03:06">박해받는 교회를 위한 6월 11일~20일 기도 제목</a></div><div class="flex-xs"><summary class="f1">사라투(18세, 가명)는 마을에 학교가 없었기 때문에 학교에 다니기 위해 기…</summary><figure class="fn"><a href="https://missionews.co.kr/news/584313"><img src="https://missionews.co.kr/data/images/full/15410/5-30.jpg?w=51&amp;h=51&amp;l=50&amp;t=40" alt="방글라데시의 로힝야 난민촌. 지난 5년 동안 30만 명 이상의 로힝야족이 미얀마를 탈출해 방글라데시로 왔다."></a></figure></div>
+  </article>
+<article><div class="title"><a href="https://missionews.co.kr/news/584312" class="art_created_at" data-date="2023-06-09 15:02:18">박해받는 교회를 위한 6월 1일~10일 기도 제목</a></div><div class="flex-xs"><summary class="f1">종교적 민족주의가 매우 강력한 튀르키예의 핍박 받는 기독교 개종자들을 …</summary><figure class="fn"><a href="https://missionews.co.kr/news/584312"><img src="https://missionews.co.kr/data/images/full/9428/image.jpg?w=51&amp;h=51&amp;l=50&amp;t=40" alt="한국오픈도어"></a></figure></div>
+  </article>
+<article><div class="title"><a href="https://missionews.co.kr/news/584311" class="art_created_at" data-date="2023-05-01 15:00:47">박해받는 교회를 위한 5월 21일~31일 기도 제목</a></div><div class="flex-xs"><summary class="f1">부르키나파소에는 인구의 23%인 520만 명의 기독교인들이 살고 있습니다. 기…</summary><figure class="fn"><a href="https://missionews.co.kr/news/584311"><img src="https://missionews.co.kr/data/images/full/15583/image.jpg?w=51&amp;h=51&amp;l=50&amp;t=40" alt="부르키나파소"></a></figure></div>
+  </article>  
+</div>        
+</div>
+<div class="col-md-12">
+	<div class="row">
+<div class="topic col-xs-4">
+	<div class="block-title flex-xs jc-sb">인물<!-- <a href="#" class="more">더보기</a> --></div>
+  <article class="flex-xs">
+    <figure class="fn"><a href="https://missionews.co.kr/news/584337"><img src="https://missionews.co.kr/data/images/full/16377/image.jpg?w=78&amp;h=50&amp;l=51&amp;t=48" alt=""></a></figure>
+    <div class="f1 title"><a href="https://missionews.co.kr/news/584337" class="art_created_at" data-date="2023-06-25 16:04:28">“목회자가 권위 내려놓고 지역사회로 들어가 함께하길”</a></div>
+  </article>
+  <ul class="list">
+	  <li><a href="https://missionews.co.kr/news/584300" class="art_created_at" data-date="2023-06-01 18:33:28">“아시아 교회, 더 많은 곳에 영향 …</a></li>
+	  <li><a href="https://missionews.co.kr/news/584304" class="art_created_at" data-date="2023-06-05 01:22:14">[부고] 통일선교 위해 ‘혼신’ 조…</a></li>
+	  <li><a href="https://missionews.co.kr/news/584291" class="art_created_at" data-date="2023-05-24 09:38:36">“지금은 디아스포라 시대… 하나…</a></li>
+	  <li><a href="https://missionews.co.kr/news/584286" class="art_created_at" data-date="2023-05-20 22:44:58">팀 켈러 목사, 암 투병 중 19일 하나…</a></li>
+	  <li><a href="https://missionews.co.kr/news/584272" class="art_created_at" data-date="2023-05-09 18:50:36">나태주 시인 “‘작은 것을 큰 것…</a></li>
+	  <li><a href="https://missionews.co.kr/news/584263" class="art_created_at" data-date="2023-05-02 10:28:31">‘성경적 효 운동’ 최성규 인천순…</a></li>
+	  <li><a href="https://missionews.co.kr/news/584218" class="art_created_at" data-date="2023-04-04 23:55:26">“루마니아 다음세대 위해 성경 교…</a></li>
+	  <li><a href="https://missionews.co.kr/news/584213" class="art_created_at" data-date="2023-03-31 13:38:39">“다수 세계 기독교 지도자 훈련의…</a></li>
+	</ul>
+</div>
+<div class="topic col-xs-4">
+ <div class="block-title flex-xs jc-sb">선교단체<!-- <a href="" class="more">더보기</a> -->
+  </div>
+  <article class="flex-xs">
+    <figure class="fn"><a href="https://missionews.co.kr/news/584338"><img src="https://missionews.co.kr/data/images/full/16382/yefk.jpg?w=78&amp;h=50&amp;l=50&amp;t=40" alt=""></a></figure>
+    <div class="f1 title"><a href="https://missionews.co.kr/news/584338" class="art_created_at" data-date="2023-06-27 00:30:51">김명혁 원로목사, YEFK 주일예배서 길선주 목사 생애 전해</a></div>
+  </article>
+  <ul class="list">
+<li><a href="https://missionews.co.kr/news/584319" class="art_created_at" data-date="2023-06-12 23:23:51">“남북한의 성도들로 어린 양의 혼…</a></li><li><a href="https://missionews.co.kr/news/584307" class="art_created_at" data-date="2023-06-07 15:15:03">“모든 세대가 영적 각성할 때 한…</a></li><li><a href="https://missionews.co.kr/news/584307" class="art_created_at" data-date="2023-06-07 15:15:03">“모든 세대가 영적 각성할 때 한…</a></li><li><a href="https://missionews.co.kr/news/584181" class="art_created_at" data-date="2023-03-13 15:13:41">앗쌀람, 2023년 봄 ‘이슬람 바로알…</a></li><li><a href="https://missionews.co.kr/news/584153" class="art_created_at" data-date="2023-02-22 15:55:55">2023 오픈도어 북한선교학교 3월 20…</a></li><li><a href="https://missionews.co.kr/news/584132" class="art_created_at" data-date="2023-02-06 11:20:18">미션파트너스, 2023년 봄학기 온·오…</a></li><li><a href="https://missionews.co.kr/news/584118" class="art_created_at" data-date="2023-01-26 09:47:58">한국CCC, 크리스천 메타버스 플랫폼…</a></li><li><a href="https://missionews.co.kr/news/584070" class="art_created_at" data-date="2022-12-29 19:35:11">홍대새교회 등, 제9차 청소년연합…</a></li></ul>
+</div>
+<div class="topic col-xs-4"> <div class="block-title flex-xs jc-sb">세계소식<!-- <a href="" class="more">더보기</a> --></div>
+  <article class="flex-xs">
+    <figure class="fn"><a href="https://missionews.co.kr/news/584328"><img src="https://missionews.co.kr/data/images/full/16329/2022-6-2-4-umc.jpg?w=78&amp;h=50&amp;l=50&amp;t=40" alt=""></a></figure>
+    <div class="f1 title"><a href="https://missionews.co.kr/news/584328" class="art_created_at" data-date="2023-06-19 08:18:37">미 펜실베이니아 298개 교회, 동성애 분열로 UMC 탈퇴</a></div>
+  </article>
+  <ul class="list">
+	  <li><a href="https://missionews.co.kr/news/584231" class="art_created_at" data-date="2023-04-10 16:46:05">미국 대통령들이 발표한 부활절 기…</a></li>
+	  <li><a href="https://missionews.co.kr/news/584177" class="art_created_at" data-date="2023-03-11 16:10:32">한국오픈도어, 라오스와 인도네시…</a></li>
+	  <li><a href="https://missionews.co.kr/news/584095" class="art_created_at" data-date="2023-01-12 21:41:59">미국의 교단주의 쇠퇴, 기독교 침…</a></li>
+	  <li><a href="https://missionews.co.kr/news/584048" class="art_created_at" data-date="2022-12-22 19:50:36">미국 휴스턴 한인 교계, 교단·세대…</a></li>
+	  <li><a href="https://missionews.co.kr/news/584036" class="art_created_at" data-date="2022-12-15 00:40:46">“중국 공산당 제20차 당대회 결과…</a></li>
+	  <li><a href="https://missionews.co.kr/news/583897" class="art_created_at" data-date="2022-09-16 15:36:40">인도 대법원, 정부에 “기독교인 …</a></li>
+	  <li><a href="https://missionews.co.kr/news/583800" class="art_created_at" data-date="2022-07-18 20:41:49">제9차 한인세계선교대회 “팬데믹 …</a></li>
+	  <li><a href="https://missionews.co.kr/news/583778" class="art_created_at" data-date="2022-07-11 20:12:53">英 법원, ‘타고난 성은 불변’ 주…</a></li>
+	</ul>
+</div>
+<div class="topic col-xs-4"><div class="block-title flex-xs jc-sb">선교편지<!-- <a href="" class="more">더보기</a> --></div>
+  <article class="flex-xs">
+    <figure class="fn"><a href="https://missionews.co.kr/news/584256"><img src="https://missionews.co.kr/data/images/full/15997/image.jpg?w=78&amp;h=50&amp;l=50&amp;t=40" alt=""></a></figure>
+    <div class="f1 title"><a href="https://missionews.co.kr/news/584256" class="art_created_at" data-date="2023-04-30 08:28:22">폭염으로 끓고 있는 북인도</a></div>
+  </article>
+  <ul class="list">
+<li><a href="https://missionews.co.kr/news/584248" class="art_created_at" data-date="2023-04-24 10:12:42">예수님 부활절에 365일 틈새전도를 …</a></li><li><a href="https://missionews.co.kr/news/584238" class="art_created_at" data-date="2023-04-17 18:19:55">비전을 품고 가나로! 가나를 품고 …</a></li><li><a href="https://missionews.co.kr/news/584184" class="art_created_at" data-date="2023-03-15 08:36:54">지속된 핍박 속에 국가금식일을 선…</a></li><li><a href="https://missionews.co.kr/news/584159" class="art_created_at" data-date="2023-02-27 17:20:41">“20년간 아프간에 뿌려진 복음의 …</a></li><li><a href="https://missionews.co.kr/news/584129" class="art_created_at" data-date="2023-02-04 10:58:51">“루마니아교회의 북한선교, 주님…</a></li><li><a href="https://missionews.co.kr/news/582343" class="art_created_at" data-date="2020-09-21 13:20:40">하나님의 마음이 머문 곳, 인디언 …</a></li><li><a href="https://missionews.co.kr/news/582312" class="art_created_at" data-date="2020-09-09 10:54:09">러시아 종교 자유 제한 수정법안 …</a></li><li><a href="https://missionews.co.kr/news/582280" class="art_created_at" data-date="2020-08-27 16:20:24">“한국에서 유익한 시간 보내...빨…</a></li><li><a href="https://missionews.co.kr/news/582221" class="art_created_at" data-date="2020-07-31 09:59:19">“코로나 상황 안 좋지만, 하나님…</a></li><li><a href="https://missionews.co.kr/news/582215" class="art_created_at" data-date="2020-07-28 14:06:37">코로나로 휴교 이후 공격과 고발 …</a></li>  </ul>
+</div>
+<div class="topic col-xs-4">  <div class="block-title flex-xs jc-sb">기획 | 초기 선교사의 발자취를 따라서</div>
+<article><div class="title"><a href="https://missionews.co.kr/news/583785" class="art_created_at" data-date="2022-07-14 13:38:42">자주적 민족독립운동을 이끈 독립협회</a></div><div class="flex-xs"><summary class="f1">독립협회 운동은 조선 최초의 근대적이며 민주주의적 민중정치 운동이며 …</summary><figure class="fn"><a href="https://missionews.co.kr/news/583785"><img src="https://missionews.co.kr/data/images/full/14260/1930-1896.jpg?w=277&amp;h=168&amp;l=50&amp;t=24" alt="1930년대 초 서재필과 부인 뮤리엘 암스트롱 모습. 서재필은 계몽강연, 독립신문 발행과 함께 1896년 배재학당에 출강해 이승만, 주시경 등 젊은이들에게 자유민주주의와 참정권, 인권 등을 가르쳤으며, 독립협회를 이끌었다."></a></figure></div>
+  </article>
+<article><div class="title"><a href="https://missionews.co.kr/news/583722" class="art_created_at" data-date="2022-06-11 13:40:10">“진리와 충성으로 최후의 순간까지 따르겠나이다”</a></div><div class="flex-xs"><summary class="f1">11일은 아펜젤러 선교사(H. G. Appenzeller, 1885~1902)가 1902년 6월 11일 순직한 지 …</summary><figure class="fn"><a href="https://missionews.co.kr/news/583722"><img src="https://missionews.co.kr/data/images/full/14002/image.jpg?w=277&amp;h=168&amp;l=50&amp;t=40" alt="정동제일교회 내에 있는 아펜젤러 흉상"></a></figure></div>
+  </article>
+<article><div class="title"><a href="https://missionews.co.kr/news/583717" class="art_created_at" data-date="2022-06-10 06:11:36">우리나라 최초 학생회인 배재학당 ‘협성회’</a></div><div class="flex-xs"><summary class="f1">협성회는 서재필이 배재에서 강의를 맡으면서 학생들에게 외국 학생들의 …</summary><figure class="fn"><a href="https://missionews.co.kr/news/583717"><img src="https://missionews.co.kr/data/images/full/13985/1898-1-1-1896.jpg?w=277&amp;h=168&amp;l=50&amp;t=40" alt="왼쪽부터 1898년 발간된 협성회회보 제1권 1호, 1896년 발간된 독립신문 초판"></a></figure></div>
+  </article>
+<article><div class="title"><a href="https://missionews.co.kr/news/583283" class="art_created_at" data-date="2021-11-08 08:50:23">아들과 어머니 선교사의 조선 파송 배경</a></div><div class="flex-xs"><summary class="f1">아들 스크랜턴이 조선에 선교사가 되기로 결단한 것은 그의 어머니인 메리 …</summary><figure class="fn"><a href="https://missionews.co.kr/news/583283"><img src="https://missionews.co.kr/data/images/full/12683/image.jpg?w=277&amp;h=168&amp;l=50&amp;t=40" alt="초기 이화학당 학생들과 교사, 메리 스크랜턴 선교사"></a></figure></div>
+  </article>
+</div>
+<div class="topic books col-xs-4">
+	<div class="block-title flex-xs jc-sb">추천서적    <!-- <a href="" class="more">더보기</a> --></div>
+<article class="flex-xs"><figure class="fn"><a href="https://missionews.co.kr/news/584202"><img src="https://missionews.co.kr/data/images/full/15864/gpt-4.jpg?w=65&amp;h=80&amp;l=50&amp;t=40" alt=""></a></figure><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/584202" class="art_created_at" data-date="2023-03-27 09:24:18">챗GPT와 GPT-4, 목회와 선교, 신앙생활 속에서 어떻게 활용할까</a></div>
+      <div class="subtitle"></div>
+    </div></article>
+<article class="flex-xs"><figure class="fn"><a href="https://missionews.co.kr/news/583176"><img src="https://missionews.co.kr/data/images/full/12434/new.jpg?w=65&amp;h=80&amp;l=50&amp;t=40" alt=""></a></figure><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/583176" class="art_created_at" data-date="2021-09-23 16:28:42">박경호 헬라어 번역 성경 : New 마태복음</a></div>
+      <div class="subtitle">저자 박경호</div>
+    </div></article>
+<article class="flex-xs"><figure class="fn"><a href="https://missionews.co.kr/news/582847"><img src="https://missionews.co.kr/data/images/full/11543/image.jpg?w=65&amp;h=80&amp;l=45&amp;t=53" alt=""></a></figure><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/582847" class="art_created_at" data-date="2021-04-16 12:47:08">존 스토트와 옥한흠에게 강해설교를 배우다</a></div>
+      <div class="subtitle">저자 김대조|역자 김동규</div>
+    </div></article>
+<article class="flex-xs"><figure class="fn"><a href="https://missionews.co.kr/news/582846"><img src="https://missionews.co.kr/data/images/full/11542/21.jpg?w=65&amp;h=80&amp;l=48&amp;t=34" alt=""></a></figure><div class="f1">
+      <div class="title"><a href="https://missionews.co.kr/news/582846" class="art_created_at" data-date="2021-04-16 12:39:57">21세기 선교학개론</a></div>
+      <div class="subtitle">마이클 W. 고힌</div>
+    </div></article>
+</div>
+	</div>
+</div>
+		
+		
+    </div>
+  </div>
+</main>
+
+
+<footer class="pf">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3">
+        <a href="/" class="logo"><img src="/views/images/2020/logo.jpg" alt="" width="194" height="47"></a>
+        <p><a class="brand" href="/"><strong>missionews</strong>.co.kr</a></p>
+      </div>
+      <div class="col-sm-7">
+        <div class="top">
+          <p><strong>선교신문</strong><br>
+            주소 : [02857] 서울 성북구 안암로 53, 4층 (안암동 5가, 크로스빌딩) | TEL : 070-4352-0759<br>
+            인터넷신문등록번호: 서울 아01350 | 인터넷신문등록일자 : 2010. 09. 16<br>
+            발행인 : (주)씨미디어 소일권 | 편집인 : 이지희 | 청소년보호책임자 : 강은미 | Copyright by missionews.co.kr All rights reserved.
+          </p>
+        </div>
+        <div class="bottom flex-sm ai-c">
+          <div class="f1">        
+            <p>
+              <strong><a href="/company" target="_blank">회사소개</a>&nbsp; l &nbsp;<a href="mailTo:missionews@naver.com">광고안내</a>&nbsp; l &nbsp;<a href="mailTo:missionews@naver.com">사업제휴안내</a>&nbsp; l&nbsp; <a href="/company/personinfo" target="_blank">개인정보취급방침</a>&nbsp; l &nbsp;<a href="/company/emailinfo" target="_blank">이메일주소 무단수집거부</a> &nbsp;l&nbsp; <a href="/company/report">기사제보</a>&nbsp; l &nbsp;<a href="/company/report">편집자에게</a>
+
+ 
+              </strong>
+            </p>        
+            <p>선교신문의 모든 콘텐츠는 저작권법의 보호를 받는바, 무단 전재·복사·배포 등은 법적제재를 받을 수 있습니다.</p>
+          </div>
+          <div class="fn">
+            <a href="/rss/articles/topnews/all.rss" target="_new"><img src="/views/images/2020/main_bottom_reeimg.gif"></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+
+
+<!-- weather -->
+<script type="text/javascript" src="https://missionews.co.kr/home/js/jquery.timeago.js"></script>
+<script>
+ jQuery("abbr.timeago").timeago();
+</script>
+<script> 
+var aday=Math.floor(Date.now()/1000);
+	$('.timeago').each(function(index){if($(this).attr('data-timestamp')>aday-86400){$(this).timeago();}});
+
+// 날씨 정보
+var wthr = [{"_a":{"stn_id":"90","icon":"04","desc":"\ud750\ub9bc","ta":"23.2","rn_hr1":"3.6"},"_v":"\uc18d\ucd08"},{"_a":{"stn_id":"93","icon":"14","desc":"\ucc9c\ub465\ubc88\uac1c","ta":"22.6","rn_hr1":"6.5"},"_v":"\ubd81\ucd98\ucc9c"},{"_a":{"stn_id":"95","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"25.6"},"_v":"\ucca0\uc6d0"},{"_a":{"stn_id":"98","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"25.8","rn_hr1":"0.0"},"_v":"\ub3d9\ub450\ucc9c"},{"_a":{"stn_id":"99","icon":"04","desc":"\ud750\ub9bc","ta":"25.8","rn_hr1":"0.0"},"_v":"\ud30c\uc8fc"},{"_a":{"stn_id":"100","icon":"04","desc":"\ud750\ub9bc","ta":"19.6","rn_hr1":"6.2"},"_v":"\ub300\uad00\ub839"},{"_a":{"stn_id":"101","icon":"04","desc":"\ud750\ub9bc","ta":"22.8","rn_hr1":"4.4"},"_v":"\ucd98\ucc9c"},{"_a":{"stn_id":"102","icon":"04","desc":"\ud750\ub9bc","ta":"21.6"},"_v":"\ubc31\ub839\ub3c4"},{"_a":{"stn_id":"104","icon":"08","desc":"\ube44","ta":"23.6","rn_hr1":"1.6"},"_v":"\ubd81\uac15\ub989"},{"_a":{"stn_id":"105","icon":"04","desc":"\ud750\ub9bc","ta":"25.7","rn_hr1":"0.6"},"_v":"\uac15\ub989"},{"_a":{"stn_id":"106","icon":"04","desc":"\ud750\ub9bc","ta":"24.1","rn_hr1":"1.4"},"_v":"\ub3d9\ud574"},{"_a":{"stn_id":"108","icon":"04","desc":"\ud750\ub9bc","ta":"24.0","rn_hr1":"11.5"},"_v":"\uc11c\uc6b8"},{"_a":{"stn_id":"112","icon":"17","desc":"\ubc15\ubb34","ta":"25.1","rn_hr1":"3.0"},"_v":"\uc778\ucc9c"},{"_a":{"stn_id":"114","icon":"04","desc":"\ud750\ub9bc","ta":"23.1","rn_hr1":"6.9"},"_v":"\uc6d0\uc8fc"},{"_a":{"stn_id":"115","icon":"04","desc":"\ud750\ub9bc","ta":"26.5"},"_v":"\uc6b8\ub989\ub3c4"},{"_a":{"stn_id":"119","icon":"04","desc":"\ud750\ub9bc","ta":"24.0","rn_hr1":"21.2"},"_v":"\uc218\uc6d0"},{"_a":{"stn_id":"121","icon":"04","desc":"\ud750\ub9bc","ta":"23.0","rn_hr1":"4.3"},"_v":"\uc601\uc6d4"},{"_a":{"stn_id":"127","icon":"04","desc":"\ud750\ub9bc","ta":"24.8","rn_hr1":"0.1"},"_v":"\ucda9\uc8fc"},{"_a":{"stn_id":"129","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"27.0","rn_hr1":"0.0"},"_v":"\uc11c\uc0b0"},{"_a":{"stn_id":"130","icon":"04","desc":"\ud750\ub9bc","ta":"23.4","rn_hr1":"1.2"},"_v":"\uc6b8\uc9c4"},{"_a":{"stn_id":"131","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"25.1","rn_hr1":"22.5"},"_v":"\uccad\uc8fc"},{"_a":{"stn_id":"133","icon":"04","desc":"\ud750\ub9bc","ta":"23.5","rn_hr1":"36.2"},"_v":"\ub300\uc804"},{"_a":{"stn_id":"135","icon":"04","desc":"\ud750\ub9bc","ta":"23.2","rn_hr1":"0.0"},"_v":"\ucd94\ud48d\ub839"},{"_a":{"stn_id":"136","icon":"04","desc":"\ud750\ub9bc","ta":"22.3","rn_hr1":"8.5"},"_v":"\uc548\ub3d9"},{"_a":{"stn_id":"137","icon":"04","desc":"\ud750\ub9bc","ta":"22.5","rn_hr1":"19.3"},"_v":"\uc0c1\uc8fc"},{"_a":{"stn_id":"138","icon":"04","desc":"\ud750\ub9bc","ta":"28.7"},"_v":"\ud3ec\ud56d"},{"_a":{"stn_id":"140","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"26.2","rn_hr1":"0.0"},"_v":"\uad70\uc0b0"},{"_a":{"stn_id":"143","icon":"08","desc":"\ube44","ta":"27.5","rn_hr1":"0.0"},"_v":"\ub300\uad6c"},{"_a":{"stn_id":"146","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"27.2","rn_hr1":"0.0"},"_v":"\uc804\uc8fc"},{"_a":{"stn_id":"152","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"28.2"},"_v":"\uc6b8\uc0b0"},{"_a":{"stn_id":"155","icon":"08","desc":"\ube44","ta":"24.7","rn_hr1":"0.7"},"_v":"\ucc3d\uc6d0"},{"_a":{"stn_id":"156","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"25.8","rn_hr1":"6.4"},"_v":"\uad11\uc8fc"},{"_a":{"stn_id":"159","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"27.1"},"_v":"\ubd80\uc0b0"},{"_a":{"stn_id":"162","icon":"04","desc":"\ud750\ub9bc","ta":"24.6","rn_hr1":"0.0"},"_v":"\ud1b5\uc601"},{"_a":{"stn_id":"165","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"25.6","rn_hr1":"15.5"},"_v":"\ubaa9\ud3ec"},{"_a":{"stn_id":"168","icon":"04","desc":"\ud750\ub9bc","ta":"23.4","rn_hr1":"8.1"},"_v":"\uc5ec\uc218"},{"_a":{"stn_id":"169","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"23.3","rn_hr1":"15.5"},"_v":"\ud751\uc0b0\ub3c4"},{"_a":{"stn_id":"170","icon":"01","desc":"\ub9d1\uc74c","ta":"26.8","rn_hr1":"3.4"},"_v":"\uc644\ub3c4"},{"_a":{"stn_id":"172","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c"},"_v":"\uace0\ucc3d"},{"_a":{"stn_id":"174","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"23.6","rn_hr1":"3.7"},"_v":"\uc21c\ucc9c"},{"_a":{"stn_id":"177","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"27.1","rn_hr1":"7.5"},"_v":"\ud64d\uc131"},{"_a":{"stn_id":"181","icon":"04","desc":"\ud750\ub9bc","ta":"24.3","rn_hr1":"34.0"},"_v":"\uc11c\uccad\uc8fc"},{"_a":{"stn_id":"184","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"30.8"},"_v":"\uc81c\uc8fc"},{"_a":{"stn_id":"185","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"24.8","rn_hr1":"0.0"},"_v":"\uace0\uc0b0"},{"_a":{"stn_id":"188","icon":"04","desc":"\ud750\ub9bc","ta":"26.4"},"_v":"\uc131\uc0b0"},{"_a":{"stn_id":"189","icon":"17","desc":"\ubc15\ubb34","ta":"25.6","rn_hr1":"0.1"},"_v":"\uc11c\uadc0\ud3ec"},{"_a":{"stn_id":"192","icon":"04","desc":"\ud750\ub9bc","ta":"24.7","rn_hr1":"0.0"},"_v":"\uc9c4\uc8fc"},{"_a":{"stn_id":"201","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"25.2"},"_v":"\uac15\ud654"},{"_a":{"stn_id":"202","icon":"04","desc":"\ud750\ub9bc","ta":"23.3","rn_hr1":"42.8"},"_v":"\uc591\ud3c9"},{"_a":{"stn_id":"203","icon":"04","desc":"\ud750\ub9bc","ta":"23.6","rn_hr1":"1.9"},"_v":"\uc774\ucc9c"},{"_a":{"stn_id":"211","icon":"04","desc":"\ud750\ub9bc","ta":"21.8","rn_hr1":"10.7"},"_v":"\uc778\uc81c"},{"_a":{"stn_id":"212","icon":"04","desc":"\ud750\ub9bc","ta":"22.5","rn_hr1":"9.8"},"_v":"\ud64d\ucc9c"},{"_a":{"stn_id":"216","icon":"04","desc":"\ud750\ub9bc","ta":"19.7","rn_hr1":"7.6"},"_v":"\ud0dc\ubc31"},{"_a":{"stn_id":"217","icon":"04","desc":"\ud750\ub9bc","ta":"21.6","rn_hr1":"1.1"},"_v":"\uc815\uc120\uad70"},{"_a":{"stn_id":"221","icon":"04","desc":"\ud750\ub9bc","ta":"23.4","rn_hr1":"7.2"},"_v":"\uc81c\ucc9c"},{"_a":{"stn_id":"226","icon":"04","desc":"\ud750\ub9bc","ta":"21.8","rn_hr1":"39.8"},"_v":"\ubcf4\uc740"},{"_a":{"stn_id":"232","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"23.8","rn_hr1":"15.5"},"_v":"\ucc9c\uc548"},{"_a":{"stn_id":"235","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"27.3","rn_hr1":"0.5"},"_v":"\ubcf4\ub839"},{"_a":{"stn_id":"236","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"26.5","rn_hr1":"6.4"},"_v":"\ubd80\uc5ec"},{"_a":{"stn_id":"238","icon":"04","desc":"\ud750\ub9bc","ta":"25.2"},"_v":"\uae08\uc0b0"},{"_a":{"stn_id":"239","icon":"04","desc":"\ud750\ub9bc","ta":"24.1","rn_hr1":"55.6"},"_v":"\uc138\uc885"},{"_a":{"stn_id":"243","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"26.6"},"_v":"\ubd80\uc548"},{"_a":{"stn_id":"244","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"25.8","rn_hr1":"0.5"},"_v":"\uc784\uc2e4"},{"_a":{"stn_id":"245","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"27.1","rn_hr1":"0.0"},"_v":"\uc815\uc74d"},{"_a":{"stn_id":"247","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"26.3","rn_hr1":"1.4"},"_v":"\ub0a8\uc6d0"},{"_a":{"stn_id":"248","icon":"04","desc":"\ud750\ub9bc","ta":"25.5","rn_hr1":"0.7"},"_v":"\uc7a5\uc218"},{"_a":{"stn_id":"251","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"27.4","rn_hr1":"1.5"},"_v":"\uace0\ucc3d\uad70"},{"_a":{"stn_id":"252","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"26.0","rn_hr1":"1.7"},"_v":"\uc601\uad11\uad70"},{"_a":{"stn_id":"253","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"26.8"},"_v":"\uae40\ud574\uc2dc"},{"_a":{"stn_id":"254","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"25.2","rn_hr1":"1.3"},"_v":"\uc21c\ucc3d\uad70"},{"_a":{"stn_id":"255","icon":"04","desc":"\ud750\ub9bc","ta":"26.6","rn_hr1":"0.0"},"_v":"\ubd81\ucc3d\uc6d0"},{"_a":{"stn_id":"257","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"27.8"},"_v":"\uc591\uc0b0\uc2dc"},{"_a":{"stn_id":"258","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"25.3","rn_hr1":"17.0"},"_v":"\ubcf4\uc131\uad70"},{"_a":{"stn_id":"259","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"25.5","rn_hr1":"22.9"},"_v":"\uac15\uc9c4\uad70"},{"_a":{"stn_id":"260","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"24.9","rn_hr1":"32.3"},"_v":"\uc7a5\ud765"},{"_a":{"stn_id":"261","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"28.1","rn_hr1":"6.1"},"_v":"\ud574\ub0a8"},{"_a":{"stn_id":"262","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"25.2","rn_hr1":"10.4"},"_v":"\uace0\ud765"},{"_a":{"stn_id":"263","icon":"04","desc":"\ud750\ub9bc","ta":"26.0","rn_hr1":"0.7"},"_v":"\uc758\ub839\uad70"},{"_a":{"stn_id":"264","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"26.0","rn_hr1":"1.2"},"_v":"\ud568\uc591\uad70"},{"_a":{"stn_id":"266","icon":"04","desc":"\ud750\ub9bc","ta":"24.4","rn_hr1":"0.3"},"_v":"\uad11\uc591\uc2dc"},{"_a":{"stn_id":"268","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"27.1","rn_hr1":"2.5"},"_v":"\uc9c4\ub3c4\uad70"},{"_a":{"stn_id":"271","icon":"04","desc":"\ud750\ub9bc","ta":"20.0","rn_hr1":"14.2"},"_v":"\ubd09\ud654"},{"_a":{"stn_id":"272","icon":"04","desc":"\ud750\ub9bc","ta":"21.9","rn_hr1":"4.8"},"_v":"\uc601\uc8fc"},{"_a":{"stn_id":"273","icon":"04","desc":"\ud750\ub9bc","ta":"22.3","rn_hr1":"51.0"},"_v":"\ubb38\uacbd"},{"_a":{"stn_id":"276","icon":"04","desc":"\ud750\ub9bc","ta":"23.5","rn_hr1":"0.0"},"_v":"\uccad\uc1a1\uad70"},{"_a":{"stn_id":"277","icon":"04","desc":"\ud750\ub9bc","ta":"25.9"},"_v":"\uc601\ub355"},{"_a":{"stn_id":"278","icon":"04","desc":"\ud750\ub9bc","ta":"23.6","rn_hr1":"2.2"},"_v":"\uc758\uc131"},{"_a":{"stn_id":"279","icon":"04","desc":"\ud750\ub9bc","ta":"25.6","rn_hr1":"0.0"},"_v":"\uad6c\ubbf8"},{"_a":{"stn_id":"281","icon":"04","desc":"\ud750\ub9bc","ta":"27.3"},"_v":"\uc601\ucc9c"},{"_a":{"stn_id":"283","icon":"04","desc":"\ud750\ub9bc","ta":"28.2"},"_v":"\uacbd\uc8fc\uc2dc"},{"_a":{"stn_id":"284","icon":"04","desc":"\ud750\ub9bc","ta":"26.0","rn_hr1":"0.1"},"_v":"\uac70\ucc3d"},{"_a":{"stn_id":"285","icon":"04","desc":"\ud750\ub9bc","ta":"25.3","rn_hr1":"0.6"},"_v":"\ud569\ucc9c"},{"_a":{"stn_id":"288","icon":"04","desc":"\ud750\ub9bc","ta":"26.5"},"_v":"\ubc00\uc591"},{"_a":{"stn_id":"289","icon":"04","desc":"\ud750\ub9bc","ta":"25.6","rn_hr1":"1.6"},"_v":"\uc0b0\uccad"},{"_a":{"stn_id":"294","icon":"04","desc":"\ud750\ub9bc","ta":"26.1","rn_hr1":"0.0"},"_v":"\uac70\uc81c"},{"_a":{"stn_id":"295","icon":"04","desc":"\ud750\ub9bc","ta":"24.2","rn_hr1":"6.9"},"_v":"\ub0a8\ud574"},{"_a":{"stn_id":"296","icon":"03","desc":"\uad6c\ub984\ub9ce\uc74c","ta":"27.0"},"_v":"\ubd81\ubd80\uc0b0"}];
+var regions = wthr.length;
+var wthrbox = $('.weather');
+var wthr_cnt = 0;
+
+UpdateWeatherInfo();
+// setInterval(function(){UpdateWeatherInfo()},7000);
+
+function UpdateWeatherInfo() {
+	weather_str = wthr[wthr_cnt]['_v']+' : '+wthr[wthr_cnt]['_a']['ta'];
+	if(weather_str!='') {
+		wthrbox.html(weather_str);
+		wthr_cnt++;
+	}
+}
+</script>
+<!-- //weather -->
+
+
+
+
+
+<script type="text/javascript">
+function ___setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";domain=.missionews.co.kr;path=/";
+}
+function ___getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+$(document).on("click", '.viewmobile', function() {
+  _rurl = $(this).attr('rurl');
+  if(_rurl!='') {
+    ___setCookie('mobile_cookie','',3);
+		// $.cookie('mobile_cookie', '', { path: '/', domain: '' });		
+    document.location.href = _rurl;  
+  }
+});
+</script>
+<script>
+$(document).on("click", '.viewfullsize', function() {
+  _rurl = $(this).attr('rurl');
+  if(_rurl!='') {
+    ___setCookie('mobile_cookie','1',3);
+    // $.cookie('mobile_cookie', '1', { path: '/', domain: '.missionews.co.kr' });
+    document.location.href = _rurl;  
+  }
+});
+
+</script>
+
+<script>setTimeout(function(){window.location.reload();},600000);</script>
+</body></html>
