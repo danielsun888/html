@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Title</title>
+  <!-- 引入 Tailwind CSS 的样式文件 -->
+<link rel="stylesheet" href="./views/0711.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- 可选：引入 Bootstrap 的 JavaScript 文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+<style>
+  .container21 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container21 .item1 {
+    margin-right: 10px;
+    padding-left: 10px;
+  }
+  .container21 .item2 {
+      display: flex;
+    margin-right: 10px;
+    border-left: 1px solid #ccc;
+    padding-left: 10px;
+  }
+
+  .container21 .item2 .photonews {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .container21 .item2 .photonews img {
+    height: 100%;
+  }
+  .container21 .item2 .lineNews {
+    display: flex;
+    flex-direction: column;
+  }
+
+   .container21 .item2 .lineNews > div {
+    position: relative;
+    padding-top: 10px;
+  }
+
+   .container21 .item2 .lineNews > div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+  }
+
+</style>
+
+<div class="container21">
+  <div class="item1">
+    <img src="./views/0711/pn_m1.jpg" alt="Photo 1">
+    <p class="mt-2">중국, ‘온라인 DB’로 공인 성직자와 가정교회 지도자들에 대한 압박 강화</p>
+  </div>
+
+  <div class="item2">
+      <div>
+      <div class="photonews">
+          <div><img src="./views/0711/pn6.jpg" alt="Photo 2"></div>
+          <div>
+            <p>학자와 고고학자들은 이스라엘 백성이 가나안에 들어갔다는 직접적인 증거는 없다고 말해왔다. 많은 작가가 아마르나 서신(Amarna Letters)1)이 이스라엘 백성이 가나안에 들어간 사건에 대해 이야기 하고 있다는 믿음을 표명했지만, 론(Ron Wyatt)2)은 동의하지 않았다. 편지를 취합하는 것은 이스라엘 백성이 가나안에 들어가기 전에 아마르나 가문이 죽으면서 끝났다.</p>
+           </div>
+      </div>
+        <div>
+       <div class="lineNews">
+        <div>
+       학자와 고고학자들은 이스라엘 백성이 가나안에 들어갔다는 직접적인 증거는 없다고 말해왔다.
+         </div>
+        <div>
+       학자와 고고학자들은 이스라엘 백성이 가나안에 들어갔다는 직접적인 증거는 없다고 말해왔다.
+         </div>
+        <div>
+       학자와 고고학자들은 이스라엘 백성이 가나안에 들어갔다는 직접적인 증거는 없다고 말해왔다.
+         </div>
+       </div>
+</div>
+
+
+</body>
+</html>

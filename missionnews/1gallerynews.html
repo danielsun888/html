@@ -5,31 +5,88 @@
   <title>Your Title</title>
   <!-- 引入 Tailwind CSS 的样式文件 -->
 <link rel="stylesheet" href="./views/0711.css">
+<style>
+.galleryNews {
+  display: flex;
+}
 
+.galleryNews .news-item {
+  display: flex;
+    flex-direction: column;
+  align-items: flex-start;
+  margin-right: 10px;
+}
+ .galleryNews-title {
+  display: flex;
+  align-items: center;
+}
+
+ .galleryNews-title .divider {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ccc;
+  margin-left: 10px;
+}
+.galleryNews .news-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.galleryNews .news-item p {
+  margin-top: 8px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+    word-break: break-word;
+
+}
+
+</style>
 </head>
 <body>
   <!-- 页面内容 -->
 <!--  Image gallery news-->
+   <div class="galleryNews-container">
+        <div class="galleryNews-title">
+          <div>포토뉴스</div>
+          <div class="divider"></div>
+        </div>
     <div class="galleryNews">
-      <div >
-        <img src="./views/0711/pn1.jpg" alt="Photo 1">
-        <p class="mt-2">중국, ‘온라인 DB’로 공인 성직자와 가정교회 지도자들에 대한 압박 강화</p>
-      </div>
+         <div class="news-item">
+            <div>
+              <img src="./views/0711/pn1.jpg" alt="Photo 1">
+            </div>
+            <div>
+              <p class="mt-2">중국, ‘온라인 DB’로 공인 성직자와 가정교회 지도자들에 대한 압박 강화</p>
+            </div>
+        </div>
 
-      <div >
-        <img src="./views/0711/pn2.jpg" alt="Photo 2">
-        <p class="mt-2">중국, ‘온라인 DB’로 공인 성직자와 가정교회 지도자들에 대한 압박 강화</p>
-      </div>
+         <div class="news-item">
+            <div>
+              <img src="./views/0711/pn1.jpg" alt="Photo 1">
+            </div>
+            <div>
+              <p class="mt-2">중국, ‘온라인 DB’로 공인 성직자와 가정교회 지도자들에 대한 압박 강화</p>
+            </div>
+         </div>
 
-      <div>
-        <img src="./views/0711/pn3.jpg" alt="Photo 3">
-        <p class="mt-2">중국, ‘온라인 DB’로 공인 성직자와 가정교회 지도자들에 대한 압박 강화</p>
-      </div>
-         <div>
-        <img src="./views/0711/pn4.jpg" alt="Photo 3">
-        <p class="mt-2">중국, ‘온라인 DB’로 공인 성직자와 가정교회 지도자들에 대한 압박 강화</p>
-      </div>
+         <div class="news-item">
+              <div>
+                <img src="./views/0711/pn1.jpg" alt="Photo 1">
+              </div>
+              <div>
+                <p class="mt-2">중국, ‘온라인 DB’로 공인 성직자와 가정교회 지도자들에 대한 압박 강화</p>
+              </div>
+         </div>
+       <div class="news-item">
+              <div>
+                <img src="./views/0711/pn1.jpg" alt="Photo 1">
+              </div>
+              <div>
+                <p class="mt-2">중국, ‘온라인 DB’로 공인 성직자와 가정교회 지도자들에 대한 압박 강화</p>
+              </div>
+       </div>
     </div>
+   </div>
 </body>
 
 </html>
