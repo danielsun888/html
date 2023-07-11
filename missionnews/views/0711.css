@@ -1,0 +1,22 @@
+    .galleryNews {
+      display: flex;
+    }
+
+    .galleryNews  > div {
+      margin-right: 10px;
+    }
+
+    .galleryNews  img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .galleryNews  p {
+      margin-top: 8px;
+    }
+
+
+    .news2 {
+      display: flex;
+      justify-content: space-between;
+    }
