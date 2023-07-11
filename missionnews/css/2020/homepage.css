@@ -1,0 +1,400 @@
+/*------------------------------------*\
+    $HOMEPAGE
+\*------------------------------------*/
+.subtitle {
+  font-size: 17px;
+  line-height: 21px;
+  color: #777;
+}
+
+summary {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.related {
+  font-weight: bold;
+  line-height: 17px;
+  line-height: 21px;
+}
+.related li {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 30px;
+  position: relative;
+}
+.related li::before {
+  content: "";
+  width: 3px;
+  height: 4px;
+  border-left: 2px solid #bebebe;
+  border-bottom: 2px solid #bebebe;
+  position: absolute;
+  top: 9px;
+  left: 13px;
+}
+
+.feature figure {
+  margin-bottom: 16px;
+}
+.feature .subtitle {
+  margin-bottom: 10px;
+}
+.feature .title {
+  font-size: 34px;
+  line-height: 38px;
+  margin-bottom: 25px;
+}
+.feature summary {
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.subfeature {
+  border-top: 1px solid #eaeaea;
+  margin-top: 17px;
+  padding-top: 19px;
+}
+.subfeature .title {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+.subfeature figure {
+  width: 210px;
+  margin-right: 15px;
+}
+
+.feature-list {
+  border-top: 1px solid #eaeaea;
+  margin-top: 17px;
+}
+.feature-list figure {
+  width: 145px;
+  margin-right: 15px;
+}
+.feature-list .title {
+  margin-bottom: 5px;
+}
+.feature-list > li {
+  padding-top: 15px;
+}
+
+.block-title {
+  color: #353535;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+ul.list {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 30px;
+}
+ul.list li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 16px;
+  position: relative;
+}
+ul.list li::before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 2px;
+  background-color: #222;
+  position: absolute;
+  left: 2px;
+  top: 12px;
+}
+
+.event-news {
+  color: #353535;
+}
+.event-news .block-title {
+  background-color: #eef4fa;
+  border: 1px solid #e2e8ee;
+  border-bottom-width: 0;
+  padding: 10px;
+}
+.event-news ul.list {
+  border: 1px solid #d7d7d7;
+  border-top-width: 0;
+  padding: 10px;
+}
+
+.gallery {
+  margin-bottom: 30px;
+}
+.gallery .block-title {
+  margin-bottom: 15px;
+}
+.gallery .block-title img {
+  cursor: pointer;
+}
+.gallery #m_headline_p2 {
+  margin-left: -2px;
+  margin-right: -2px;
+  margin-top: 4px;
+}
+.gallery #m_headline_p2 .m_hd_p {
+  padding-left: 2px;
+  padding-right: 2px;
+  flex-grow: 1;
+}
+.gallery .m_hd_p {
+  cursor: pointer;
+}
+.gallery .m_headline_p {
+  position: relative;
+}
+.gallery .m_headline_p .txt_line2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  color: white;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC42NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65)));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  padding: 10px;
+  text-align: center;
+}
+.gallery .m_headline_p .txt_line2 a:hover {
+  color: #eee;
+}
+.gallery.video .m_headline_p > a {
+  display: block;
+  position: relative;
+}
+.gallery.video .m_headline_p > a::before {
+  content: "";
+  display: block;
+  width: 38px;
+  height: 38px;
+  /*background: url(/views/images/2020/play.svg) center/28px no-repeat black;*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topic {
+  margin-bottom: 30px;
+}
+.topic .block-title {
+  border-top: 2px solid black;
+  border-bottom: 1px solid #d7d7d7;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 38px;
+  margin-bottom: 16px;
+}
+.topic .block-title .more {
+  font-weight: 400;
+  font-size: 13px;
+  color: #206ba9;
+}
+.topic .block-title .more:hover {
+  text-decoration: underline;
+}
+.topic article {
+  border-bottom: 1px solid #d7d7d7;
+  padding-bottom: 14px;
+  margin-bottom: 10px;
+}
+.topic article figure {
+  width: 78px;
+  margin-right: 15px;
+}
+.topic article .title {
+  color: #353535;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 22px;
+}
+.topic article .subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  color: #206ba9;
+  margin-top: 4px;
+}
+.topic.books article {
+  margin-bottom: 14px;
+}
+.topic.books article figure {
+  width: 65px;
+}
+
+.side-block {
+  margin-bottom: 30px;
+}
+.side-block:last-of-type article {
+  border-bottom: 0;
+}
+.side-block .block-title {
+  border-bottom: 3px solid #d3e4f2;
+  padding-bottom: 9px;
+  position: relative;
+}
+.side-block .block-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.side-block figure {
+  margin-left: 20px;
+}
+.side-block figure a {
+  display: block;
+  width: 51px;
+  height: 51px;
+  overflow: hidden;
+  position: relative;
+  background-color: black;
+}
+.side-block figure a img {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: auto;
+  max-width: inherit;
+  transform: translateX(-50%);
+}
+.side-block .category {
+  color: #206ba9;
+  font-size: 13px;
+  line-height: 13px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+.side-block .title {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 22px;
+}
+.side-block summary {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+}
+.side-block article {
+  border-bottom: 1px solid #eaeaea;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  position: relative;
+}
+.side-block article > .flex-xs {
+  margin-top: 10px;
+}
+.side-block.opinion .block-title::before {
+  width: 25px;
+  height: 19px;
+  background: url(/views/images/2020/deco1.gif) center no-repeat;
+}
+.side-block.opinion figure a {
+  border-radius: 50%;
+}
+.side-block.opinion summary {
+  margin-top: 8px;
+}
+.side-block.popular .block-title::before {
+  width: 27px;
+  height: 21px;
+  background: url(/views/images/2020/deco2.gif) center no-repeat;
+}
+.side-block.popular article .title {
+  counter-increment: step;
+  position: relative;
+  padding-left: 22px;
+}
+.side-block.popular article .title::before {
+  content: counter(step);
+  font-weight: bold;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.photos {
+  background-color: black;
+  position: relative;
+  padding-top: 19px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.photos .block-title {
+  color: white;
+  padding-left: 37px;
+  padding-right: 37px;
+  padding-bottom: 19px;
+}
+.photos li {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.photos li .info {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 18px;
+}
+.photos li .title {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 30px;
+}
+.photos li .byline {
+  font-size: 13px;
+  line-height: 22px;
+  color: #333;
+}
+.photos li.slick-active .info {
+  background-color: white;
+}
+.photos .slick-arrow {
+  font-size: 0;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 6px;
+}
+.photos .slick-prev {
+  background-image: url(/views/images/2020/ico_prev.gif);
+}
+.photos .slick-next {
+  background-image: url(/views/images/2020/ico_next.gif);
+}
+
+@media only screen and (max-width: 767px) {
+  .col-l > div.row {
+    display: flex;
+    flex-direction: column;
+  }
+  .col-l > div.row .col-sm-8 {
+    order: 1;
+  }
+  .col-l > div.row .col-sm-4 {
+    order: 2;
+  }
+}
