@@ -1,0 +1,48 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Title</title>
+</head>
+<style>
+  .navigation {
+    width: 200px;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    left: -200px;
+    transition: left 0.3s ease-in-out;
+  }
+ .navigation ul {
+    list-style: none;
+    padding: 0;
+  }
+  .open {
+    left: 0;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+</style>
+
+<button id="toggleButton">navigation</button>
+<div class="navigation">
+  <ul>
+    <li><a href="#">전체기사</a></li>
+    <li><a href="#">뉴스</a></li>
+    <li><a href="#">기획</a></li>
+    <li><a href="#">사설/칼럼</a></li>
+    <li><a href="#">추천서적</a></li>
+    <li><a href="#">자료실</a></li>
+  </ul>
+</div>
+  <!-- 导航栏内容 -->
+
+<script>
+  const toggleButton = document.getElementById('toggleButton');
+  const navigation = document.querySelector('.navigation');
+
+  toggleButton.addEventListener('click', function() {
+    navigation.classList.toggle('open');
+  });
+</script>
