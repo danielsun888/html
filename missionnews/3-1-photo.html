@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Title</title>
   <!-- 引入 Tailwind CSS 的样式文件 -->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 
 </head>
 <body>
@@ -59,10 +60,55 @@
 
        background-color: black;
    }
+      .item3 img{
+      width: 213px;
+          height: 264px;
+       background-color: black;
+   }
 
 
 </style>
+  <script>
+    $(document).ready(function() {
+      var files = [
+        "./views/0711/pg31.png",
+        "./views/0711/pl_m2.jpg",
+        "./views/0711/pl_m3.jpg",
+        "./views/0711/pl_m4.jpg",
+        "./views/0711/pl_m5.jpg",
+        "./views/0711/pl_m6.jpg"
+        // 添加更多文件路径
+      ];
+      var currentIndex = 0;
 
+      // 初始化显示第一个文件
+      updateFileLink(files[currentIndex]);
+
+      // 上一个按钮点击事件
+      $('.prev-btn').click(function() {
+        currentIndex--;
+        if (currentIndex < 0) {
+          currentIndex = files.length - 1;
+        }
+        updateFileLink(files[currentIndex]);
+      });
+
+      // 下一个按钮点击事件
+      $('.next-btn').click(function() {
+        currentIndex++;
+        if (currentIndex >= files.length) {
+          currentIndex = 0;
+        }
+        updateFileLink(files[currentIndex]);
+      });
+
+      // 更新文件链接和图片
+      function updateFileLink(file) {
+        // $('#file-link').attr('href', file);
+        $('#file-link img').attr('src', file);
+      }
+    });
+  </script>
 <div class="container31">
   <div class="item1">
     <img src="./views/0711/pn_m1.jpg" alt="Photo 1">
@@ -97,8 +143,12 @@
                  <button class="next-btn">next</button>
 
                   <div class="image-container">
-                    <img src="./views/0711/pg31.png" alt="Photo 1">
+<!--                    <img src="./views/0711/pg31.png" alt="Photo 1">-->
+                      <a href="#" target="_blank" id="file-link">
+                       <img  src="./views/0711/pg31.png" alt="Photo 1">
+                      </a>
                   </div>
+
              </div>
   </div>
 </div>

@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Title</title>
+  <title>1 gallerynews</title>
   <!-- 引入 Tailwind CSS 的样式文件 -->
 <link rel="stylesheet" href="./views/0711.css">
 <style>
@@ -39,6 +39,20 @@
     word-break: break-word;
 
 }
+.arrow-left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
 
 </style>
 </head>
@@ -52,6 +66,10 @@
         </div>
     <div class="galleryNews">
          <div class="news-item">
+<!--             <div><             </div>-->
+              <div class="arrow-left">
+        <i class="fas fa-arrow-left"></i>
+      </div>
             <div>
               <img src="./views/0711/pn1.jpg" alt="Photo 1">
             </div>
