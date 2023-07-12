@@ -2,12 +2,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Title</title>
-  <!-- 引入 Tailwind CSS 的样式文件 -->
-
-  <!-- 可选：引入 Bootstrap 的 JavaScript 文件 -->
+</head>
 <style>
+.head2 {
+    display: flex;
+   flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  space-between: 10px;
+}
 
-  .search-bar {
+    .search-bar {
     display: flex;
     align-items: center;
     padding-bottom: 25px;
@@ -32,16 +44,71 @@
     cursor: pointer;
   }
 
+  .headNavigation {
+    width: 200px;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    left: -200px;
+    transition: left 0.3s ease-in-out;
+  }
+  .headNavigation ul {
+    list-style: none;
+    padding: 0;
+  }
+  .open {
+    left: 0;
+  }
+  .headNavigation a {
+    text-decoration: none;
+    color: black;
+  }
+  #headToggleButton {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+  }
+  #closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+  }
 </style>
-</head>
-
-
-  <nav class="pn">
-    <div class="">
-
-          <div class="search-bar">
+<div class="head2">
+  <div class="search-bar">
             <input type="text" class="search-input" ><button type="submit"></button>
-          </div>
-    </div>
-  </nav>
+  </div>
+  <div>
+            <button id="headToggleButton"><img src="./views/0711/ic_menu.png"></button>
+            <div class="headNavigation">
+              <button id="closeButton">Close</button>
+              <ul>
+                <li><a href="#">전체기사</a></li>
+                <li><a href="#">뉴스</a></li>
+                <li><a href="#">기획</a></li>
+                <li><a href="#">사설/칼럼</a></li>
+                <li><a href="#">추천서적</a></li>
+                <li><a href="#">자료실</a></li>
+              </ul>
+            </div>
+  </div>
+</div>
+<script>
+  const toggleButton = document.getElementById('headToggleButton');
+  const closeButton = document.getElementById('closeButton');
+  const navigation = document.querySelector('.headNavigation');
 
+  toggleButton.addEventListener('click', function() {
+    navigation.classList.toggle('open');
+  });
+
+  closeButton.addEventListener('click', function() {
+    navigation.classList.remove('open');
+  });
+</script>
